@@ -1,0 +1,50 @@
+{
+  "custom_cursors": 2,
+  "last_sch_text_sim_command": ".tran 1u 200m 50m 10u",
+  "tabs": [
+    {
+      "analysis": "TRAN",
+      "commands": [
+        ".tran 1u 200m 50m 10u",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli"
+      ],
+      "dottedSecondary": false,
+      "fixedY1scale": {
+        "max": 6.0,
+        "min": -1.0
+      },
+      "fixedY2scale": {
+        "max": 11.0,
+        "min": -11.0
+      },
+      "legend": {
+        "x": 78,
+        "y": 34
+      },
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "I(V2)",
+          "trace_type": 258
+        },
+        {
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(/Isense)",
+          "trace_type": 257
+        }
+      ]
+    }
+  ],
+  "user_defined_signals": [],
+  "version": 7
+}
