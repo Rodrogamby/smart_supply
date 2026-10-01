@@ -1,14 +1,13 @@
 {
   "custom_cursors": 2,
-  "last_sch_text_sim_command": ".tran 1u 200m 50m 10u",
+  "last_sch_text_sim_command": ".tran 10u 200m 50m",
   "tabs": [
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 1u 200m 50m 10u",
+        ".tran 10u 200m 50m",
         ".kicad adjustpaths",
-        ".save all",
-        ".probe alli"
+        ".save all"
       ],
       "dottedSecondary": true,
       "fixedY1scale": {
@@ -20,7 +19,7 @@
         "min": -11.0
       },
       "legend": {
-        "x": 77,
+        "x": 12,
         "y": 40
       },
       "margins": {
@@ -33,13 +32,18 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(228, 30, 191)",
-          "signal": "I(V2)",
-          "trace_type": 258
-        },
-        {
           "color": "rgb(66, 175, 14)",
           "signal": "V(/Current_Sensor_Sim/Isense)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(/Current_Sensor_Sim/Isns)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(/Current_Sensor_Sim/Isnspre)",
           "trace_type": 257
         },
         {
