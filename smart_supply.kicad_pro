@@ -669,7 +669,7 @@
         "uuid": "487ef637-7a03-4925-80c1-798e0c6f0bbd"
       }
     ],
-    "used_designators": "I1-3,G1,D1-3,#PWR1-5,V1-2,R1-4",
+    "used_designators": "SW1,J1,I1-3,G1,FB1,C1-6,D1-3,#PWR1-17,U1,V1-2,R1-7",
     "variants": []
   },
   "sheets": [
@@ -680,6 +680,10 @@
     [
       "4afa77e3-011c-47b7-b4a4-3a54e6ff5b81",
       "Current Sensor Sim"
+    ],
+    [
+      "f9380e13-e191-4828-b42d-2cc7f479b711",
+      "MCU"
     ]
   ],
   "text_variables": {},
