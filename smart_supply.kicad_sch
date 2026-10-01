@@ -52,6 +52,52 @@
 		)
 	)
 	(sheet
+		(at 59.69 21.59)
+		(size 19.05 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "72d405bf-0387-4131-abdf-ec63b9359b4d")
+		(property "Sheetname" "Voltage Sensor Sim"
+			(at 59.69 20.8784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 59.69 36.1446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 22.86 41.91)
 		(size 12.7 12.7)
 		(exclude_from_sim yes)
