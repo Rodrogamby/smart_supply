@@ -6,6 +6,52 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
+		(at 21.59 62.23)
+		(size 13.97 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "21684dc7-d3bf-41d6-9154-934c515daf55")
+		(property "Sheetname" "ADEsensing"
+			(at 21.59 61.5184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADEsensing.kicad_sch"
+			(at 21.59 76.7846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 22.86 21.59)
 		(size 12.7 12.7)
 		(exclude_from_sim no)

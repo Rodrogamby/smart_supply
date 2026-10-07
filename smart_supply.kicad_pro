@@ -669,7 +669,7 @@
         "uuid": "487ef637-7a03-4925-80c1-798e0c6f0bbd"
       }
     ],
-    "used_designators": "Re1,U1-2,U4-5,C1-6,C11,FB1,V1-2,V4,#SYM1,SW1,J1,I1-3,G1,D1-3,#PWR1-17,#PWR22-23,#PWR26-36,R1-7,R14,R28",
+    "used_designators": "Re1,U1-2,U4-6,C1-6,C11-17,FB1,V1-2,V4,#SYM1,SW1,J1,I1-3,G1,D1-3,#PWR1-17,#PWR22-23,#PWR26-39,R1-7,R14,R18-21,R28,L1-2,Y1",
     "variants": []
   },
   "sheets": [
@@ -684,6 +684,10 @@
     [
       "f9380e13-e191-4828-b42d-2cc7f479b711",
       "MCU"
+    ],
+    [
+      "21684dc7-d3bf-41d6-9154-934c515daf55",
+      "ADEsensing"
     ]
   ],
   "text_variables": {},
