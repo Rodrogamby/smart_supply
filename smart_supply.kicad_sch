@@ -5,10 +5,60 @@
 	(uuid "487ef637-7a03-4925-80c1-798e0c6f0bbd")
 	(paper "A4")
 	(lib_symbols)
-	(sheet
-		(at 21.59 62.23)
-		(size 13.97 13.97)
+	(rectangle
+		(start 92.71 17.78)
+		(end 166.37 68.58)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "23179f32-7e4f-4dc0-bb68-8e818d3b122b")
+	)
+	(rectangle
+		(start 19.05 17.78)
+		(end 92.71 68.58)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "244cda7f-f238-482a-93e1-f53e71bc06b2")
+	)
+	(text "Simulation"
 		(exclude_from_sim no)
+		(at 107.442 65.278 0)
+		(effects
+			(font
+				(size 3.2512 3.2512)
+				(thickness 0.6502)
+				(bold yes)
+				(color 255 153 0 1)
+			)
+		)
+		(uuid "3c98e418-d16e-4098-bd44-4617349b6943")
+	)
+	(text "Layout"
+		(exclude_from_sim no)
+		(at 27.94 65.278 0)
+		(effects
+			(font
+				(size 3.2512 3.2512)
+				(thickness 0.6502)
+				(bold yes)
+				(color 0 0 255 1)
+			)
+		)
+		(uuid "d27dd13a-0cd3-4756-8efc-c8dae2a823b8")
+	)
+	(sheet
+		(at 21.59 41.91)
+		(size 12.7 12.7)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -21,8 +71,8 @@
 			(color 0 0 0 0)
 		)
 		(uuid "21684dc7-d3bf-41d6-9154-934c515daf55")
-		(property "Sheetname" "ADEsensing"
-			(at 21.59 61.5184 0)
+		(property "Sheetname" "ADE Module"
+			(at 21.59 41.1984 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -33,7 +83,7 @@
 			)
 		)
 		(property "Sheetfile" "ADEsensing.kicad_sch"
-			(at 21.59 76.7846 0)
+			(at 21.59 55.1946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -46,14 +96,14 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
-					(page "4")
+					(page "5")
 				)
 			)
 		)
 	)
 	(sheet
-		(at 22.86 21.59)
-		(size 12.7 12.7)
+		(at 109.22 44.45)
+		(size 13.97 12.7)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
@@ -68,7 +118,7 @@
 		)
 		(uuid "4afa77e3-011c-47b7-b4a4-3a54e6ff5b81")
 		(property "Sheetname" "Current Sensor Sim"
-			(at 22.86 20.8784 0)
+			(at 109.22 43.7384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -79,7 +129,7 @@
 			)
 		)
 		(property "Sheetfile" "current_sensor_sim.kicad_sch"
-			(at 22.86 34.8746 0)
+			(at 109.22 57.7346 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -98,11 +148,11 @@
 		)
 	)
 	(sheet
-		(at 22.86 41.91)
-		(size 12.7 12.7)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
+		(at 109.22 24.13)
+		(size 13.97 13.97)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
@@ -112,9 +162,9 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "f9380e13-e191-4828-b42d-2cc7f479b711")
-		(property "Sheetname" "MCU"
-			(at 22.86 41.1984 0)
+		(uuid "78ed7862-57f9-462b-ac3c-68f24f48418e")
+		(property "Sheetname" "Rectifier Simulation"
+			(at 109.22 23.4184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -124,8 +174,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "mcu.kicad_sch"
-			(at 22.86 55.1946 0)
+		(property "Sheetfile" "rectifier_sim.kicad_sch"
+			(at 109.22 38.6846 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -139,6 +189,52 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 21.59 21.59)
+		(size 12.7 12.7)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f9380e13-e191-4828-b42d-2cc7f479b711")
+		(property "Sheetname" "MCU"
+			(at 21.59 20.8784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu.kicad_sch"
+			(at 21.59 34.8746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
+					(page "4")
 				)
 			)
 		)
