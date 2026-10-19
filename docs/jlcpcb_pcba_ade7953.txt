@@ -1,0 +1,34 @@
+Parts
+
+LDO
+https://jlcpcb.com/partdetail/MicrochipTech-MCP1825ST_3302EEB/C632677
+
+Crystal
+https://jlcpcb.com/partdetail/Starwave-SWXJHBCVH0_3580000/C22464956
+
+20pF
+https://jlcpcb.com/partdetail/177115-0603CG200F500NT/C165732
+
+100nF
+https://jlcpcb.com/partdetail/1942-CL10B104KA8NNNC/C1590
+
+4.7µF
+https://jlcpcb.com/partdetail/2131-CL21A475KAQNNNE/C1779
+
+10µF
+https://jlcpcb.com/partdetail/16532-CL21A106KAYNNNE/C15850
+
+Ferrite bead
+https://jlcpcb.com/partdetail/Sunlord-GZ2012D101TF/C1015
+
+10kΩ
+https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414
+
+LED (Yellow Green, 2V, 25mA)
+https://jlcpcb.com/partdetail/EverlightElec-17_21SYGC_S530_E24T/C2986046
+
+50Ω
+https://jlcpcb.com/partdetail/SIE-CRF0805Q50R0FN/C55205334
+
+ADE7953
+https://jlcpcb.com/partdetail/AnalogDevices-ADE7953ACPZRL/C515890
