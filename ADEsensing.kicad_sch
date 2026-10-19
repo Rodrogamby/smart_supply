@@ -3094,7 +3094,7 @@
 				)
 			)
 			(property "Footprint" "DDPAK3_MC_MCH"
-				(at 0 0 0)
+				(at 20.066 19.812 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3106,7 +3106,7 @@
 				)
 			)
 			(property "Datasheet" "MCP1825ST-3302E/EB"
-				(at 0 0 0)
+				(at 20.574 17.526 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3161,55 +3161,18 @@
 				)
 			)
 			(symbol "MCP1825ST-3302E_EB_0_1"
-				(polyline
-					(pts
-						(xy 7.62 7.62) (xy 7.62 -20.32)
-					)
+				(rectangle
+					(start 7.62 7.62)
+					(end 33.02 -20.32)
 					(stroke
-						(width 0.127)
+						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy 7.62 -20.32) (xy 33.02 -20.32)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 33.02 7.62) (xy 7.62 7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 33.02 -20.32) (xy 33.02 7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
+				(pin power_in line
 					(at 0 0 0)
 					(length 7.62)
 					(name "VIN"
@@ -3227,7 +3190,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 0 -12.7 0)
 					(length 7.62)
 					(name "GND"
@@ -3245,7 +3208,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_out line
 					(at 40.64 2.54 180)
 					(length 7.62)
 					(name "VOUT"
@@ -3263,7 +3226,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 0 -15.24 0)
 					(length 7.62)
 					(name "GND"
@@ -5323,6 +5286,17 @@
 				)
 			)
 		)
+		(property "MPN" "C165732"
+			(at 93.98 34.29 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "be82d42b-fb7b-4b23-a54d-83aa46f51d66")
 		)
@@ -5396,6 +5370,17 @@
 		)
 		(property "Description" "Two pin crystal"
 			(at 86.36 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C22464956"
+			(at 86.36 30.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5553,6 +5538,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 45.72 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C1779"
 			(at 45.72 22.86 0)
 			(hide yes)
 			(show_name no)
@@ -5903,6 +5899,17 @@
 				)
 			)
 		)
+		(property "MPN" "C2986046"
+			(at 158.75 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "28958f09-13e7-4656-bab1-c957f0204105")
 		)
@@ -5975,6 +5982,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 120.65 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C1779"
 			(at 120.65 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -6058,6 +6076,17 @@
 			)
 		)
 		(property "Description" "Single Phase Multifunction Energy Metering with Neutral Current Measurement, LFCSP-28"
+			(at 43.18 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C515890"
 			(at 43.18 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -6631,6 +6660,17 @@
 				)
 			)
 		)
+		(property "MPN" "C1015"
+			(at 123.19 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a00cf267-e1aa-4f40-bdc9-4a13bd15bb1e")
 		)
@@ -6868,6 +6908,17 @@
 				)
 			)
 		)
+		(property "MPN" "C1779"
+			(at 22.86 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f0bb8166-28d6-40a6-b064-c93287f74715")
 		)
@@ -7072,7 +7123,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SmartSupplyLib:DDPAK3_MC_MCH"
+		(property "Footprint" "DDPAK3_MC_MCH"
 			(at 123.19 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -7097,6 +7148,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 123.19 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C632677"
 			(at 123.19 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -7273,6 +7335,17 @@
 				)
 			)
 		)
+		(property "MPN" "C1779"
+			(at 22.86 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "46f9d8e8-49f5-4570-907a-4b9b8082d144")
 		)
@@ -7432,6 +7505,17 @@
 				)
 			)
 		)
+		(property "MPN" "C1590"
+			(at 35.56 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "24504782-73e6-4dfa-ab68-a2a3be720f8b")
 		)
@@ -7580,6 +7664,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 81.28 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C1590"
 			(at 81.28 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -7829,6 +7924,17 @@
 				)
 			)
 		)
+		(property "MPN" "C1590"
+			(at 58.42 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "18e2e32e-1bf1-4b3d-ad1c-66b88f0de857")
 		)
@@ -7900,6 +8006,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 93.98 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C165732"
+			(at 93.98 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8306,6 +8423,17 @@
 				)
 			)
 		)
+		(property "MPN" "C17414"
+			(at 81.28 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "692df1f1-dd7e-467f-a4b0-2637ed40186f")
 		)
@@ -8466,6 +8594,17 @@
 				)
 			)
 		)
+		(property "MPN" "C55205334"
+			(at 146.05 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0180665f-8141-45bf-a42d-dd435f32c726")
 		)
@@ -8537,6 +8676,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 35.56 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C1590"
 			(at 35.56 22.86 0)
 			(hide yes)
 			(show_name no)
@@ -8958,6 +9108,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 163.83 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C15850"
 			(at 163.83 31.75 0)
 			(hide yes)
 			(show_name no)

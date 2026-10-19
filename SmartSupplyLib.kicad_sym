@@ -32,7 +32,7 @@
 			)
 		)
 		(property "Footprint" "DDPAK3_MC_MCH"
-			(at 0 0 0)
+			(at 20.066 19.812 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -44,7 +44,7 @@
 			)
 		)
 		(property "Datasheet" "MCP1825ST-3302E/EB"
-			(at 0 0 0)
+			(at 20.574 17.526 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -99,55 +99,18 @@
 			)
 		)
 		(symbol "MCP1825ST-3302E_EB_0_1"
-			(polyline
-				(pts
-					(xy 7.62 7.62) (xy 7.62 -20.32)
-				)
+			(rectangle
+				(start 7.62 7.62)
+				(end 33.02 -20.32)
 				(stroke
-					(width 0.127)
+					(width 0)
 					(type default)
 				)
 				(fill
-					(type none)
+					(type background)
 				)
 			)
-			(polyline
-				(pts
-					(xy 7.62 -20.32) (xy 33.02 -20.32)
-				)
-				(stroke
-					(width 0.127)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 33.02 7.62) (xy 7.62 7.62)
-				)
-				(stroke
-					(width 0.127)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 33.02 -20.32) (xy 33.02 7.62)
-				)
-				(stroke
-					(width 0.127)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(pin unspecified line
+			(pin power_in line
 				(at 0 0 0)
 				(length 7.62)
 				(name "VIN"
@@ -165,7 +128,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at 0 -12.7 0)
 				(length 7.62)
 				(name "GND"
@@ -183,7 +146,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_out line
 				(at 40.64 2.54 180)
 				(length 7.62)
 				(name "VOUT"
@@ -201,7 +164,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at 0 -15.24 0)
 				(length 7.62)
 				(name "GND"
