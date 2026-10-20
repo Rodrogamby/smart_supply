@@ -3064,7 +3064,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SmartSupplyLib:MCP1825ST-3302E_EB"
+		(symbol "SmartSupplyLib:MCP1825ST-3302E_DB"
 			(pin_names
 				(offset 0.254)
 			)
@@ -3083,7 +3083,7 @@
 					)
 				)
 			)
-			(property "Value" "MCP1825ST-3302E/EB"
+			(property "Value" "MCP1825ST-3302E/DB"
 				(at 20.32 10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3093,8 +3093,8 @@
 					)
 				)
 			)
-			(property "Footprint" "DDPAK3_MC_MCH"
-				(at 20.066 19.812 0)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+				(at -5.334 10.414 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3105,8 +3105,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "MCP1825ST-3302E/EB"
-				(at 20.574 17.526 0)
+			(property "Datasheet" "MCP1825ST-3302E/DB"
+				(at -4.064 12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3128,17 +3128,7 @@
 					)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "MCP1825ST-3302E/EB"
+			(property "ki_keywords" "MCP1825ST-3302E/DB"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3149,7 +3139,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "DDPAK3_MC_MCH DDPAK3_MC_MCH-M DDPAK3_MC_MCH-L"
+			(property "ki_fp_filters" "SOT-223-3_TabPin2"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3160,10 +3150,10 @@
 					)
 				)
 			)
-			(symbol "MCP1825ST-3302E_EB_0_1"
+			(symbol "MCP1825ST-3302E_DB_1_1"
 				(rectangle
 					(start 7.62 7.62)
-					(end 33.02 -20.32)
+					(end 33.02 -15.24)
 					(stroke
 						(width 0)
 						(type default)
@@ -3191,7 +3181,7 @@
 					)
 				)
 				(pin power_in line
-					(at 0 -12.7 0)
+					(at 0 -10.16 0)
 					(length 7.62)
 					(name "GND"
 						(effects
@@ -3219,24 +3209,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -15.24 0)
-					(length 7.62)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3886,6 +3858,12 @@
 		(uuid "b1678f1e-a284-43c4-96f6-24bdc42e199b")
 	)
 	(junction
+		(at 163.83 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "07fa625c-793f-43bb-8bd6-82f5e1edaf4a")
+	)
+	(junction
 		(at 29.21 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3926,12 +3904,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a99de52c-d0bc-4ec9-8e7e-4d5bb49ddc00")
-	)
-	(junction
-		(at 163.83 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b804de17-7438-410a-8c11-a4b0b01733f9")
 	)
 	(wire
 		(pts
@@ -6272,6 +6244,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 123.19 40.64 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "57a58696-2579-425e-a995-eb4d7e829f2d")
+		(property "Reference" "#PWR048"
+			(at 116.84 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 40.6399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "DDPAK3_MC_MCH"
+			(at 123.19 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 123.19 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b856e9b9-25bc-4bea-98b8-848acf756d99")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/21684dc7-d3bf-41d6-9154-934c515daf55"
+					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x06_Pin")
 		(at 116.84 86.36 0)
 		(unit 1)
@@ -7086,105 +7137,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/21684dc7-d3bf-41d6-9154-934c515daf55"
 					(reference "#PWR051")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SmartSupplyLib:MCP1825ST-3302E_EB")
-		(at 123.19 30.48 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "970df264-045d-475c-b1a8-c06a3ea9ce3e")
-		(property "Reference" "U7"
-			(at 143.51 17.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "MCP1825ST-3302E/EB"
-			(at 143.51 20.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "SmartSupplyLib:DDPAK3_MC_MCH"
-			(at 123.19 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "MCP1825ST-3302E/EB"
-			(at 123.19 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 123.19 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "C632677"
-			(at 123.19 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3232cd7b-b886-4039-93fc-5d2c79bf5a6d")
-		)
-		(pin "2"
-			(uuid "a4994b36-9323-4c70-846e-d776ba97e6a5")
-		)
-		(pin "3"
-			(uuid "5a4f0952-6351-4929-9a4d-45e635d62dff")
-		)
-		(pin "4"
-			(uuid "ee158ff8-6a62-4da6-a389-f0f7e9a42bab")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/21684dc7-d3bf-41d6-9154-934c515daf55"
-					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -8120,6 +8072,102 @@
 		)
 	)
 	(symbol
+		(lib_id "SmartSupplyLib:MCP1825ST-3302E_DB")
+		(at 123.19 30.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c7c74010-38bf-46e7-ab07-3cfa00bde7fe")
+		(property "Reference" "U7"
+			(at 143.51 17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "MCP1825ST-3302E/DB"
+			(at 143.51 20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 117.856 20.066 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "MCP1825ST-3302E/DB"
+			(at 119.126 17.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C145411"
+			(at 123.19 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6edfc627-39d3-46c7-82e1-59f9bbfa2f06")
+		)
+		(pin "2"
+			(uuid "336aeab5-e7d5-4527-8329-48d2f3654872")
+		)
+		(pin "3"
+			(uuid "191c38bd-d561-43ea-9857-e8d99fcd5fb0")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/21684dc7-d3bf-41d6-9154-934c515daf55"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 30.48 99.06 270)
 		(unit 1)
@@ -8193,85 +8241,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/21684dc7-d3bf-41d6-9154-934c515daf55"
 					(reference "#PWR047")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 123.19 43.18 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf045036-b4bc-4b94-b56d-cf8d49318e01")
-		(property "Reference" "#PWR048"
-			(at 116.84 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 119.38 43.1799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "DDPAK3_MC_MCH"
-			(at 123.19 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 123.19 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5cbd8862-902c-47e3-a40f-74f7836504bf")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/21684dc7-d3bf-41d6-9154-934c515daf55"
-					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -8967,85 +8936,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/21684dc7-d3bf-41d6-9154-934c515daf55"
 					(reference "H4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 123.19 45.72 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f59510a7-cbba-480b-b643-a256b534f453")
-		(property "Reference" "#PWR049"
-			(at 116.84 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 119.38 45.7199 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "DDPAK3_MC_MCH"
-			(at 123.19 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 123.19 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e2bc7e74-f48e-4baa-bd05-42de73b1262f")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/21684dc7-d3bf-41d6-9154-934c515daf55"
-					(reference "#PWR049")
 					(unit 1)
 				)
 			)

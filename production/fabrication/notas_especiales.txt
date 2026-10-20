@@ -1,0 +1,27 @@
+Material Type 
+	S1000H TG155
+
+Surface Finish
+	OSP
+
+Via Covering
+	Untented
+
+Via Plating Method
+	Horizontal Electroless Copper Plating
+
+---PCBA---
+PCBA Qty
+	2
+
+Solder Pase
+	High temp.
+
+J2, J3, J4, J5: Do not place
+
+---Match de precio (solo para confirmar)---
+PCB (5): $14.80
+PCBA (2): $78.75
+Impuestos/aduana pendientes
+
+	
