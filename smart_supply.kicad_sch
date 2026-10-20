@@ -102,6 +102,52 @@
 		)
 	)
 	(sheet
+		(at 49.53 41.91)
+		(size 12.7 12.7)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "34ab41b0-567d-4411-99e8-070d64ace837")
+		(property "Sheetname" "POWER LINES"
+			(at 49.53 41.1984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "POWER_LINES.kicad_sch"
+			(at 49.53 55.1946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 109.22 44.45)
 		(size 13.97 12.7)
 		(exclude_from_sim no)
@@ -189,6 +235,52 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 49.53 21.59)
+		(size 12.7 12.7)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ec25a9df-b47e-476b-804e-5c9e6193e727")
+		(property "Sheetname" "ADE_final"
+			(at 49.53 20.8784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADE_final.kicad_sch"
+			(at 49.53 34.8746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
+					(page "6")
 				)
 			)
 		)
