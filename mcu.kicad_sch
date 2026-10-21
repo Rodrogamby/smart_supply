@@ -4182,6 +4182,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 77.47) (xy 64.77 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "293d1eaf-8114-4210-b2a8-b6079e07b763")
+	)
+	(wire
+		(pts
 			(xy 20.32 100.33) (xy 17.78 100.33)
 		)
 		(stroke
@@ -4802,6 +4812,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 74.93) (xy 64.77 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb81609d-c302-43df-aacb-86c73036bda8")
+	)
+	(wire
+		(pts
 			(xy 66.04 172.72) (xy 66.04 177.8)
 		)
 		(stroke
@@ -4919,6 +4939,26 @@
 			(justify right bottom)
 		)
 		(uuid "72b04d9d-4da1-4682-b18b-0dfbac2b1c3c")
+	)
+	(label "RLY_CH2"
+		(at 64.77 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9c57868d-a982-4fe7-ae2b-173d1304d8c4")
+	)
+	(label "RLY_CH1"
+		(at 64.77 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a4cbc97b-7bb8-48eb-8d17-e99fc117c391")
 	)
 	(label "MOSI"
 		(at 27.94 59.69 180)
