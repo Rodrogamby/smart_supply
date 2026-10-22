@@ -44,3 +44,6 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+# Archived Backups (KiCad 6.0)
+**/node_modules/
