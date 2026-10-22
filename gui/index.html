@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101827" />
+    <title>Draft of dashboard</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Carrier</p>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="status-stack" aria-live="polite">
+          <span id="broker-status" class="badge bad">Broker disconnected</span>
+          <span id="device-status" class="badge neutral">ESP32 unknown</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="panel connection-panel" aria-labelledby="connection-title">
+          <div>
+            <h2 id="connection-title">Connection</h2>
+          </div>
+          <div class="connection-controls">
+            <label for="broker-url">MQTT WebSocket URL</label>
+            <input id="broker-url" type="url" value="ws://localhost:9001" spellcheck="false" />
+            <div class="button-row">
+              <button id="connect-btn" type="button">Connect</button>
+              <button id="disconnect-btn" type="button" class="secondary" disabled>Disconnect</button>
+            </div>
+          </div>
+        </section>
+
+        <div id="notice" class="notice" role="status" aria-live="polite">Connect to MQTT to receive ESP32 measurements.</div>
+
+        <p class="muted telemetry-time">Last telemetry: <span id="last-update">—</span></p>
+
+        <section class="channels" aria-label="Output channels">
+          <article class="panel channel" data-channel="ch1">
+            <div class="channel-heading"><div><p class="eyebrow">CHANNEL 01</p><h2>120 VAC output</h2></div><span id="ch1-state" class="badge neutral">Unknown</span></div>
+            <div class="readings">
+              <div><span>Voltage</span><strong id="ch1-voltage">—</strong><small>V RMS</small></div>
+              <div><span>Current</span><strong id="ch1-current">—</strong><small>A RMS</small></div>
+              <div><span>Power</span><strong id="ch1-power">—</strong><small>W</small></div>
+            </div>
+            <div class="button-row"><button class="channel-command" data-channel="ch1" data-enabled="true" disabled>Turn on</button><button class="channel-command secondary" data-channel="ch1" data-enabled="false" disabled>Turn off</button></div>
+          </article>
+
+          <article class="panel channel" data-channel="ch2">
+            <div class="channel-heading"><div><p class="eyebrow">CHANNEL 02</p><h2>24 VAC output</h2></div><span id="ch2-state" class="badge neutral">Unknown</span></div>
+            <div class="readings">
+              <div><span>Voltage</span><strong id="ch2-voltage">—</strong><small>V RMS</small></div>
+              <div><span>Current</span><strong id="ch2-current">—</strong><small>A RMS</small></div>
+              <div><span>Power</span><strong id="ch2-power">—</strong><small>W</small></div>
+            </div>
+            <div class="button-row"><button class="channel-command" data-channel="ch2" data-enabled="true" disabled>Turn on</button><button class="channel-command secondary" data-channel="ch2" data-enabled="false" disabled>Turn off</button></div>
+          </article>
+        </section>
+
+        <section class="panel power-panel" aria-labelledby="power-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">AC POWER ANALYSIS</p><h2 id="power-title">Power triangle</h2></div>
+            <label>Channel <select id="power-channel"><option value="ch1">Channel 1 · 120 VAC</option><option value="ch2">Channel 2 · 24 VAC</option></select></label>
+          </div>
+          <div class="power-layout">
+            <div>
+              <svg id="triangle" viewBox="0 0 440 300" role="img" aria-labelledby="triangle-title">
+                <title id="triangle-title">Power triangle: waiting for measurements</title>
+                <line class="triangle-axis" x1="45" y1="150" x2="410" y2="150" />
+                <line class="triangle-axis" x1="45" y1="20" x2="45" y2="280" />
+                <g id="triangle-vectors" visibility="hidden">
+                  <line id="p-vector" class="vector p-vector" />
+                  <line id="q-vector" class="vector q-vector" />
+                  <line id="s-vector" class="vector s-vector" />
+                  <text id="p-label" class="p-label">P</text><text id="q-label" class="q-label">Q</text><text id="s-label" class="s-label">S</text>
+                </g>
+                <text x="385" y="173" class="axis-label">P (W)</text><text x="10" y="17" class="axis-label">Q (var)</text>
+              </svg>
+            </div>
+            <div class="power-values">
+              <div><span>Active power · P</span><strong id="triangle-p">—</strong><small>W</small></div>
+              <div><span>Reactive power · Q</span><strong id="triangle-q">—</strong><small>var</small></div>
+              <div><span>Apparent power · S</span><strong id="triangle-s">—</strong><small>VA</small></div>
+              <div><span>Power factor · PF</span><strong id="triangle-pf">—</strong><small></small></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="events-title">
+          <div class="section-heading"><h2 id="events-title">Event log</h2><button id="clear-log" class="text-button" type="button">Clear</button></div>
+          <ul id="event-log" class="event-log" aria-live="polite"></ul>
+        </section>
+      </main>
+      <footer> prototype lol</footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

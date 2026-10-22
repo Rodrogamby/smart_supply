@@ -1,0 +1,89 @@
+install mosquitto
+
+
+sudo apt update
+sudo apt install -y mosquitto mosquitto-clients
+sudo systemctl enable --now mosquitto
+systemctl is-active mosquitto
+
+
+
+CREATE TLS CERTIFICATE
+sudo apt update
+sudo apt install -y certbot python3-certbot-nginx
+sudo certbot certonly --nginx -d retotest.mexicocentral.cloudapp.azure.com
+
+
+CREATE MQTT USERNAME AND PASSWORD
+sudo mosquitto_passwd -c /etc/mosquitto/passwd reto
+
+Set permissions so Mosquitto can read it:
+sudo chown root:mosquitto /etc/mosquitto/passwd
+sudo chmod 640 /etc/mosquitto/passwd
+
+Give Mosquitto its own protected certificate copies
+sudo install -d -o root -g mosquitto -m 750 /etc/mosquitto/certs
+
+sudo install -o root -g mosquitto -m 640 \
+/etc/letsencrypt/live/retotest.mexicocentral.cloudapp.azure.com/fullchain.pem \
+/etc/mosquitto/certs/fullchain.pem
+
+sudo install -o root -g mosquitto -m 640 \
+/etc/letsencrypt/live/retotest.mexicocentral.cloudapp.azure.com/privkey.pem \
+/etc/mosquitto/certs/privkey.pem
+
+user:reto
+password:reto
+
+
+CONFIGURE THE SECURE MQTT LISTENER
+sudo nano /etc/mosquitto/conf.d/spps.conf
+
+
+CONFIGURATION FILE CONTENT
+paste into /etc/mosquitto/conf.d/spps.conf
+
+# MQTT over TLS
+listener 8883
+protocol mqtt
+
+# Username/password authentication
+allow_anonymous false
+password_file /etc/mosquitto/passwd
+
+# Server certificate and private key
+certfile /etc/mosquitto/certs/fullchain.pem
+keyfile /etc/mosquitto/certs/privkey.pem
+
+
+RESTART AND VERIFY MOSQUITTO
+sudo systemctl restart mosquitto
+systemctl is-active mosquitto
+sudo ss -ltnp 'sport = :8883'
+
+
+AUTOMATIC CERTIFICATE RENEWAL AND DEPLOYMENT
+sudo nano /etc/letsencrypt/renewal-hooks/deploy/mosquitto.sh
+
+paste:
+#!/bin/sh
+set -eu
+
+CERT_DIR="/etc/letsencrypt/live/retotest.mexicocentral.cloudapp.azure.com"
+
+install -o root -g mosquitto -m 640 \
+  "$CERT_DIR/fullchain.pem" \
+  /etc/mosquitto/certs/fullchain.pem
+
+install -o root -g mosquitto -m 640 \
+  "$CERT_DIR/privkey.pem" \
+  /etc/mosquitto/certs/privkey.pem
+
+systemctl reload mosquitto
+
+
+then run:
+sudo chmod 750 /etc/letsencrypt/renewal-hooks/deploy/mosquitto.sh
+sudo systemctl enable --now certbot.timer
+sudo certbot renew --dry-run --run-deploy-hooks
+

@@ -1,0 +1,426 @@
+install mosquitto
+
+
+sudo apt update
+sudo apt install -y mosquitto mosquitto-clients
+sudo systemctl enable --now mosquitto
+systemctl is-active mosquitto
+
+
+
+CREATE TLS CERTIFICATE
+sudo apt update
+sudo apt install -y certbot python3-certbot-nginx
+sudo certbot certonly --nginx -d retotest.mexicocentral.cloudapp.azure.com
+
+
+CREATE MQTT USERNAME AND PASSWORD
+sudo mosquitto_passwd -c /etc/mosquitto/passwd reto
+
+Set permissions so Mosquitto can read it:
+sudo chown root:mosquitto /etc/mosquitto/passwd
+sudo chmod 640 /etc/mosquitto/passwd
+
+Give Mosquitto its own protected certificate copies
+sudo install -d -o root -g mosquitto -m 750 /etc/mosquitto/certs
+
+sudo install -o root -g mosquitto -m 640 \
+/etc/letsencrypt/live/retotest.mexicocentral.cloudapp.azure.com/fullchain.pem \
+/etc/mosquitto/certs/fullchain.pem
+
+sudo install -o root -g mosquitto -m 640 \
+/etc/letsencrypt/live/retotest.mexicocentral.cloudapp.azure.com/privkey.pem \
+/etc/mosquitto/certs/privkey.pem
+
+user:reto
+password:reto
+
+
+CONFIGURE THE SECURE MQTT LISTENER
+sudo nano /etc/mosquitto/conf.d/spps.conf
+
+
+====================================================================
+ADDED DOCUMENTATION — Original notes above preserved
+====================================================================
+
+1. CONFIGURATION FILE CONTENT
+
+Paste into /etc/mosquitto/conf.d/spps.conf:
+
+# MQTT over TLS
+listener 8883
+protocol mqtt
+
+# Require authentication
+allow_anonymous false
+password_file /etc/mosquitto/passwd
+
+# Server certificate and private key
+certfile /etc/mosquitto/certs/fullchain.pem
+keyfile /etc/mosquitto/certs/privkey.pem
+
+Save: Ctrl+O, Enter. Exit: Ctrl+X.
+
+Port 8883 is the conventional MQTT TLS port. The certificate and key
+configuration actually enables TLS; choosing the port alone does not.
+
+
+2. RESTART AND CHECK MOSQUITTO — RUN INSIDE THE VM
+
+sudo systemctl restart mosquitto
+systemctl is-active mosquitto
+sudo ss -ltnp 'sport = :8883'
+
+Verified results:
+active
+LISTEN on 0.0.0.0:8883 and [::]:8883
+
+If startup fails:
+sudo journalctl -u mosquitto -n 40 --no-pager
+sudo tail -n 40 /var/log/mosquitto/mosquitto.log
+
+Problem encountered:
+Error: Unable to open pwfile "/etc/mosquitto/passwd".
+
+Resolution: ensure the password file exists and apply the ownership
+and permissions in the original notes.
+
+If the file already exists, update the user WITHOUT -c:
+sudo mosquitto_passwd /etc/mosquitto/passwd reto
+
+Use -c only when creating the file: it overwrites existing contents.
+
+After repeated startup failures:
+sudo systemctl reset-failed mosquitto
+sudo systemctl restart mosquitto
+
+
+3. AUTOMATIC CERTIFICATE RENEWAL
+
+Certbot renews the originals under /etc/letsencrypt/.
+Mosquitto uses protected copies under /etc/mosquitto/certs/.
+A deploy hook updates those copies and reloads the broker.
+
+sudo nano /etc/letsencrypt/renewal-hooks/deploy/mosquitto.sh
+
+Paste:
+
+#!/bin/sh
+set -eu
+
+CERT_DIR="/etc/letsencrypt/live/retotest.mexicocentral.cloudapp.azure.com"
+
+install -o root -g mosquitto -m 640 \
+  "$CERT_DIR/fullchain.pem" \
+  /etc/mosquitto/certs/fullchain.pem
+
+install -o root -g mosquitto -m 640 \
+  "$CERT_DIR/privkey.pem" \
+  /etc/mosquitto/certs/privkey.pem
+
+systemctl reload mosquitto
+
+Save and exit. Then run:
+
+sudo chmod 750 /etc/letsencrypt/renewal-hooks/deploy/mosquitto.sh
+sudo systemctl enable --now certbot.timer
+sudo certbot renew --dry-run --run-deploy-hooks
+
+Verified result: all simulated renewals succeeded.
+
+Keep HTTP port 80 reachable for the Nginx HTTP validation used by
+this certificate configuration.
+
+
+4. AZURE INBOUND RULE — MQTT TLS
+
+Spanish portal navigation:
+Maquinas virtuales > vm1 > Redes > Configuracion de red >
+Crear regla de puerto > Regla de puerto de entrada
+
+Field                              Value
+Origen                             Any / Cualquiera
+Intervalos de puertos de origen    *
+Destino                            Any / Cualquiera
+Servicio                           Personalizado
+Intervalos de puertos de destino   8883
+Protocolo                          TCP
+Accion                             Permitir
+Prioridad                          310, if unused
+Nombre                             Allow-MQTT-TLS
+
+A matching Deny rule with a lower priority number takes precedence.
+
+Inside the VM, check Ubuntu's firewall:
+sudo ufw status
+
+Only if it reports active:
+sudo ufw allow 8883/tcp
+
+Do not enable UFW merely to perform this test.
+
+
+5. LOCAL TLS DIAGNOSTIC
+
+Run inside the VM:
+
+timeout 10 openssl s_client -connect 127.0.0.1:8883 -servername retotest.mexicocentral.cloudapp.azure.com </dev/null
+
+Verified:
+Verification: OK
+TLSv1.3
+Verify return code: 0 (ok)
+
+This checked local TLS and certificate-chain trust.
+-servername supplies SNI; it does not itself verify the hostname.
+
+For an explicit hostname-verification diagnostic:
+timeout 10 openssl s_client -connect 127.0.0.1:8883 -servername retotest.mexicocentral.cloudapp.azure.com -verify_hostname retotest.mexicocentral.cloudapp.azure.com -verify_return_error -CAfile /etc/ssl/certs/ca-certificates.crt </dev/null
+
+
+6. LOCAL MQTT TEST — TWO SSH SESSIONS
+
+Problem observed:
+The VM's MQTT clients stalled when connecting through the hostname
+resolving to its own public IP. Direct local TLS worked.
+The exact cause of that public-IP route failure was not established.
+
+Temporary workaround, run ONCE inside the VM:
+
+echo '127.0.0.1 retotest.mexicocentral.cloudapp.azure.com # spps-local-test' | sudo tee -a /etc/hosts
+
+This affects the VM only. It retains hostname verification while
+routing locally. Laptop and ESP32 DNS resolution are unaffected.
+
+First SSH session — subscriber:
+mosquitto_sub -h retotest.mexicocentral.cloudapp.azure.com -p 8883 --cafile /etc/ssl/certs/ca-certificates.crt -u reto -P 'reto' -t test2 -v -d
+
+Second SSH session — publisher:
+mosquitto_pub -h retotest.mexicocentral.cloudapp.azure.com -p 8883 --cafile /etc/ssl/certs/ca-certificates.crt -u reto -P 'reto' -t test2 -m "Hola de nuevo" -d
+
+Verified subscriber output:
+test2 Hola de nuevo
+
+Diagnostic messages:
+CONNACK (0): connection and authentication accepted.
+SUBACK: subscription acknowledged.
+PUBLISH: message received by subscriber.
+PINGRESP: broker responded to the keepalive request.
+
+The subscriber stays running. The publisher sends and exits.
+
+-t test2 and -t "test2" are equivalent.
+The shell removes the quotes. An actual newline inside quotes would
+be part of the topic; a visual terminal line wrap is not.
+
+To remove the temporary local override after testing:
+sudo sed -i '/# spps-local-test$/d' /etc/hosts
+
+Removal has not been confirmed. Removing it restores public DNS
+resolution inside the VM and may reproduce the earlier route issue.
+
+
+7. EXTERNAL PORT TEST — WINDOWS POWERSHELL, NOT SSH
+
+Test-NetConnection retotest.mexicocentral.cloudapp.azure.com -Port 8883
+
+Initially failed from both the institutional network and hotspot.
+After adding the Azure inbound rule, the test succeeded:
+
+TcpTestSucceeded : True
+
+A failed ping by itself does not prove MQTT is blocked.
+This command checks TCP reachability, not TLS or MQTT authentication.
+
+
+8. WINDOWS MQTT TLS TEST
+
+Initial error:
+SSL routines::certificate verify failed
+
+Resolution: provide a trusted public CA certificate explicitly.
+
+In local Windows PowerShell:
+
+curl.exe --fail -L "https://letsencrypt.org/certs/isrgrootx1.pem" -o "$env:USERPROFILE\isrgrootx1.pem"
+
+Then publish:
+
+& "C:\Program Files\mosquitto\mosquitto_pub.exe" -h retotest.mexicocentral.cloudapp.azure.com -p 8883 --cafile "$env:USERPROFILE\isrgrootx1.pem" -u reto -P 'reto' -t test2 -m "Hola desde Windows" -d
+
+Verified publisher output:
+Client null sending CONNECT
+Client (null) received CONNACK (0)
+Client null sending PUBLISH ...
+Client null sending DISCONNECT
+
+This confirms connection, authentication, and client publication over
+verified TLS. At QoS 0 this output is not a broker delivery acknowledgment.
+A running subscriber should display:
+test2 Hola desde Windows
+
+
+9. PREVIOUSLY COMPLETED INFRASTRUCTURE
+
+VM name: vm1
+OS: Ubuntu Server 24.04 LTS x64 Gen 2
+Public IP observed: 158.23.60.51
+Private IP observed: 172.16.0.4
+DNS: retotest.mexicocentral.cloudapp.azure.com
+SSH user: azureuser
+MQTT test user: reto
+SSH: TCP 22
+HTTP: TCP 80
+MQTT TLS: TCP 8883
+
+Size selected for the project: Standard_B2ats_v2, 2 vCPUs, 1 GiB RAM.
+SKU diagnostics reported a zone-1 restriction in Mexico Central.
+Zones 2/3 were the next deployment options; the final zone was not
+explicitly recorded.
+
+DNS label setup:
+VM overview > click public IP > Configuracion > Etiqueta de nombre DNS.
+The Azure-managed name points to the VM public IP.
+
+Nginx installed inside the VM:
+sudo apt-get -y update
+sudo apt-get -y install nginx
+
+HTTP port 80 was allowed in Azure.
+Nginx welcome page opened successfully:
+http://retotest.mexicocentral.cloudapp.azure.com
+
+Installing Nginx alone does not configure HTTPS.
+
+Connect from Windows:
+ssh -i "C:\Users\Fabian Aguario\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\TEC\IE\octavo semestre\smart_supply\VM\vm1_key.pem" azureuser@158.23.60.51
+
+-i selects the SSH private identity key file.
+Quote the Windows path because it contains spaces.
+Do not prefix an absolute C:\ path with ~.
+
+Prompt reference:
+PS C:\Users\Fabian Aguario>     Commands run on Windows.
+azureuser@vm1:~$               Commands run on the Ubuntu VM.
+
+After SSH login, the same terminal controls the remote VM.
+exit disconnects and returns to the local shell.
+
+The institutional network initially stalled SSH; the hotspot worked.
+Its specific filtering policy was not confirmed.
+
+
+10. COMMAND AND PERMISSION REFERENCE
+
+sudo       Run with administrator privileges.
+apt update Refresh package lists; does not upgrade installed packages.
+apt install -y
+           Install packages and automatically confirm prompts.
+systemctl enable --now
+           Enable service at boot and start it immediately.
+systemctl is-active
+           Check current service state.
+chown root:mosquitto
+           Set owner root and group mosquitto.
+chmod 640  Owner read/write; group read; others no access.
+chmod 750  Owner full access; group read/traverse; others no access.
+           For directories, execute permission means traversal.
+-h         Broker host.
+-p         Port (lowercase).
+-u         MQTT username.
+-P         MQTT password (uppercase).
+-t         MQTT topic.
+-m         Message payload (publisher).
+-v         Display topic and payload (subscriber).
+-d         Show MQTT diagnostic messages.
+--cafile   Trusted public CA certificates used to verify the server.
+-L         Complete connection URL; requires a URL argument.
+           It is not a loopback flag.
+
+Mosquitto runs as a background service even after SSH disconnects,
+provided the VM remains running.
+
+fullchain.pem: public server certificate and chain.
+privkey.pem: secret server private key; do not share its contents.
+isrgrootx1.pem: public CA trust certificate, not a private key.
+
+A new hostname requires a certificate covering that hostname.
+Changing only the IP does not require a new certificate if the same
+hostname continues to resolve correctly.
+
+
+11. ARCHITECTURE AND CURRENT STATUS
+
+Component / connection                  Role
+Windows MQTT client -> Azure TCP 8883    External TLS publication
+Azure inbound rule -> Mosquitto         Allow access to broker
+Mosquitto -> subscribed clients         Route MQTT messages
+Certbot -> protected certificate copies Renew and deploy certificates
+Nginx HTTP                              Web serving and cert validation
+ESP32 -> Mosquitto                       Next milestone; not tested yet
+Python subscriber -> database           Planned historical storage
+Browser dashboard -> secure WebSockets  Planned integration
+
+Mosquitto routes messages. It is not a historical measurement database.
+The dashboard remains a local HTML/CSS/JS project pending deployment.
+
+Completed:
+- Azure VM and SSH access.
+- Nginx HTTP page.
+- Mosquitto broker installation and service.
+- Certificate issuance and renewal dry run.
+- MQTT password authentication.
+- Local TLS and MQTT tests.
+- External TCP reachability.
+- Windows MQTT publication with verified TLS.
+
+Next:
+- Connect ESP32 to 2.4 GHz Wi-Fi.
+- Check MicroPython version.
+- Configure MQTT library, CA trust, hostname verification and device time.
+- Publish test message and receive it on the VM.
+- Add structured telemetry and historical database storage.
+- Connect dashboard and remote commands.
+
+
+12. TEST CREDENTIAL UPDATE BEFORE REMOTE POWER CONTROL
+
+Original notes and test commands preserve reto/reto as requested.
+Replace the test password before operating physical power outputs.
+Passwords passed with -P can appear in shell history/process arguments.
+
+Update existing user (do not use -c):
+sudo mosquitto_passwd /etc/mosquitto/passwd reto
+sudo systemctl reload mosquitto
+
+Update client credentials accordingly.
+The password-change step is recommended; it has not been performed.
+
+
+13. OFFICIAL REFERENCES
+
+Mosquitto installation:
+https://mosquitto.org/download/
+
+Publisher options:
+https://mosquitto.org/man/mosquitto_pub-1.html
+
+Subscriber options:
+https://mosquitto.org/man/mosquitto_sub-1.html
+
+Broker configuration:
+https://mosquitto.org/man/mosquitto-conf-5.html
+
+Authentication:
+https://mosquitto.org/documentation/authentication-methods/
+
+Certbot and renewal hooks:
+https://eff-certbot.readthedocs.io/en/stable/using.html
+
+Let's Encrypt certificate chains:
+https://letsencrypt.org/certificates/
+
+Azure public IP DNS labels:
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses/
+
