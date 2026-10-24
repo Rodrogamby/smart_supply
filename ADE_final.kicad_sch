@@ -2329,22 +2329,10 @@
 		(uuid "efc487ac-4760-47c8-9850-7cb0a6893e09")
 	)
 	(junction
-		(at 74.93 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1b70fe82-a721-416f-a427-7b1b98d5d239")
-	)
-	(junction
 		(at 132.08 21.59)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2d2d73dd-2386-4729-a0a5-e00daa13e97f")
-	)
-	(junction
-		(at 85.09 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2ea7a91e-c791-4718-abc2-19299dc30c5f")
 	)
 	(junction
 		(at 95.25 24.13)
@@ -2371,12 +2359,6 @@
 		(uuid "5796c6ea-5d65-4ada-9dda-239c20eadba3")
 	)
 	(junction
-		(at 99.06 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "620c2d9f-5dbf-4714-9bb8-b8f81c243ea3")
-	)
-	(junction
 		(at 72.39 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2387,12 +2369,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "71ae412b-80c6-4021-8779-129e055c81e3")
-	)
-	(junction
-		(at 109.22 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "80fe7abc-efb6-443f-98b7-9006313980c3")
 	)
 	(junction
 		(at 40.64 189.23)
@@ -2419,10 +2395,6 @@
 		(uuid "e5ba0d77-19e1-4954-af14-2500ca0cded8")
 	)
 	(no_connect
-		(at 76.2 57.15)
-		(uuid "20792d49-6daf-4eba-9c3a-03d9a21644c5")
-	)
-	(no_connect
 		(at 91.44 57.15)
 		(uuid "389d4375-93f6-4e59-98bc-23c82280dc24")
 	)
@@ -2431,26 +2403,12 @@
 		(uuid "54054696-0045-4683-ba53-e9be255d951c")
 	)
 	(no_connect
-		(at 76.2 59.69)
-		(uuid "6e931b07-28f8-49ac-a408-0ebedda78e47")
-	)
-	(no_connect
 		(at 91.44 59.69)
 		(uuid "7172f9c3-7cd7-4cc9-a983-2bc5288d1a80")
 	)
 	(no_connect
 		(at 91.44 67.31)
 		(uuid "c7401e0a-28ec-4c66-9683-f7d0e4516444")
-	)
-	(wire
-		(pts
-			(xy 99.06 116.84) (xy 99.06 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a3b1cac-3ca8-46c2-8a88-d56761536716")
 	)
 	(wire
 		(pts
@@ -2744,16 +2702,6 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 116.84) (xy 85.09 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8038c08d-b9e4-4559-9317-ca8562c52977")
-	)
-	(wire
-		(pts
 			(xy 38.1 57.15) (xy 38.1 60.96)
 		)
 		(stroke
@@ -2864,16 +2812,6 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 116.84) (xy 74.93 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa912ae4-4c92-4bf3-9a70-498775cf22fd")
-	)
-	(wire
-		(pts
 			(xy 76.2 57.15) (xy 80.01 57.15)
 		)
 		(stroke
@@ -2951,16 +2889,6 @@
 			(type default)
 		)
 		(uuid "c284cfb3-e1cf-4548-9d0d-987bf21a7bbb")
-	)
-	(wire
-		(pts
-			(xy 109.22 116.84) (xy 109.22 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c326822f-1130-41a0-96b9-7236fe74d14a")
 	)
 	(wire
 		(pts
@@ -5529,84 +5457,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 109.22 119.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "667a7505-7a60-4031-8823-ff9f8c457713")
-		(property "Reference" "#PWR0101"
-			(at 109.22 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 109.22 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "RF_Module:ESP32-S3-WROOM-1"
-			(at 109.22 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 109.22 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 109.22 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c6514652-099e-49ae-9a38-f963365e4188")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/ec25a9df-b47e-476b-804e-5c9e6193e727"
-					(reference "#PWR0101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 33.02 36.83 180)
 		(unit 1)
@@ -6008,6 +5858,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 76.2 57.15 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7dfe3580-27de-42f6-8a8b-7a6c0413edef")
+		(property "Reference" "#PWR0104"
+			(at 69.85 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 76.708 55.372 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 76.2 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fa470b80-da92-4a18-8ae1-06d00aaa5d84")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/ec25a9df-b47e-476b-804e-5c9e6193e727"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 156.21 60.96 90)
 		(unit 1)
@@ -6172,84 +6100,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/ec25a9df-b47e-476b-804e-5c9e6193e727"
 					(reference "#PWR064")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 99.06 119.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8f737271-b911-4aae-b802-672b94cb9cb8")
-		(property "Reference" "#PWR099"
-			(at 99.06 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 99.06 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "RF_Module:ESP32-S3-WROOM-1"
-			(at 99.06 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 99.06 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 99.06 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "14d15053-cebe-474f-8864-b521a69ba8e2")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/ec25a9df-b47e-476b-804e-5c9e6193e727"
-					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -6740,6 +6590,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 76.2 59.69 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a9921640-582d-4411-a835-ae5b94aa6b60")
+		(property "Reference" "#PWR0105"
+			(at 69.85 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 76.708 57.912 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 76.2 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a083ff4-0482-40d0-a076-c1ae38ac3ba6")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/ec25a9df-b47e-476b-804e-5c9e6193e727"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 78.74 76.2 0)
 		(unit 1)
@@ -7134,84 +7062,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/ec25a9df-b47e-476b-804e-5c9e6193e727"
 					(reference "C34")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 85.09 119.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b83efa37-8c52-4184-a35c-5ef2314da77b")
-		(property "Reference" "#PWR086"
-			(at 85.09 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 85.09 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "RF_Module:ESP32-S3-WROOM-1"
-			(at 85.09 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 85.09 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 85.09 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "548758ef-8522-4041-9331-ceb7d55ff43d")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/ec25a9df-b47e-476b-804e-5c9e6193e727"
-					(reference "#PWR086")
 					(unit 1)
 				)
 			)
@@ -7844,84 +7694,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/ec25a9df-b47e-476b-804e-5c9e6193e727"
 					(reference "#PWR083")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 74.93 119.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "de752a5b-70f4-4178-b381-49a1bc714a4d")
-		(property "Reference" "#PWR084"
-			(at 74.93 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 74.93 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "RF_Module:ESP32-S3-WROOM-1"
-			(at 74.93 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 74.93 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 74.93 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "57c632ba-7f1e-4041-9abc-0ac11121dc2f")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/ec25a9df-b47e-476b-804e-5c9e6193e727"
-					(reference "#PWR084")
 					(unit 1)
 				)
 			)
