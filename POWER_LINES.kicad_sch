@@ -2059,285 +2059,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_DPST"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SW"
-				(at 0 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SW_DPST"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Double Pole Single Throw (DPST) Switch"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "switch dual double-pole single-throw OFF-ON"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SW_DPST_0_0"
-				(circle
-					(center -2.032 2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -2.032 -2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 2.794) (xy 1.27 4.064)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 -2.286) (xy 1.27 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0 3.175)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 1.905)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy 0 -0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 -2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_DPST_1_1"
-				(rectangle
-					(start -3.175 4.445)
-					(end 3.175 -3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Transformer:ZMCT103C"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3552,7 +3273,7 @@
 		)
 	)
 	(circle
-		(center 116.84 85.09)
+		(center 144.78 85.09)
 		(radius 1.7961)
 		(stroke
 			(width 0)
@@ -3576,7 +3297,7 @@
 		(uuid "400ae686-5632-495e-b9dd-54726f229b9f")
 	)
 	(circle
-		(center 110.49 85.09)
+		(center 138.43 85.09)
 		(radius 1.7961)
 		(stroke
 			(width 0)
@@ -3588,7 +3309,7 @@
 		(uuid "492cf1dc-1492-4a41-9cbf-b91e44ddb467")
 	)
 	(circle
-		(center 106.68 31.75)
+		(center 134.62 31.75)
 		(radius 1.7961)
 		(stroke
 			(width 0)
@@ -3601,7 +3322,7 @@
 	)
 	(rectangle
 		(start 13.97 12.7)
-		(end 139.7 93.98)
+		(end 165.1 93.98)
 		(stroke
 			(width 0)
 			(type default)
@@ -3612,7 +3333,7 @@
 		(uuid "5354be45-8b41-4a42-86c2-b20190ee0e40")
 	)
 	(circle
-		(center 101.6 31.75)
+		(center 129.54 31.75)
 		(radius 1.7961)
 		(stroke
 			(width 0)
@@ -3695,7 +3416,7 @@
 	)
 	(text "Place pads for external cable ZMCT103"
 		(exclude_from_sim no)
-		(at 99.568 26.67 0)
+		(at 127.508 26.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3713,9 +3434,19 @@
 		)
 		(uuid "36c08a9c-8749-4179-bc37-2b013116647e")
 	)
+	(text "DPST SWITCH"
+		(exclude_from_sim no)
+		(at 71.882 40.386 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4a947bc3-083c-4300-9571-5c16dd55bdde")
+	)
 	(text "Place pads for external cable ZMCT103"
 		(exclude_from_sim no)
-		(at 117.094 80.518 0)
+		(at 145.034 80.518 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3902,7 +3633,7 @@
 		(uuid "792fbd6b-e722-427f-a080-2270b91500f4")
 	)
 	(junction
-		(at 87.63 36.83)
+		(at 115.57 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7c843bc3-2be8-4f6a-a6eb-aa17fe8effad")
@@ -4016,7 +3747,7 @@
 		(uuid "f996d18c-ada1-4f75-b4c2-45f8b5f95f4d")
 	)
 	(junction
-		(at 85.09 31.75)
+		(at 113.03 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fd642755-6262-434b-932d-a12b5e824854")
@@ -4183,7 +3914,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 36.83) (xy 113.03 36.83)
+			(xy 115.57 36.83) (xy 140.97 36.83)
 		)
 		(stroke
 			(width 0)
@@ -4553,7 +4284,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 31.75) (xy 113.03 31.75)
+			(xy 113.03 31.75) (xy 140.97 31.75)
 		)
 		(stroke
 			(width 0)
@@ -4723,6 +4454,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 36.83) (xy 115.57 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "666f0566-eeac-4553-af32-3a69c8397c51")
+	)
+	(wire
+		(pts
 			(xy 217.17 127) (xy 217.17 133.35)
 		)
 		(stroke
@@ -4733,7 +4474,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 31.75) (xy 85.09 31.75)
+			(xy 100.33 31.75) (xy 113.03 31.75)
 		)
 		(stroke
 			(width 0)
@@ -4863,6 +4604,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 31.75) (xy 55.88 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7292111e-d231-469d-9bfe-973efafae426")
+	)
+	(wire
+		(pts
 			(xy 247.65 27.94) (xy 247.65 38.1)
 		)
 		(stroke
@@ -4923,23 +4674,13 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 77.47) (xy 87.63 85.09)
+			(xy 115.57 77.47) (xy 115.57 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7a6172ab-e65e-4403-8beb-39803fcd7f96")
-	)
-	(wire
-		(pts
-			(xy 63.5 36.83) (xy 87.63 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7bec5fa0-f1ff-4bad-aa02-2959515c5bba")
 	)
 	(wire
 		(pts
@@ -4953,7 +4694,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 90.17) (xy 121.92 90.17)
+			(xy 113.03 90.17) (xy 149.86 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5013,7 +4754,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 77.47) (xy 85.09 90.17)
+			(xy 113.03 77.47) (xy 113.03 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5063,6 +4804,26 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 36.83) (xy 86.36 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84e886c1-df48-40c5-afec-87849c436fe0")
+	)
+	(wire
+		(pts
+			(xy 87.63 31.75) (xy 95.25 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8519574c-6af8-428a-9de9-a4ab13ea9bf7")
+	)
+	(wire
+		(pts
 			(xy 102.87 186.69) (xy 113.03 186.69)
 		)
 		(stroke
@@ -5083,7 +4844,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 31.75) (xy 53.34 31.75)
+			(xy 33.02 31.75) (xy 54.61 31.75)
 		)
 		(stroke
 			(width 0)
@@ -5173,7 +4934,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 85.09) (xy 121.92 85.09)
+			(xy 115.57 85.09) (xy 149.86 85.09)
 		)
 		(stroke
 			(width 0)
@@ -5253,7 +5014,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 30.48) (xy 72.39 31.75)
+			(xy 99.06 30.48) (xy 100.33 31.75)
 		)
 		(stroke
 			(width 0)
@@ -5443,16 +5204,6 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 31.75) (xy 67.31 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bd8b422c-406b-4494-a8c6-3e94992074be")
-	)
-	(wire
-		(pts
 			(xy 265.43 62.23) (xy 265.43 53.34)
 		)
 		(stroke
@@ -5503,7 +5254,17 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 31.75) (xy 85.09 49.53)
+			(xy 86.36 33.02) (xy 87.63 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c20b7603-1fb9-47d3-8805-d0be7209929e")
+	)
+	(wire
+		(pts
+			(xy 113.03 31.75) (xy 113.03 49.53)
 		)
 		(stroke
 			(width 0)
@@ -5573,7 +5334,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 36.83) (xy 87.63 49.53)
+			(xy 115.57 36.83) (xy 115.57 49.53)
 		)
 		(stroke
 			(width 0)
@@ -5743,7 +5504,17 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 36.83) (xy 53.34 36.83)
+			(xy 54.61 36.83) (xy 55.88 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f08519a5-1fbd-4656-8a5d-fc9f714cdd1c")
+	)
+	(wire
+		(pts
+			(xy 33.02 36.83) (xy 54.61 36.83)
 		)
 		(stroke
 			(width 0)
@@ -5753,7 +5524,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 31.75) (xy 68.58 30.48)
+			(xy 95.25 31.75) (xy 96.52 30.48)
 		)
 		(stroke
 			(width 0)
@@ -5882,7 +5653,7 @@
 		(uuid "46e420d3-6188-4a10-a81f-de08df0e264c")
 	)
 	(label "CH1_L"
-		(at 113.03 31.75 0)
+		(at 140.97 31.75 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6072,7 +5843,7 @@
 		(uuid "d593d221-6077-4929-95ad-67278341d02d")
 	)
 	(label "CH2_L"
-		(at 121.92 85.09 0)
+		(at 149.86 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6142,7 +5913,7 @@
 		(uuid "fe050696-0d1a-461b-9456-3bcae1feb0b4")
 	)
 	(label "CH1_N"
-		(at 113.03 36.83 0)
+		(at 140.97 36.83 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6152,7 +5923,7 @@
 		(uuid "fe4172cd-8dbe-47b8-89eb-a8540bf23448")
 	)
 	(label "CH2_N"
-		(at 121.92 90.17 0)
+		(at 149.86 90.17 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6194,7 +5965,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 82.2452 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -6273,7 +6044,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 111.252 158.75 90)
 			(hide yes)
 			(show_name no)
@@ -6352,7 +6123,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RELAY_G2R-1A-E AC12_OMR"
+		(property "Footprint" "SmartSupplyLib:RELAY_G2R-1A-E AC12_OMR"
 			(at 214.63 127 0)
 			(hide yes)
 			(show_name no)
@@ -6447,7 +6218,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 67.0052 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -6606,7 +6377,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 133.0452 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -6685,7 +6456,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RELAY_G2R-1A-E AC12_OMR"
+		(property "Footprint" "SmartSupplyLib:RELAY_G2R-1A-E AC12_OMR"
 			(at 215.9 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -6831,7 +6602,7 @@
 	)
 	(symbol
 		(lib_id "SmartSupplyLib:1717020")
-		(at 85.09 49.53 90)
+		(at 113.03 49.53 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -6842,7 +6613,7 @@
 		(dnp no)
 		(uuid "2ebd3a7d-658e-4ac9-987d-89d771d17bb9")
 		(property "Reference" "J8"
-			(at 81.28 57.1499 90)
+			(at 109.22 57.1499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6853,7 +6624,7 @@
 			)
 		)
 		(property "Value" "1717020"
-			(at 81.28 59.6899 90)
+			(at 109.22 59.6899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6863,8 +6634,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CONN_1717020_PXC"
-			(at 85.09 49.53 0)
+		(property "Footprint" "SmartSupplyLib:CONN_1717020_PXC"
+			(at 113.03 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6876,7 +6647,7 @@
 			)
 		)
 		(property "Datasheet" "1717020"
-			(at 85.09 49.53 0)
+			(at 113.03 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6888,7 +6659,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 85.09 49.53 0)
+			(at 113.03 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6944,7 +6715,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 191.262 148.59 90)
 			(hide yes)
 			(show_name no)
@@ -7024,7 +6795,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 123.19 188.468 90)
 			(hide yes)
 			(show_name no)
@@ -7105,7 +6876,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 82.2452 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -7472,6 +7243,89 @@
 		)
 	)
 	(symbol
+		(lib_id "SmartSupplyLib:1717020")
+		(at 55.88 33.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "461a9af8-deea-4d57-9ac0-ed253f3320a6")
+		(property "Reference" "J11"
+			(at 63.4999 29.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1717020"
+			(at 66.0399 29.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartSupplyLib:CONN_1717020_PXC"
+			(at 55.88 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "1717020"
+			(at 55.88 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d4d2e55d-4ba9-4dd8-abfe-9d2a2dd7b3cf")
+		)
+		(pin "2"
+			(uuid "8822a678-5cf7-40bc-9d74-506400898291")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 246.38 99.06 0)
 		(unit 1)
@@ -7580,7 +7434,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 123.19 137.668 90)
 			(hide yes)
 			(show_name no)
@@ -7660,7 +7514,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 72.39 153.162 90)
 			(hide yes)
 			(show_name no)
@@ -7827,7 +7681,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "RELAY_G2R-1A-E AC12_OMR"
+		(property "Footprint" "SmartSupplyLib:RELAY_G2R-1A-E AC12_OMR"
 			(at 262.89 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -8008,7 +7862,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 57.912 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -8087,7 +7941,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 111.252 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -8247,7 +8101,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CONN_1730405_PXC"
+		(property "Footprint" "SmartSupplyLib:CONN_1730405_PXC"
 			(at 33.02 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -8331,7 +8185,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 123.19 150.622 90)
 			(hide yes)
 			(show_name no)
@@ -8412,7 +8266,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 67.0052 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -8539,92 +8393,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_DPST")
-		(at 58.42 34.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "777fafb6-d408-4b37-ba21-5ccc0b708299")
-		(property "Reference" "SW2"
-			(at 58.42 25.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_DPST"
-			(at 58.42 27.94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_NKK_GW12LJP"
-			(at 58.42 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 58.42 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Double Pole Single Throw (DPST) Switch"
-			(at 58.42 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "244f25a1-fd81-49b3-86d3-9bca5f8ebd14")
-		)
-		(pin "4"
-			(uuid "5c7ebf7f-d9f0-4e49-ba32-8312c8bf86a3")
-		)
-		(pin "1"
-			(uuid "ab4c3c64-f522-4621-911d-c0e4c053ae6c")
-		)
-		(pin "3"
-			(uuid "590d00d8-2e6f-4b08-b860-e7eabc5c69ef")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
-					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 64.77 110.49 180)
 		(unit 1)
@@ -8658,7 +8426,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 66.548 110.49 90)
 			(hide yes)
 			(show_name no)
@@ -9227,7 +8995,7 @@
 	)
 	(symbol
 		(lib_id "SamacSys_Parts:0031.8201.G")
-		(at 68.58 30.48 90)
+		(at 96.52 30.48 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9238,7 +9006,7 @@
 		(fields_autoplaced yes)
 		(uuid "8b320314-246c-480a-8991-5491b465a713")
 		(property "Reference" "H5"
-			(at 74.93 19.0499 90)
+			(at 102.87 19.0499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9249,7 +9017,7 @@
 			)
 		)
 		(property "Value" "0031.8201.G"
-			(at 74.93 21.5899 90)
+			(at 102.87 21.5899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9259,8 +9027,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "00318201G"
-			(at 163.5 13.97 0)
+		(property "Footprint" "SmartSupplyLib:fuse holder"
+			(at 191.44 13.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9272,7 +9040,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.schurter.com/en/datasheet/ogn"
-			(at 263.5 13.97 0)
+			(at 291.44 13.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9284,7 +9052,7 @@
 			)
 		)
 		(property "Description" "OGN for THT 22.5mm"
-			(at 68.58 30.48 0)
+			(at 96.52 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9295,7 +9063,7 @@
 			)
 		)
 		(property "Height" "12.7"
-			(at 463.5 13.97 0)
+			(at 491.44 13.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9307,7 +9075,7 @@
 			)
 		)
 		(property "Mouser Part Number" "693-0031.8201.G"
-			(at 563.5 13.97 0)
+			(at 591.44 13.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9319,7 +9087,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Schurter/0031.8201.G?qs=53fxdJjyGHQ26HnfkWkpvg%3D%3D"
-			(at 663.5 13.97 0)
+			(at 691.44 13.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9331,7 +9099,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "SCHURTER"
-			(at 763.5 13.97 0)
+			(at 791.44 13.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9343,7 +9111,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "0031.8201.G"
-			(at 863.5 13.97 0)
+			(at 891.44 13.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9402,7 +9170,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "RELAY_G2R-1A-E AC12_OMR"
+		(property "Footprint" "SmartSupplyLib:RELAY_G2R-1A-E AC12_OMR"
 			(at 261.62 127 0)
 			(hide yes)
 			(show_name no)
@@ -9600,7 +9368,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal"
 			(at 31.75 109.728 90)
 			(hide yes)
 			(show_name no)
@@ -9679,7 +9447,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 111.252 128.27 90)
 			(hide yes)
 			(show_name no)
@@ -9758,7 +9526,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 123.19 99.822 90)
 			(hide yes)
 			(show_name no)
@@ -9837,7 +9605,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 185.42 71.882 90)
 			(hide yes)
 			(show_name no)
@@ -9916,7 +9684,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 57.912 180.34 90)
 			(hide yes)
 			(show_name no)
@@ -10075,7 +9843,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 133.0452 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -10284,6 +10052,90 @@
 		)
 	)
 	(symbol
+		(lib_id "SmartSupplyLib:1717020")
+		(at 86.36 33.02 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c6884049-2ccb-45db-b416-292e9b263df2")
+		(property "Reference" "J12"
+			(at 78.7401 29.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1717020"
+			(at 76.2001 29.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartSupplyLib:CONN_1717020_PXC"
+			(at 86.36 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "1717020"
+			(at 86.36 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b0f8d7c2-b2f3-4c35-bc1d-0f16d3e2a813")
+		)
+		(pin "2"
+			(uuid "d176be9e-2d22-452c-8cff-2fce2a5448dd")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 193.04 87.63 0)
 		(unit 1)
@@ -10391,7 +10243,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 111.252 179.07 90)
 			(hide yes)
 			(show_name no)
@@ -10627,7 +10479,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 133.0452 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -10707,7 +10559,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal"
 			(at 41.91 109.728 90)
 			(hide yes)
 			(show_name no)
@@ -10877,7 +10729,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 66.548 161.29 90)
 			(hide yes)
 			(show_name no)
@@ -10959,7 +10811,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 133.0452 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -11038,7 +10890,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 191.262 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -11165,7 +11017,7 @@
 	)
 	(symbol
 		(lib_id "SmartSupplyLib:1717020")
-		(at 85.09 77.47 90)
+		(at 113.03 77.47 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11176,7 +11028,7 @@
 		(fields_autoplaced yes)
 		(uuid "f4654822-dfb2-41c9-a4cf-6e940b8c2068")
 		(property "Reference" "J9"
-			(at 91.44 67.3099 90)
+			(at 119.38 67.3099 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11187,7 +11039,7 @@
 			)
 		)
 		(property "Value" "1717020"
-			(at 91.44 69.8499 90)
+			(at 119.38 69.8499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11197,8 +11049,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "CONN_1717020_PXC"
-			(at 85.09 77.47 0)
+		(property "Footprint" "SmartSupplyLib:CONN_1717020_PXC"
+			(at 113.03 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11210,7 +11062,7 @@
 			)
 		)
 		(property "Datasheet" "1717020"
-			(at 85.09 77.47 0)
+			(at 113.03 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11222,7 +11074,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 85.09 77.47 0)
+			(at 113.03 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11382,7 +11234,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 185.42 140.462 90)
 			(hide yes)
 			(show_name no)
@@ -11462,7 +11314,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 72.39 102.362 90)
 			(hide yes)
 			(show_name no)
@@ -11542,7 +11394,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 36.83 160.528 90)
 			(hide yes)
 			(show_name no)

@@ -5,405 +5,6 @@
 	(uuid "21296b74-bf53-423a-9456-533c3aa9c4a2")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Micro_SD_Card_Det_Hirose_DM3AT"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at -16.51 17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Micro_SD_Card_Det_Hirose_DM3AT"
-				(at 16.51 17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(property "Footprint" ""
-				(at 52.07 17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Micro SD Card Socket with card detection pins"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector SD microsd"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "microSD*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Micro_SD_Card_Det_Hirose_DM3AT_0_1"
-				(polyline
-					(pts
-						(xy -8.89 -8.89) (xy -8.89 11.43) (xy -1.27 11.43) (xy 2.54 15.24) (xy 3.81 15.24) (xy 3.81 13.97)
-						(xy 6.35 13.97) (xy 7.62 15.24) (xy 20.32 15.24) (xy 20.32 -8.89) (xy -8.89 -8.89)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -7.62 10.795)
-					(end -5.08 9.525)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 8.255)
-					(end -5.08 6.985)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 5.715)
-					(end -5.08 4.445)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 3.175)
-					(end -5.08 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 0.635)
-					(end -5.08 -0.635)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 -1.905)
-					(end -5.08 -3.175)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 -4.445)
-					(end -5.08 -5.715)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 -6.985)
-					(end -5.08 -8.255)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 16.51 15.24) (xy 16.51 16.51) (xy -19.05 16.51) (xy -19.05 -16.51) (xy 16.51 -16.51) (xy 16.51 -8.89)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Micro_SD_Card_Det_Hirose_DM3AT_1_1"
-				(pin bidirectional line
-					(at -22.86 10.16 0)
-					(length 3.81)
-					(name "DAT2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -22.86 7.62 0)
-					(length 3.81)
-					(name "DAT3/CD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -22.86 5.08 0)
-					(length 3.81)
-					(name "CMD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -22.86 2.54 0)
-					(length 3.81)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -22.86 0 0)
-					(length 3.81)
-					(name "CLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -22.86 -2.54 0)
-					(length 3.81)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -22.86 -5.08 0)
-					(length 3.81)
-					(name "DAT0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -22.86 -7.62 0)
-					(length 3.81)
-					(name "DAT1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -22.86 -12.7 0)
-					(length 3.81)
-					(name "DET_B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -22.86 -10.16 0)
-					(length 3.81)
-					(name "DET_A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 -12.7 180)
-					(length 3.81)
-					(name "SHIELD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "SH"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:USB_C_Receptacle_USB2.0_16P"
 			(pin_names
 				(offset 1.016)
@@ -3406,6 +3007,396 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "SmartSupplyLib:DM3AT-SF-PEJM5"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 29.21 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "DM3AT-SF-PEJM5"
+				(at 29.21 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "DM3ATSFPEJM5"
+				(at 29.21 -94.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Hirose-HRS-DM3AT-SF-PEJM5_C114218.pdf"
+				(at 29.21 -194.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "Memory Card Connectors R/A SMT MICROSD CON PUSH-PUSH TOP BRDMNT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Height" "1.83"
+				(at 29.21 -394.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Part Number" "798-DM3AT-SF-PEJM5"
+				(at 29.21 -494.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Hirose-Connector/DM3AT-SF-PEJM5?qs=LZSZKJVF%252B2WTDKp%252BR7IYAQ%3D%3D"
+				(at 29.21 -594.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Name" "Hirose"
+				(at 29.21 -694.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Part_Number" "DM3AT-SF-PEJM5"
+				(at 29.21 -794.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(symbol "DM3AT-SF-PEJM5_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 27.94 -17.78)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "DAT2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "CD/DAT3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 0)
+					(length 5.08)
+					(name "CMD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 0)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -10.16 0)
+					(length 5.08)
+					(name "CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -12.7 0)
+					(length 5.08)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -15.24 0)
+					(length 5.08)
+					(name "DAT0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 33.02 0 180)
+					(length 5.08)
+					(name "DAT1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 33.02 -2.54 180)
+					(length 5.08)
+					(name "MP1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 33.02 -5.08 180)
+					(length 5.08)
+					(name "MP2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 33.02 -7.62 180)
+					(length 5.08)
+					(name "MP3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 33.02 -10.16 180)
+					(length 5.08)
+					(name "MP4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 33.02 -12.7 180)
+					(length 5.08)
+					(name "MP5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 33.02 -15.24 180)
+					(length 5.08)
+					(name "MP6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_Push"
 			(pin_numbers
 				(hide yes)
@@ -4168,6 +4159,24 @@
 		(uuid "2fac02ac-600d-4810-8fca-09f51699a38d")
 	)
 	(junction
+		(at 279.4 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "30325f1b-8d72-4c3a-94f3-7a218a87a00f")
+	)
+	(junction
+		(at 281.94 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "30e68f31-17b5-437d-b257-afa5daa1ed12")
+	)
+	(junction
+		(at 279.4 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "41afae37-a506-4434-8de0-f26e444bf42d")
+	)
+	(junction
 		(at 186.69 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4239,13 +4248,11 @@
 		(color 0 0 0 0)
 		(uuid "f174bdf0-d1d2-4b4c-89db-096c6e0ea415")
 	)
-	(no_connect
-		(at 234.95 52.07)
-		(uuid "36171853-f3e4-4f66-bd66-eb46b8b69080")
-	)
-	(no_connect
-		(at 234.95 49.53)
-		(uuid "49ecfaf2-e982-4450-9ba6-cf052151bd51")
+	(junction
+		(at 281.94 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fcc5a1c3-8e60-4583-a1da-3dce8063383f")
 	)
 	(no_connect
 		(at 109.22 34.29)
@@ -4467,6 +4474,16 @@
 	)
 	(wire
 		(pts
+			(xy 241.3 38.1) (xy 245.11 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "295b19b7-efca-4cbc-8964-f573550b4b06")
+	)
+	(wire
+		(pts
 			(xy 20.32 100.33) (xy 17.78 100.33)
 		)
 		(stroke
@@ -4507,7 +4524,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 34.29) (xy 238.76 34.29)
+			(xy 241.3 30.48) (xy 245.11 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4557,6 +4574,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 40.64) (xy 279.4 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "397de5c9-4971-4d2e-8d5e-accda3f05a0e")
+	)
+	(wire
+		(pts
 			(xy 186.69 63.5) (xy 190.5 63.5)
 		)
 		(stroke
@@ -4567,7 +4594,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 46.99) (xy 238.76 46.99)
+			(xy 279.4 25.4) (xy 278.13 25.4)
 		)
 		(stroke
 			(width 0)
@@ -4577,13 +4604,13 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 49.53) (xy 238.76 49.53)
+			(xy 280.67 27.94) (xy 281.94 29.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3d38303e-c0ba-4353-8d1d-d682e5269b9e")
+		(uuid "4380b3aa-bb4c-4235-88dc-96f0694ad9ce")
 	)
 	(wire
 		(pts
@@ -4617,7 +4644,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 36.83) (xy 238.76 36.83)
+			(xy 241.3 33.02) (xy 245.11 33.02)
 		)
 		(stroke
 			(width 0)
@@ -4657,7 +4684,7 @@
 	)
 	(wire
 		(pts
-			(xy 283.21 52.07) (xy 283.21 55.88)
+			(xy 283.21 30.48) (xy 283.21 34.29)
 		)
 		(stroke
 			(width 0)
@@ -4684,6 +4711,16 @@
 			(type default)
 		)
 		(uuid "4bc87279-a895-456a-be1b-f5661eb67e80")
+	)
+	(wire
+		(pts
+			(xy 278.13 30.48) (xy 281.94 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cb73324-e7e9-48cf-a20d-1428d4baa622")
 	)
 	(wire
 		(pts
@@ -4727,6 +4764,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 38.1) (xy 279.4 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bd1ae8f-b486-4fc8-a98f-d5500c48834d")
+	)
+	(wire
+		(pts
 			(xy 182.88 63.5) (xy 186.69 63.5)
 		)
 		(stroke
@@ -4744,16 +4791,6 @@
 			(type default)
 		)
 		(uuid "5cc0a022-d9e9-4888-b5a1-7b6a3265a6a9")
-	)
-	(wire
-		(pts
-			(xy 234.95 41.91) (xy 238.76 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d5a1d25-83db-4077-90a3-08855a70a1c3")
 	)
 	(wire
 		(pts
@@ -4777,7 +4814,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 44.45) (xy 238.76 44.45)
+			(xy 241.3 40.64) (xy 245.11 40.64)
 		)
 		(stroke
 			(width 0)
@@ -4804,6 +4841,26 @@
 			(type default)
 		)
 		(uuid "6927d72b-9faa-4c02-a95c-fa4566cc12d2")
+	)
+	(wire
+		(pts
+			(xy 278.13 33.02) (xy 281.94 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a97f143-6147-4f85-9597-d87c540f0196")
+	)
+	(wire
+		(pts
+			(xy 279.4 38.1) (xy 279.4 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d27f580-c825-4705-9c6b-9aa2d957df04")
 	)
 	(wire
 		(pts
@@ -4834,6 +4891,16 @@
 			(type default)
 		)
 		(uuid "75597317-834c-4009-8683-b3b858e13d2f")
+	)
+	(wire
+		(pts
+			(xy 281.94 34.29) (xy 280.67 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "766abbdf-9af2-4538-b273-1f13d513a402")
 	)
 	(wire
 		(pts
@@ -4917,6 +4984,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 35.56) (xy 279.4 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8dfdfbf4-a0a0-4cce-8d07-49f49386aaf8")
+	)
+	(wire
+		(pts
 			(xy 30.48 100.33) (xy 33.02 100.33)
 		)
 		(stroke
@@ -4974,6 +5051,16 @@
 			(type default)
 		)
 		(uuid "982ee4fd-93de-4a96-a752-497df3936134")
+	)
+	(wire
+		(pts
+			(xy 281.94 33.02) (xy 281.94 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98bbc8cb-d4af-498a-9d10-1a0821a124ae")
 	)
 	(wire
 		(pts
@@ -5047,6 +5134,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 27.94) (xy 280.67 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abdf6ffe-4779-4244-a17f-b09cec3c4212")
+	)
+	(wire
+		(pts
 			(xy 223.52 30.48) (xy 223.52 33.02)
 		)
 		(stroke
@@ -5097,7 +5194,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 29.21) (xy 238.76 29.21)
+			(xy 241.3 25.4) (xy 245.11 25.4)
 		)
 		(stroke
 			(width 0)
@@ -5134,6 +5231,16 @@
 			(type default)
 		)
 		(uuid "b7951092-f611-452d-924d-9ed73260b2ee")
+	)
+	(wire
+		(pts
+			(xy 279.4 35.56) (xy 279.4 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba39f451-144b-4542-aa5b-abedfc46c27b")
 	)
 	(wire
 		(pts
@@ -5257,7 +5364,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 39.37) (xy 238.76 39.37)
+			(xy 241.3 35.56) (xy 245.11 35.56)
 		)
 		(stroke
 			(width 0)
@@ -5287,7 +5394,7 @@
 	)
 	(wire
 		(pts
-			(xy 281.94 52.07) (xy 283.21 52.07)
+			(xy 281.94 30.48) (xy 283.21 30.48)
 		)
 		(stroke
 			(width 0)
@@ -5317,6 +5424,16 @@
 	)
 	(wire
 		(pts
+			(xy 281.94 29.21) (xy 281.94 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9ea12fa-0973-4ee2-8baa-11bbc8dbab6b")
+	)
+	(wire
+		(pts
 			(xy 60.96 74.93) (xy 64.77 74.93)
 		)
 		(stroke
@@ -5327,23 +5444,13 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 31.75) (xy 238.76 31.75)
+			(xy 241.3 27.94) (xy 245.11 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ed41e276-75b6-4621-a4d5-e4606e9c92ad")
-	)
-	(wire
-		(pts
-			(xy 234.95 52.07) (xy 238.76 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1c96e9a-9509-4bd1-a506-398b56e7753b")
 	)
 	(wire
 		(pts
@@ -5387,6 +5494,26 @@
 	)
 	(wire
 		(pts
+			(xy 281.94 30.48) (xy 281.94 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa5f48c5-1f4a-4425-9280-0289cdbd46a9")
+	)
+	(wire
+		(pts
+			(xy 279.4 35.56) (xy 280.67 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb666e82-7896-4519-b010-8561df89ab94")
+	)
+	(wire
+		(pts
 			(xy 44.45 129.54) (xy 44.45 133.35)
 		)
 		(stroke
@@ -5416,7 +5543,7 @@
 		(uuid "0bfdd310-b31b-4929-80fc-9bd236bf00d2")
 	)
 	(label "CMD"
-		(at 234.95 34.29 180)
+		(at 241.3 30.48 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5436,7 +5563,7 @@
 		(uuid "104d0ada-7f48-47a5-9bbf-3beab61ce5b1")
 	)
 	(label "DAT2"
-		(at 234.95 29.21 180)
+		(at 241.3 25.4 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5446,12 +5573,12 @@
 		(uuid "133fe2a4-8c3b-4dac-808d-cd0aed151683")
 	)
 	(label "DAT1"
-		(at 234.95 46.99 180)
+		(at 279.4 25.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "2a7d83ae-14eb-42c3-a3c2-33533197e4ba")
 	)
@@ -5546,7 +5673,7 @@
 		(uuid "6c56d3f5-c02c-451e-8ca3-af67bb6a3632")
 	)
 	(label "VDD_SD"
-		(at 234.95 36.83 180)
+		(at 241.3 33.02 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5566,7 +5693,7 @@
 		(uuid "72b04d9d-4da1-4682-b18b-0dfbac2b1c3c")
 	)
 	(label "CLK_SD"
-		(at 234.95 39.37 180)
+		(at 241.3 35.56 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5626,7 +5753,7 @@
 		(uuid "ada919bc-63eb-456a-80bf-acdaf71ac05e")
 	)
 	(label "D0_SD"
-		(at 234.95 44.45 180)
+		(at 241.3 40.64 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5646,7 +5773,7 @@
 		(uuid "f739c87b-4a3e-446a-9b15-1af6504e3d45")
 	)
 	(label "DAT3"
-		(at 234.95 31.75 180)
+		(at 241.3 27.94 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6557,7 +6684,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 283.21 55.88 0)
+		(at 283.21 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6568,7 +6695,7 @@
 		(fields_autoplaced yes)
 		(uuid "3b0cdaf8-e24b-4750-ba3d-1d21b764f6cf")
 		(property "Reference" "#PWR076"
-			(at 283.21 62.23 0)
+			(at 283.21 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6579,7 +6706,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 283.21 60.96 0)
+			(at 283.21 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6589,7 +6716,7 @@
 			)
 		)
 		(property "Footprint" "RF_Module:ESP32-S3-WROOM-1"
-			(at 283.21 55.88 0)
+			(at 283.21 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6600,7 +6727,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 283.21 55.88 0)
+			(at 283.21 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6611,7 +6738,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 283.21 55.88 0)
+			(at 283.21 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6915,7 +7042,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 191.4652 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -6995,7 +7122,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 40.64 102.108 90)
 			(hide yes)
 			(show_name no)
@@ -7045,7 +7172,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 234.95 41.91 270)
+		(at 241.3 38.1 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7056,7 +7183,7 @@
 		(fields_autoplaced yes)
 		(uuid "57ebe058-bf7b-45d9-ba4d-0bde456d6949")
 		(property "Reference" "#PWR033"
-			(at 228.6 41.91 0)
+			(at 234.95 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7067,7 +7194,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 231.14 41.9099 90)
+			(at 237.49 38.0999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7078,7 +7205,7 @@
 			)
 		)
 		(property "Footprint" "RF_Module:ESP32-S3-WROOM-1"
-			(at 234.95 41.91 0)
+			(at 241.3 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7089,7 +7216,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 234.95 41.91 0)
+			(at 241.3 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7100,7 +7227,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 234.95 41.91 0)
+			(at 241.3 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7235,7 +7362,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 94.9452 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -7587,7 +7714,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 183.8452 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -7926,7 +8053,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "SmartSupplyLib:fuse holder"
 			(at 107.442 71.12 90)
 			(hide yes)
 			(show_name no)
@@ -8084,7 +8211,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 59.3852 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -8320,7 +8447,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 29.21 106.3752 0)
 			(hide yes)
 			(show_name no)
@@ -8870,7 +8997,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 103.632 104.14 90)
 			(hide yes)
 			(show_name no)
@@ -9106,7 +9233,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 102.362 64.77 90)
 			(hide yes)
 			(show_name no)
@@ -9155,6 +9282,184 @@
 		)
 	)
 	(symbol
+		(lib_id "SmartSupplyLib:DM3AT-SF-PEJM5")
+		(at 245.11 25.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b1ed7a5d-0198-48aa-adfd-459e0b9fc59d")
+		(property "Reference" "J10"
+			(at 261.62 17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DM3AT-SF-PEJM5"
+			(at 261.62 20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SmartSupplyLib:DM3ATSFPEJM5"
+			(at 274.32 120.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Hirose-HRS-DM3AT-SF-PEJM5_C114218.pdf"
+			(at 274.32 220.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Memory Card Connectors R/A SMT MICROSD CON PUSH-PUSH TOP BRDMNT"
+			(at 245.11 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "1.83"
+			(at 274.32 420.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "798-DM3AT-SF-PEJM5"
+			(at 274.32 520.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Hirose-Connector/DM3AT-SF-PEJM5?qs=LZSZKJVF%252B2WTDKp%252BR7IYAQ%3D%3D"
+			(at 274.32 620.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Hirose"
+			(at 274.32 720.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "DM3AT-SF-PEJM5"
+			(at 274.32 820.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "2"
+			(uuid "a55b5a91-a5c9-4b60-b69f-b370f6da3a12")
+		)
+		(pin "5"
+			(uuid "4b0a5386-4ded-4a5b-b572-38772cc13ee7")
+		)
+		(pin "6"
+			(uuid "b4383db5-f1e5-405d-a333-aa08f49124f8")
+		)
+		(pin "1"
+			(uuid "c62efd02-7f39-414c-ac3b-cad6ac5482b1")
+		)
+		(pin "8"
+			(uuid "0ce4411b-5a14-4338-b9a3-7f74c282a7c0")
+		)
+		(pin "4"
+			(uuid "55d20449-6719-4199-bc8f-7ce5527f55f6")
+		)
+		(pin "3"
+			(uuid "7c06e3e5-2df2-400f-a2af-ad06082dd354")
+		)
+		(pin "7"
+			(uuid "b65a5d3e-b74f-4866-9bbb-1cf9fee12756")
+		)
+		(pin "MP4"
+			(uuid "8dc3a46f-1e2d-48bd-bf24-b9cc739c4f42")
+		)
+		(pin "MP3"
+			(uuid "baa5aa84-232d-4b8f-9bd2-1631011aa277")
+		)
+		(pin "MP1"
+			(uuid "ff365082-7046-4b71-b174-aa622d5c9ad6")
+		)
+		(pin "MP6"
+			(uuid "624a5a2b-0035-4c51-9c0b-9eb7c08aa611")
+		)
+		(pin "MP2"
+			(uuid "b4a63584-3fc8-4613-a1ef-d7690032e161")
+		)
+		(pin "MP5"
+			(uuid "e4b50fd1-c934-43f6-bd3f-c9a3261a483b")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "SamacSys_Parts:MIC39100-3.3WS")
 		(at 78.74 132.08 90)
 		(mirror x)
@@ -9188,7 +9493,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SOT230P700X180-4N"
+		(property "Footprint" "SmartSupplyLib:SOT230P700X180-4N"
 			(at 173.66 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -9338,7 +9643,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 96.2152 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -9420,7 +9725,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 97.4852 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -9469,113 +9774,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Micro_SD_Card_Det_Hirose_DM3AT")
-		(at 261.62 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bdb6d72b-77fa-489b-addd-84c3a42d4bac")
-		(property "Reference" "J11"
-			(at 262.255 17.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Micro_SD_Card_Det_Hirose_DM3AT"
-			(at 262.255 20.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Module:Maple_Mini"
-			(at 313.69 21.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1"
-			(at 261.62 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Micro SD Card Socket with card detection pins"
-			(at 261.62 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "c255405a-7bc8-41e1-902a-b71fea44b307")
-		)
-		(pin "5"
-			(uuid "7f667d25-7e8f-4f67-a609-f6c698450f8c")
-		)
-		(pin "SH"
-			(uuid "6b6ea842-ec22-4589-9467-d5127c631b41")
-		)
-		(pin "9"
-			(uuid "77b139c3-352f-4f07-992f-4ce15857b734")
-		)
-		(pin "10"
-			(uuid "890ec656-3207-43bf-8804-a9078cfaf546")
-		)
-		(pin "4"
-			(uuid "43657652-2c2d-4f27-9a59-319575e6c812")
-		)
-		(pin "3"
-			(uuid "2f433472-79d9-470e-a9cc-1eabbbe8755d")
-		)
-		(pin "7"
-			(uuid "b9d88a7f-33c4-4de4-92b0-f951cb7dd727")
-		)
-		(pin "6"
-			(uuid "035a1908-3393-4632-84c2-aecdfd850293")
-		)
-		(pin "8"
-			(uuid "3b762fde-ef57-4022-b1f3-61eda9df8f98")
-		)
-		(pin "1"
-			(uuid "284ff633-634b-40ce-b126-001b1a4b244b")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
-					(reference "J11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 101.6 64.77 0)
 		(unit 1)
@@ -9608,7 +9806,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 99.822 64.77 90)
 			(hide yes)
 			(show_name no)
@@ -9767,7 +9965,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 97.4852 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -10377,7 +10575,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 70.8152 107.95 0)
 			(hide yes)
 			(show_name no)
