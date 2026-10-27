@@ -4364,6 +4364,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 39.37) (xy 64.77 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17c207f2-9859-42b6-8d63-85169548b65b")
+	)
+	(wire
+		(pts
 			(xy 220.98 33.02) (xy 223.52 33.02)
 		)
 		(stroke
@@ -5632,7 +5642,7 @@
 		)
 		(uuid "5b882f72-99f7-425a-9653-628a3a469ac3")
 	)
-	(label "ZX"
+	(label "ZX1"
 		(at 27.94 72.39 180)
 		(effects
 			(font
@@ -5781,6 +5791,16 @@
 			(justify right bottom)
 		)
 		(uuid "f8412b9b-47fc-4f09-b018-e1caef01bb3b")
+	)
+	(label "ZX2"
+		(at 64.77 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fbb5bc73-32c9-4947-bbaf-52ccb49bc580")
 	)
 	(label "CMD"
 		(at 210.82 33.02 180)
@@ -10894,7 +10914,7 @@
 				)
 			)
 		)
-		(property "Value" "PGND"
+		(property "Value" "N"
 			(at 16.51 147.574 0)
 			(show_name no)
 			(do_not_autoplace no)

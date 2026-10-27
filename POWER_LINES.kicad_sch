@@ -2059,6 +2059,219 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "SmartSupplyLib:MOV-14D241K"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "RV"
+				(at 13.97 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "MOV-14D241K"
+				(at 13.97 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "MOV14D241K"
+				(at 13.97 -96.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA16/858708.pdf"
+				(at 13.97 -196.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "Bourns MOV-14D Series Metal Oxide Varistor 830pF 50A 395V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Height" "20"
+				(at 13.97 -396.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Part Number" "652-MOV-14D241K"
+				(at 13.97 -496.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/MOV-14D241K?qs=CQ3B1E%252BbPs2CiKalQN9uMQ%3D%3D"
+				(at 13.97 -596.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Name" "Bourns"
+				(at 13.97 -696.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Part_Number" "MOV-14D241K"
+				(at 13.97 -796.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(symbol "MOV-14D241K_1_1"
+				(polyline
+					(pts
+						(xy 3.81 -2.54) (xy 6.35 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 1.27)
+					(end 12.7 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 2.54) (xy 6.35 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 2.54) (xy 13.97 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 0 180)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Transformer:ZMCT103C"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3555,6 +3768,18 @@
 		(uuid "26504f8b-3dc2-4548-bc28-e93266d25e47")
 	)
 	(junction
+		(at 52.07 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28e8c589-0da1-429e-9e0a-dd33d76d23ce")
+	)
+	(junction
+		(at 52.07 22.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "29486615-26fb-4757-8e76-b645d03fa1e3")
+	)
+	(junction
 		(at 246.38 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3844,6 +4069,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 36.83) (xy 59.69 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b6a47db-8188-42ee-9d19-6d4e4d1dca81")
+	)
+	(wire
+		(pts
 			(xy 193.04 83.82) (xy 193.04 85.09)
 		)
 		(stroke
@@ -3944,6 +4179,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 22.86) (xy 59.69 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a4c364b-8b27-4788-ac60-68533cfacb93")
+	)
+	(wire
+		(pts
 			(xy 25.4 158.75) (xy 33.02 158.75)
 		)
 		(stroke
@@ -4011,6 +4256,16 @@
 			(type default)
 		)
 		(uuid "217beb56-d453-4732-a6c9-8f58c8bdc51e")
+	)
+	(wire
+		(pts
+			(xy 36.83 36.83) (xy 36.83 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "235b6b1b-14eb-4f5e-b6b3-2d02daa4a2ae")
 	)
 	(wire
 		(pts
@@ -4091,6 +4346,16 @@
 			(type default)
 		)
 		(uuid "2bf5a740-d5bb-44c2-bb8f-9e67d8471236")
+	)
+	(wire
+		(pts
+			(xy 39.37 22.86) (xy 39.37 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fa7b986-1a30-4db9-9bfc-6ae7608ccf7c")
 	)
 	(wire
 		(pts
@@ -4264,6 +4529,16 @@
 	)
 	(wire
 		(pts
+			(xy 36.83 45.72) (xy 52.07 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bedd1a1-d1b3-4494-843d-5e94c6001087")
+	)
+	(wire
+		(pts
 			(xy 58.42 107.95) (xy 60.96 107.95)
 		)
 		(stroke
@@ -4321,6 +4596,16 @@
 			(type default)
 		)
 		(uuid "57cc31d9-d97a-46cd-9bcf-89324050f74f")
+	)
+	(wire
+		(pts
+			(xy 52.07 22.86) (xy 59.69 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "591aae46-896b-4915-adb5-5901733d329c")
 	)
 	(wire
 		(pts
@@ -4604,13 +4889,23 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 31.75) (xy 55.88 33.02)
+			(xy 59.69 31.75) (xy 60.96 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7292111e-d231-469d-9bfe-973efafae426")
+	)
+	(wire
+		(pts
+			(xy 33.02 31.75) (xy 39.37 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72be8092-3cd7-47fe-a6d4-4b175f893d33")
 	)
 	(wire
 		(pts
@@ -4671,6 +4966,16 @@
 			(type default)
 		)
 		(uuid "77d9f40c-4c20-45a1-8827-38d20c435d1c")
+	)
+	(wire
+		(pts
+			(xy 52.07 45.72) (xy 59.69 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79759da8-ccd7-4d21-9a61-7ad00a62c750")
 	)
 	(wire
 		(pts
@@ -4844,16 +5149,6 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 31.75) (xy 54.61 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87def8e7-7575-4b69-b4ca-3343cfae41d2")
-	)
-	(wire
-		(pts
 			(xy 204.47 20.32) (xy 204.47 29.21)
 		)
 		(stroke
@@ -4954,6 +5249,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 22.86) (xy 52.07 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "966702e9-2f53-484a-a23b-502a29ccc634")
+	)
+	(wire
+		(pts
 			(xy 81.28 116.84) (xy 81.28 119.38)
 		)
 		(stroke
@@ -5051,6 +5356,16 @@
 			(type default)
 		)
 		(uuid "a4222af3-1881-41b6-89ed-a4fea842453e")
+	)
+	(wire
+		(pts
+			(xy 52.07 43.18) (xy 52.07 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a495e944-6215-49cb-b27c-97d3db848349")
 	)
 	(wire
 		(pts
@@ -5404,6 +5719,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 22.86) (xy 52.07 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0368720-4d7c-4a7a-8446-a516ce9ca5c8")
+	)
+	(wire
+		(pts
 			(xy 261.62 127) (xy 261.62 129.54)
 		)
 		(stroke
@@ -5411,6 +5736,16 @@
 			(type default)
 		)
 		(uuid "e1699cc2-3dda-446f-9c4c-a8bb180246f6")
+	)
+	(wire
+		(pts
+			(xy 33.02 36.83) (xy 36.83 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1de5b72-7915-40c9-98d5-0d7e258a22e1")
 	)
 	(wire
 		(pts
@@ -5504,23 +5839,13 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 36.83) (xy 55.88 35.56)
+			(xy 59.69 36.83) (xy 60.96 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f08519a5-1fbd-4656-8a5d-fc9f714cdd1c")
-	)
-	(wire
-		(pts
-			(xy 33.02 36.83) (xy 54.61 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4f9ce02-1284-4db7-ab0b-2857836094c5")
 	)
 	(wire
 		(pts
@@ -7244,7 +7569,7 @@
 	)
 	(symbol
 		(lib_id "SmartSupplyLib:1717020")
-		(at 55.88 33.02 0)
+		(at 60.96 33.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7254,7 +7579,7 @@
 		(dnp no)
 		(uuid "461a9af8-deea-4d57-9ac0-ed253f3320a6")
 		(property "Reference" "J11"
-			(at 63.4999 29.21 90)
+			(at 68.5799 29.21 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7265,7 +7590,7 @@
 			)
 		)
 		(property "Value" "1717020"
-			(at 66.0399 29.21 90)
+			(at 71.1199 29.21 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7276,7 +7601,7 @@
 			)
 		)
 		(property "Footprint" "SmartSupplyLib:CONN_1717020_PXC"
-			(at 55.88 33.02 0)
+			(at 60.96 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7288,7 +7613,7 @@
 			)
 		)
 		(property "Datasheet" "1717020"
-			(at 55.88 33.02 0)
+			(at 60.96 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7300,7 +7625,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 55.88 33.02 0)
+			(at 60.96 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10286,6 +10611,149 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "R41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartSupplyLib:MOV-14D241K")
+		(at 52.07 43.18 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d5882a78-0fcf-4a83-a8de-b57ecf02a169")
+		(property "Reference" "RV1"
+			(at 55.88 33.0199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MOV-14D241K"
+			(at 45.72 40.894 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SmartSupplyLib:MOV14D241K"
+			(at 148.26 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA16/858708.pdf"
+			(at 248.26 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Bourns MOV-14D Series Metal Oxide Varistor 830pF 50A 395V"
+			(at 52.07 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "20"
+			(at 448.26 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "652-MOV-14D241K"
+			(at 548.26 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/MOV-14D241K?qs=CQ3B1E%252BbPs2CiKalQN9uMQ%3D%3D"
+			(at 648.26 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Bourns"
+			(at 748.26 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MOV-14D241K"
+			(at 848.26 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "2"
+			(uuid "d8c43d00-c005-4401-875d-b37dd31e73cc")
+		)
+		(pin "1"
+			(uuid "31782ca5-85f6-43a7-9d26-df31731b7f6b")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "RV1")
 					(unit 1)
 				)
 			)
