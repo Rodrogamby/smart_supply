@@ -3500,7 +3500,7 @@
 		(uuid "492cf1dc-1492-4a41-9cbf-b91e44ddb467")
 	)
 	(circle
-		(center 134.62 31.75)
+		(center 134.62 22.86)
 		(radius 1.7961)
 		(stroke
 			(width 0)
@@ -3524,7 +3524,7 @@
 		(uuid "5354be45-8b41-4a42-86c2-b20190ee0e40")
 	)
 	(circle
-		(center 129.54 31.75)
+		(center 129.54 22.86)
 		(radius 1.7961)
 		(stroke
 			(width 0)
@@ -3607,7 +3607,7 @@
 	)
 	(text "Place pads for external cable ZMCT103"
 		(exclude_from_sim no)
-		(at 127.508 26.67 0)
+		(at 127.508 17.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3806,7 +3806,7 @@
 		(uuid "585fa592-cac6-48cb-bd7c-0033549a50c1")
 	)
 	(junction
-		(at 110.49 31.75)
+		(at 110.49 22.86)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "60758fb8-004c-4e5e-addf-1df30c19fb44")
@@ -3902,7 +3902,7 @@
 		(uuid "b13f9f72-04d2-490d-9fa7-63f230a55762")
 	)
 	(junction
-		(at 125.73 31.75)
+		(at 125.73 22.86)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b1519c56-fc6b-48c2-95cb-3364dc144bea")
@@ -4047,6 +4047,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 35.56) (xy 87.63 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c006f67-7991-4aae-af3f-c1244f03a96f")
+	)
+	(wire
+		(pts
 			(xy 193.04 83.82) (xy 193.04 85.09)
 		)
 		(stroke
@@ -4117,6 +4127,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 22.86) (xy 110.49 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16fb7e62-4a03-499a-8fdb-c8050a6d6e69")
+	)
+	(wire
+		(pts
 			(xy 127 101.6) (xy 132.08 101.6)
 		)
 		(stroke
@@ -4137,7 +4157,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 31.75) (xy 140.97 31.75)
+			(xy 125.73 22.86) (xy 140.97 22.86)
 		)
 		(stroke
 			(width 0)
@@ -4287,6 +4307,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 49.53) (xy 110.49 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bc2d75d-3da3-4d55-bb05-573655dfdf29")
+	)
+	(wire
+		(pts
 			(xy 132.08 152.4) (xy 135.89 152.4)
 		)
 		(stroke
@@ -4317,7 +4347,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 31.75) (xy 125.73 31.75)
+			(xy 110.49 22.86) (xy 125.73 22.86)
 		)
 		(stroke
 			(width 0)
@@ -4657,16 +4687,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 49.53) (xy 110.49 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "666f0566-eeac-4553-af32-3a69c8397c51")
-	)
-	(wire
-		(pts
 			(xy 217.17 127) (xy 217.17 133.35)
 		)
 		(stroke
@@ -4997,26 +5017,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 49.53) (xy 86.36 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "84e886c1-df48-40c5-afec-87849c436fe0")
-	)
-	(wire
-		(pts
-			(xy 87.63 31.75) (xy 92.71 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8519574c-6af8-428a-9de9-a4ab13ea9bf7")
-	)
-	(wire
-		(pts
 			(xy 102.87 186.69) (xy 113.03 186.69)
 		)
 		(stroke
@@ -5024,6 +5024,16 @@
 			(type default)
 		)
 		(uuid "8606f7b0-bc5f-40d7-98c8-544e6c38b111")
+	)
+	(wire
+		(pts
+			(xy 87.63 35.56) (xy 87.63 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8643a45f-3af3-43c4-a624-b3747f6ce7eb")
 	)
 	(wire
 		(pts
@@ -5117,6 +5127,26 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 22.86) (xy 92.71 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91bc0ddd-fea8-4d64-9c9f-e3c61bd36c77")
+	)
+	(wire
+		(pts
+			(xy 110.49 44.45) (xy 110.49 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91dcd931-0725-403f-aeef-7711db8a53b6")
+	)
+	(wire
+		(pts
 			(xy 125.73 85.09) (xy 149.86 85.09)
 		)
 		(stroke
@@ -5207,7 +5237,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 31.75) (xy 110.49 31.75)
+			(xy 100.33 22.86) (xy 110.49 22.86)
 		)
 		(stroke
 			(width 0)
@@ -5407,6 +5437,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 33.02) (xy 86.36 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be0a3203-4a9b-404c-8e1f-c82033fff8a2")
+	)
+	(wire
+		(pts
 			(xy 247.65 55.88) (xy 247.65 62.23)
 		)
 		(stroke
@@ -5447,7 +5487,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 33.02) (xy 87.63 31.75)
+			(xy 87.63 33.02) (xy 87.63 22.86)
 		)
 		(stroke
 			(width 0)
@@ -5527,7 +5567,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 31.75) (xy 125.73 58.42)
+			(xy 125.73 22.86) (xy 125.73 58.42)
 		)
 		(stroke
 			(width 0)
@@ -5846,7 +5886,7 @@
 		(uuid "46e420d3-6188-4a10-a81f-de08df0e264c")
 	)
 	(label "CH1_L"
-		(at 140.97 31.75 0)
+		(at 140.97 22.86 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8262,7 +8302,7 @@
 	)
 	(symbol
 		(lib_id "SmartSupplyLib:MOV-14D241K")
-		(at 110.49 49.53 90)
+		(at 110.49 44.45 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8272,7 +8312,7 @@
 		(dnp no)
 		(uuid "5f395f03-d114-41ea-b893-483e094160bc")
 		(property "Reference" "RV1"
-			(at 114.3 39.3699 90)
+			(at 114.3 34.2899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8283,7 +8323,7 @@
 			)
 		)
 		(property "Value" "MOV-14D241K"
-			(at 104.14 47.244 90)
+			(at 104.14 42.164 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8294,7 +8334,7 @@
 			)
 		)
 		(property "Footprint" "SmartSupplyLib:MOV14D241K"
-			(at 206.68 35.56 0)
+			(at 206.68 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8306,7 +8346,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA16/858708.pdf"
-			(at 306.68 35.56 0)
+			(at 306.68 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8318,7 +8358,7 @@
 			)
 		)
 		(property "Description" "Bourns MOV-14D Series Metal Oxide Varistor 830pF 50A 395V"
-			(at 110.49 49.53 0)
+			(at 110.49 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8329,7 +8369,7 @@
 			)
 		)
 		(property "Height" "20"
-			(at 506.68 35.56 0)
+			(at 506.68 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8341,7 +8381,7 @@
 			)
 		)
 		(property "Mouser Part Number" "652-MOV-14D241K"
-			(at 606.68 35.56 0)
+			(at 606.68 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8353,7 +8393,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/MOV-14D241K?qs=CQ3B1E%252BbPs2CiKalQN9uMQ%3D%3D"
-			(at 706.68 35.56 0)
+			(at 706.68 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8365,7 +8405,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Bourns"
-			(at 806.68 35.56 0)
+			(at 806.68 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8377,7 +8417,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "MOV-14D241K"
-			(at 906.68 35.56 0)
+			(at 906.68 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9331,7 +9371,7 @@
 	)
 	(symbol
 		(lib_id "Device:Fuse")
-		(at 96.52 31.75 90)
+		(at 96.52 22.86 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9342,7 +9382,7 @@
 		(fields_autoplaced yes)
 		(uuid "8b320314-246c-480a-8991-5491b465a713")
 		(property "Reference" "F2"
-			(at 96.52 25.4 90)
+			(at 96.52 16.51 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9352,7 +9392,7 @@
 			)
 		)
 		(property "Value" "Fuse"
-			(at 96.52 27.94 90)
+			(at 96.52 19.05 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9362,7 +9402,7 @@
 			)
 		)
 		(property "Footprint" "SmartSupplyLib:fuse holder"
-			(at 96.52 33.528 90)
+			(at 96.52 24.638 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9373,7 +9413,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.schurter.com/en/datasheet/ogn"
-			(at 96.52 31.75 0)
+			(at 96.52 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9384,7 +9424,7 @@
 			)
 		)
 		(property "Description" "Fuse"
-			(at 96.52 31.75 0)
+			(at 96.52 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9395,7 +9435,7 @@
 			)
 		)
 		(property "Height" "12.7"
-			(at 491.44 15.24 0)
+			(at 491.44 6.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9407,7 +9447,7 @@
 			)
 		)
 		(property "Mouser Part Number" "693-0031.8201.G"
-			(at 591.44 15.24 0)
+			(at 591.44 6.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9419,7 +9459,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Schurter/0031.8201.G?qs=53fxdJjyGHQ26HnfkWkpvg%3D%3D"
-			(at 691.44 15.24 0)
+			(at 691.44 6.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9431,7 +9471,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "SCHURTER"
-			(at 791.44 15.24 0)
+			(at 791.44 6.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9443,7 +9483,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "0031.8201.G"
-			(at 891.44 15.24 0)
+			(at 891.44 6.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

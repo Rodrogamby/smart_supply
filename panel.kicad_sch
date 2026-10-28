@@ -946,6 +946,36 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Red 5mA\n"
+		(exclude_from_sim no)
+		(at 30.226 15.494 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "57d24f19-1ddf-42f1-9ebb-12677dbee614")
+	)
+	(text "Red 5mA\n"
+		(exclude_from_sim no)
+		(at 18.542 15.748 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b12ce976-22ce-4dea-a982-944b3389711b")
+	)
+	(text "Red 5mA\n"
+		(exclude_from_sim no)
+		(at 41.656 15.494 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "de9a9eab-df01-4c7e-951a-940755d1f509")
+	)
 	(junction
 		(at 31.75 39.37)
 		(diameter 0)
@@ -957,12 +987,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "42a5f36f-e0d8-4346-9c22-b31be72d74f9")
-	)
-	(junction
-		(at 43.18 39.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b8c71e63-4d15-4fa7-b1f0-c737bb43693a")
 	)
 	(wire
 		(pts
@@ -983,26 +1007,6 @@
 			(type default)
 		)
 		(uuid "20ff99b3-ff7f-4cc3-b1fa-00d6f18c4c08")
-	)
-	(wire
-		(pts
-			(xy 54.61 38.1) (xy 54.61 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "25075aca-6b29-4cc4-840b-9bf586ee7f7c")
-	)
-	(wire
-		(pts
-			(xy 43.18 39.37) (xy 54.61 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a52c4ef-69ec-41f6-a6be-ae86871a8261")
 	)
 	(wire
 		(pts
@@ -1114,16 +1118,6 @@
 		)
 		(uuid "a8064d40-0335-4e0c-9401-00e4cb42b38d")
 	)
-	(label "Led4"
-		(at 54.61 22.86 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c4d9ecae-74e5-46b3-a529-d43e8d922201")
-	)
 	(label "Led1"
 		(at 66.04 25.4 90)
 		(effects
@@ -1157,7 +1151,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "270"
 			(at 45.72 27.9399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1239,7 +1233,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "270"
 			(at 21.59 27.9399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1392,99 +1386,6 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 54.61 34.29 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "414260be-23a0-46a8-bebf-39ccff91d004")
-		(property "Reference" "D14"
-			(at 58.42 34.6074 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 58.42 37.1474 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 54.61 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 54.61 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 54.61 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "24d13219-49da-4beb-8d36-daa893e225ba")
-		)
-		(pin "1"
-			(uuid "31c2abcf-c7b0-4533-a919-f9ec94d8f1fe")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/2c9929a5-2c00-45f1-baca-5f3ca7d07447"
-					(reference "D14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
 		(at 43.18 34.29 90)
 		(unit 1)
 		(body_style 1)
@@ -1571,88 +1472,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/2c9929a5-2c00-45f1-baca-5f3ca7d07447"
 					(reference "D13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 54.61 26.67 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "67c6b625-5b4a-4956-8e67-179f2b5a882a")
-		(property "Reference" "R49"
-			(at 57.15 25.3999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R"
-			(at 57.15 27.9399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 52.832 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 54.61 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "2ce1982f-a16b-44cd-b044-26ccf9c1f1e2")
-		)
-		(pin "1"
-			(uuid "f13d7d42-f18d-4d51-9384-ac0917a45701")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/2c9929a5-2c00-45f1-baca-5f3ca7d07447"
-					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -2009,7 +1828,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "270"
 			(at 34.29 27.9399 0)
 			(show_name no)
 			(do_not_autoplace no)
