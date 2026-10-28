@@ -2432,7 +2432,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 105.41) (xy 85.09 107.95)
+			(xy 85.09 107.95) (xy 85.09 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2502,7 +2502,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 105.41) (xy 99.06 107.95)
+			(xy 99.06 107.95) (xy 99.06 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2552,7 +2552,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 115.57) (xy 85.09 116.84)
+			(xy 85.09 118.11) (xy 85.09 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2572,7 +2572,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 105.41) (xy 109.22 107.95)
+			(xy 109.22 107.95) (xy 109.22 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2602,7 +2602,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 105.41) (xy 74.93 107.95)
+			(xy 74.93 107.95) (xy 74.93 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2632,7 +2632,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 115.57) (xy 99.06 116.84)
+			(xy 99.06 118.11) (xy 99.06 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2672,7 +2672,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 116.84) (xy 90.17 116.84)
+			(xy 85.09 119.38) (xy 90.17 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2712,7 +2712,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 115.57) (xy 74.93 116.84)
+			(xy 74.93 118.11) (xy 74.93 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2752,7 +2752,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 115.57) (xy 109.22 116.84)
+			(xy 109.22 118.11) (xy 109.22 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2792,7 +2792,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 116.84) (xy 80.01 116.84)
+			(xy 74.93 119.38) (xy 80.01 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2892,7 +2892,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 116.84) (xy 114.3 116.84)
+			(xy 109.22 119.38) (xy 114.3 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2962,7 +2962,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 116.84) (xy 104.14 116.84)
+			(xy 99.06 119.38) (xy 104.14 119.38)
 		)
 		(stroke
 			(width 0)
@@ -3381,7 +3381,7 @@
 		(uuid "87601aea-1df6-4d2f-9ef0-db9aea17ea0c")
 	)
 	(label "IRQ1"
-		(at 80.01 116.84 0)
+		(at 80.01 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3421,7 +3421,7 @@
 		(uuid "9b8d616c-ccff-43ad-961e-40f60e69b30e")
 	)
 	(label "CS1"
-		(at 90.17 116.84 0)
+		(at 90.17 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3461,7 +3461,7 @@
 		(uuid "a4981e6e-185f-43fe-ac36-0ef5eff513cc")
 	)
 	(label "IRQ2"
-		(at 104.14 116.84 0)
+		(at 104.14 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3481,7 +3481,7 @@
 		(uuid "b44db091-f012-4486-9628-75e7ce9ca304")
 	)
 	(label "CS2"
-		(at 114.3 116.84 0)
+		(at 114.3 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3791,7 +3791,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 99.06 111.76 180)
+		(at 99.06 114.3 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3802,17 +3802,6 @@
 		(fields_autoplaced yes)
 		(uuid "074da480-3b0c-4db9-920f-c60e8200e785")
 		(property "Reference" "R44"
-			(at 101.6 110.4899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
 			(at 101.6 113.0299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3823,8 +3812,19 @@
 				(justify right)
 			)
 		)
+		(property "Value" "10k"
+			(at 101.6 115.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 100.838 111.76 90)
+			(at 100.838 114.3 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3835,7 +3835,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 111.76 0)
+			(at 99.06 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3846,7 +3846,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 99.06 111.76 0)
+			(at 99.06 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3951,7 +3951,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 99.06 105.41 0)
+		(at 99.06 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3961,7 +3961,7 @@
 		(dnp no)
 		(uuid "1120ffa6-ab8b-405e-9f16-fb55bfb8ed1c")
 		(property "Reference" "#PWR098"
-			(at 99.06 109.22 0)
+			(at 99.06 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3972,7 +3972,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 99.06 101.6 0)
+			(at 99.06 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3982,7 +3982,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN3810-9_TYPE_B"
-			(at 99.06 105.41 0)
+			(at 99.06 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3993,7 +3993,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 105.41 0)
+			(at 99.06 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4004,7 +4004,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 99.06 105.41 0)
+			(at 99.06 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4184,7 +4184,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 74.93 111.76 180)
+		(at 74.93 114.3 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4195,17 +4195,6 @@
 		(fields_autoplaced yes)
 		(uuid "1e60b35e-746c-45c1-923e-3e80d77c6946")
 		(property "Reference" "R24"
-			(at 77.47 110.4899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
 			(at 77.47 113.0299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4216,8 +4205,19 @@
 				(justify right)
 			)
 		)
+		(property "Value" "10k"
+			(at 77.47 115.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 76.708 111.76 90)
+			(at 76.708 114.3 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4228,7 +4228,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 111.76 0)
+			(at 74.93 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4239,7 +4239,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 74.93 111.76 0)
+			(at 74.93 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4502,7 +4502,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 85.09 105.41 0)
+		(at 85.09 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4512,7 +4512,7 @@
 		(dnp no)
 		(uuid "2a2983e6-c996-469b-b1d6-c00d576f1178")
 		(property "Reference" "#PWR085"
-			(at 85.09 109.22 0)
+			(at 85.09 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4523,7 +4523,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 85.09 101.6 0)
+			(at 85.09 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4533,7 +4533,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN3810-9_TYPE_B"
-			(at 85.09 105.41 0)
+			(at 85.09 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4544,7 +4544,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.09 105.41 0)
+			(at 85.09 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4555,7 +4555,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 85.09 105.41 0)
+			(at 85.09 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5218,7 +5218,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 85.09 111.76 180)
+		(at 85.09 114.3 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5229,17 +5229,6 @@
 		(fields_autoplaced yes)
 		(uuid "5e505727-36af-4907-95db-d1a1c35ada66")
 		(property "Reference" "R25"
-			(at 87.63 110.4899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
 			(at 87.63 113.0299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5250,8 +5239,19 @@
 				(justify right)
 			)
 		)
+		(property "Value" "10k"
+			(at 87.63 115.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 86.868 111.76 90)
+			(at 86.868 114.3 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5262,7 +5262,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.09 111.76 0)
+			(at 85.09 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5273,7 +5273,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 85.09 111.76 0)
+			(at 85.09 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6430,7 +6430,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 109.22 111.76 180)
+		(at 109.22 114.3 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6441,17 +6441,6 @@
 		(fields_autoplaced yes)
 		(uuid "9d635c04-6898-4be0-af36-625ee561b38d")
 		(property "Reference" "R45"
-			(at 111.76 110.4899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
 			(at 111.76 113.0299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6462,8 +6451,19 @@
 				(justify right)
 			)
 		)
+		(property "Value" "10k"
+			(at 111.76 115.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 110.998 111.76 90)
+			(at 110.998 114.3 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6474,7 +6474,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 111.76 0)
+			(at 109.22 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6485,7 +6485,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 109.22 111.76 0)
+			(at 109.22 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7547,7 +7547,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 109.22 105.41 0)
+		(at 109.22 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7557,7 +7557,7 @@
 		(dnp no)
 		(uuid "d6599a54-000d-4d90-9058-0c377b93a743")
 		(property "Reference" "#PWR0100"
-			(at 109.22 109.22 0)
+			(at 109.22 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7568,7 +7568,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 109.22 101.6 0)
+			(at 109.22 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7578,7 +7578,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN3810-9_TYPE_B"
-			(at 109.22 105.41 0)
+			(at 109.22 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7589,7 +7589,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 105.41 0)
+			(at 109.22 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7600,7 +7600,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 109.22 105.41 0)
+			(at 109.22 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7624,7 +7624,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 74.93 105.41 0)
+		(at 74.93 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7634,7 +7634,7 @@
 		(dnp no)
 		(uuid "dc2b8f24-63e5-471e-9a19-32f76aeb53b2")
 		(property "Reference" "#PWR083"
-			(at 74.93 109.22 0)
+			(at 74.93 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7645,7 +7645,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 74.93 101.6 0)
+			(at 74.93 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7655,7 +7655,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN3810-9_TYPE_B"
-			(at 74.93 105.41 0)
+			(at 74.93 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7666,7 +7666,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 105.41 0)
+			(at 74.93 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7677,7 +7677,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 74.93 105.41 0)
+			(at 74.93 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

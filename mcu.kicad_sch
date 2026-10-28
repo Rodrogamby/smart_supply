@@ -1873,6 +1873,160 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:SMF5V0A"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SMF5V0A"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMF"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/doc?85881"
+				(at -1.27 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "200W unidirectional Transil Transient Voltage Suppressor, 5Vrwm, SMF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode TVS voltage suppressor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D*SMF*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SMF5V0A_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SMF5V0A_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "RF_Module:ESP32-S3-MINI-1U"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4411,7 +4565,7 @@
 		(uuid "5995a4fa-1687-4b39-9af8-fcd8480c2783")
 	)
 	(rectangle
-		(start 179.705 12.7)
+		(start 177.8 12.7)
 		(end 285.115 74.422)
 		(stroke
 			(width 0)
@@ -4614,6 +4768,12 @@
 		(uuid "41afae37-a506-4434-8de0-f26e444bf42d")
 	)
 	(junction
+		(at 91.44 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "566e0538-b18c-47a2-bb8e-aa0ddd53dc05")
+	)
+	(junction
 		(at 186.69 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4660,6 +4820,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8deb474b-5a20-4abb-9334-ccbc00d2b324")
+	)
+	(junction
+		(at 91.44 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a64a01b0-250d-4149-8974-70c9103bba10")
 	)
 	(junction
 		(at 48.26 139.7)
@@ -5653,6 +5819,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 132.08) (xy 105.41 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2844dc2-ece0-4e3a-be8d-a3eb8ec6636c")
+	)
+	(wire
+		(pts
 			(xy 241.3 25.4) (xy 245.11 25.4)
 		)
 		(stroke
@@ -5860,6 +6036,16 @@
 			(type default)
 		)
 		(uuid "d7f7e4f1-3bae-45f5-b9e7-13ac8c6e8be1")
+	)
+	(wire
+		(pts
+			(xy 91.44 139.7) (xy 105.41 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d89c05ae-8318-48bd-8a65-4c3340c54118")
 	)
 	(wire
 		(pts
@@ -6893,7 +7079,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 49.2252 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -7384,7 +7570,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 107.442 35.56 90)
 			(hide yes)
 			(show_name no)
@@ -7923,7 +8109,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 91.44 135.89 0)
+		(at 105.41 135.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7934,7 +8120,7 @@
 		(fields_autoplaced yes)
 		(uuid "59ce8925-ee69-4e3b-b041-8f8168859125")
 		(property "Reference" "C5"
-			(at 95.25 134.6199 0)
+			(at 109.22 134.6199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7945,7 +8131,7 @@
 			)
 		)
 		(property "Value" "220u"
-			(at 95.25 137.1599 0)
+			(at 109.22 137.1599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7955,8 +8141,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 92.4052 139.7 0)
+		(property "Footprint" "Capacitor_THT:C_Axial_L12.0mm_D6.5mm_P15.00mm_Horizontal"
+			(at 106.3752 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7967,7 +8153,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 135.89 0)
+			(at 105.41 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7978,7 +8164,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 91.44 135.89 0)
+			(at 105.41 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9257,7 +9443,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9a751d69-4a77-496e-8648-aac646367f61")
 		(property "Reference" "RV2"
@@ -10088,6 +10274,88 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SMF5V0A")
+		(at 91.44 135.89 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b0dcf0fa-d728-487a-8f97-bbf76f5dd721")
+		(property "Reference" "D15"
+			(at 93.98 134.6199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMF5V0A"
+			(at 93.98 137.1599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMF"
+			(at 86.36 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?85881"
+			(at 91.44 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "200W unidirectional Transil Transient Voltage Suppressor, 5Vrwm, SMF"
+			(at 91.44 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b9e51e97-42af-4115-93a2-fff1dc9d8d0c")
+		)
+		(pin "2"
+			(uuid "bf017c1f-a15a-44ba-ba53-9e5b10dc79f8")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
+					(reference "D15")
 					(unit 1)
 				)
 			)
@@ -11552,7 +11820,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "SmartSupplyLib:fuse holder"
 			(at 25.4 133.858 90)
 			(hide yes)
 			(show_name no)

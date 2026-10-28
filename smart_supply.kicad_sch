@@ -102,6 +102,52 @@
 		)
 	)
 	(sheet
+		(at 73.66 21.59)
+		(size 12.7 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2c9929a5-2c00-45f1-baca-5f3ca7d07447")
+		(property "Sheetname" "Panel"
+			(at 73.66 20.8784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "panel.kicad_sch"
+			(at 73.66 36.1446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 49.53 41.91)
 		(size 12.7 12.7)
 		(exclude_from_sim yes)

@@ -734,6 +734,14 @@
     "meta": {
       "version": 1
     },
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -746,7 +754,7 @@
         "uuid": "487ef637-7a03-4925-80c1-798e0c6f0bbd"
       }
     ],
-    "used_designators": "F1,FL1,T1,RV1-2,Q1-4,D7-10,#PWR12,#PWR32-33,#PWR35-38,#PWR49,#PWR67-70,#PWR75-82,#PWR98-120,Y3,K1-6,U10-11,C5-6,C14,C16,C47-56,SW2,R19-23,R35,R44-53,H5,J6,J8-12,IC3-4",
+    "used_designators": "F1-2,RV1-2,Q1-4,FL1,T1,Y3,D7-16,#PWR12,#PWR15,#PWR32-33,#PWR35-38,#PWR49,#PWR67-70,#PWR75-82,#PWR98-120,K1-6,C5-6,C14,C16,C47-56,U10-11,SW2,R19-23,R35,R44-53,H5,J6,J8-13,IC3-4",
     "variants": []
   },
   "sheets": [
@@ -777,6 +785,10 @@
     [
       "34ab41b0-567d-4411-99e8-070d64ace837",
       "POWER LINES"
+    ],
+    [
+      "2c9929a5-2c00-45f1-baca-5f3ca7d07447",
+      "Panel"
     ]
   ],
   "text_variables": {},
