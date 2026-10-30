@@ -1205,6 +1205,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F2700T5E"
+			(at 43.18 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5774cbc1-cad9-4dc6-8841-33c6b916185f")
 		)
@@ -1277,6 +1288,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 19.05 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805W8F2700T5E"
 			(at 19.05 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -1428,7 +1450,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 43.18 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -1462,6 +1484,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 43.18 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "333-2SURD/S530-A3"
 			(at 43.18 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -1678,7 +1711,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 31.75 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -1712,6 +1745,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 31.75 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "333-2SURD/S530-A3"
 			(at 31.75 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -1882,6 +1926,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F2700T5E"
+			(at 31.75 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "068ea0b4-715d-4624-8550-8ee88a8efddc")
 		)
@@ -1931,7 +1986,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 19.05 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -1965,6 +2020,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 19.05 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "333-2SURD/S530-A3"
 			(at 19.05 34.29 0)
 			(hide yes)
 			(show_name no)

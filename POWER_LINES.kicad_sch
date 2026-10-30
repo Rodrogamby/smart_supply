@@ -6231,6 +6231,17 @@
 				)
 			)
 		)
+		(property "MPN" "CC0805KRX7R9BB333"
+			(at 81.28 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "f895c7a3-45dd-4d45-bda2-280a2c91b578")
 		)
@@ -6277,7 +6288,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 111.252 158.75 90)
 			(hide yes)
 			(show_name no)
@@ -6300,6 +6311,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 113.03 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF330JT5E"
 			(at 113.03 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -6381,6 +6403,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 214.63 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "G2R-1A-E-DC5"
 			(at 214.63 127 0)
 			(hide yes)
 			(show_name no)
@@ -6474,6 +6507,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 66.04 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRX7R9BB333"
 			(at 66.04 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -6643,6 +6687,17 @@
 				)
 			)
 		)
+		(property "MPN" "CC0805KRX7R9BB333"
+			(at 132.08 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b20cf922-0c64-42ff-93c1-1f125f9e9fdb")
 		)
@@ -6714,6 +6769,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 215.9 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "G2R-1A-E-DC5"
 			(at 215.9 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -6818,6 +6884,17 @@
 				)
 			)
 		)
+		(property "MPN" "ZMCT103C"
+			(at 102.87 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "76d8c946-5591-467c-b0b3-819632db93fe")
 		)
@@ -6902,6 +6979,17 @@
 				)
 			)
 		)
+		(property "MPN" "1717020"
+			(at 123.19 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6e0e1c3c-d477-4adc-ae72-02d7ef82d677")
 		)
@@ -6971,6 +7059,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 193.04 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805W8F1003T5E"
 			(at 193.04 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -7061,6 +7160,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F1001T5E"
+			(at 123.19 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0344425e-93c6-48fe-a357-3cf4804a1599")
 		)
@@ -7132,6 +7242,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 81.28 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRX7R9BB333"
 			(at 81.28 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -7454,6 +7575,17 @@
 				)
 			)
 		)
+		(property "MPN" "ZMPT101K"
+			(at 53.34 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "9f187a08-c399-42ad-8aef-bee4a6d6b96f")
 		)
@@ -7533,6 +7665,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 60.96 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1717020"
 			(at 60.96 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -7700,6 +7843,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F1001T5E"
+			(at 123.19 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2b3776c9-8a4d-43a8-b805-be2a5aec47e7")
 		)
@@ -7717,7 +7871,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 72.39 154.94 270)
+		(at 72.39 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7748,7 +7902,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 72.39 153.162 90)
+			(at 72.39 156.718 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7770,6 +7924,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 72.39 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805W8F1001T5E"
 			(at 72.39 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -7860,6 +8025,17 @@
 				)
 			)
 		)
+		(property "MPN" "ZMPT101K"
+			(at 53.34 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "93530b90-f214-4292-bfa8-2105a683d708")
 		)
@@ -7939,6 +8115,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 262.89 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "G2R-1A-E-DC5"
 			(at 262.89 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -8046,6 +8233,17 @@
 				)
 			)
 		)
+		(property "MPN" "AO3400A"
+			(at 201.93 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3a488b77-4ee7-44fe-8c38-a02f20eb77b4")
 		)
@@ -8128,6 +8326,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F1001T5E"
+			(at 59.69 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4b7337b6-0771-4419-b120-58bc56cb8f66")
 		)
@@ -8174,7 +8383,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 111.252 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -8197,6 +8406,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 113.03 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF100JT5E"
 			(at 113.03 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -8428,6 +8648,17 @@
 				(justify left top)
 			)
 		)
+		(property "MPN" "MOV-14D241K"
+			(at 110.49 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5507073f-ff62-46c8-a837-f36230b3964c")
 		)
@@ -8502,6 +8733,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 33.02 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1730405"
 			(at 33.02 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -8594,6 +8836,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F1001T5E"
+			(at 123.19 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d77770aa-5456-40ff-90bc-c6019a0d1121")
 		)
@@ -8665,6 +8918,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 66.04 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRX7R9BB333"
 			(at 66.04 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -8835,6 +9099,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F1000T5E"
+			(at 64.77 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1c1e504a-1557-48f6-9b67-c66b9188e6b0")
 		)
@@ -8929,6 +9204,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 246.38 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1N4007"
 			(at 246.38 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -9189,6 +9475,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 204.47 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1N4007"
 			(at 204.47 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9494,6 +9791,17 @@
 				(justify left top)
 			)
 		)
+		(property "MPN" "0031.8201.G"
+			(at 96.52 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d9caf5b8-8878-4495-a80e-bc630021be63")
 		)
@@ -9567,6 +9875,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 261.62 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "G2R-1A-E-DC5"
 			(at 261.62 127 0)
 			(hide yes)
 			(show_name no)
@@ -9693,6 +10012,17 @@
 				)
 			)
 		)
+		(property "MPN" "1N4007"
+			(at 203.2 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "25640f12-f129-4a07-85cb-49b8884f9e9e")
 		)
@@ -9730,7 +10060,7 @@
 				)
 			)
 		)
-		(property "Value" "49.9k"
+		(property "Value" "47k"
 			(at 31.75 104.14 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9763,6 +10093,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 31.75 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MFR01SF4702A10"
 			(at 31.75 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -9819,7 +10160,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 111.252 128.27 90)
 			(hide yes)
 			(show_name no)
@@ -9842,6 +10183,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 113.03 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF100JT5E"
 			(at 113.03 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -9931,6 +10283,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F1001T5E"
+			(at 123.19 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4e1b9bba-2b9a-437c-8491-0600df68e148")
 		)
@@ -10010,6 +10373,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F1000T5E"
+			(at 185.42 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3547a22d-40f9-4cc5-bf84-da74e0ae8f2b")
 		)
@@ -10079,6 +10453,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 59.69 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805W8F1001T5E"
 			(at 59.69 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -10238,6 +10623,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 132.08 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0805KRX7R9BB333"
 			(at 132.08 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -10408,6 +10804,17 @@
 				)
 			)
 		)
+		(property "MPN" "ZMCT103C"
+			(at 102.87 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0a5b27c2-1528-431d-bbbe-1b0ee987d294")
 		)
@@ -10482,6 +10889,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 86.36 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1717020"
 			(at 86.36 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -10615,7 +11033,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 111.252 179.07 90)
 			(hide yes)
 			(show_name no)
@@ -10638,6 +11056,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 113.03 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF330JT5E"
 			(at 113.03 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -10884,6 +11313,17 @@
 				)
 			)
 		)
+		(property "MPN" "CC0805KRX7R9BB333"
+			(at 132.08 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "3d7ffb08-40d9-4f20-8e4d-f5196a7a8646")
 		)
@@ -10921,7 +11361,7 @@
 				)
 			)
 		)
-		(property "Value" "49.9k"
+		(property "Value" "47k"
 			(at 41.91 104.14 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10954,6 +11394,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 41.91 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MFR01SF4702A10"
 			(at 41.91 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -11049,6 +11500,17 @@
 				)
 			)
 		)
+		(property "MPN" "AO3400A"
+			(at 200.66 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "409d850e-0cba-4a4e-b16b-00030dee1b37")
 		)
@@ -11069,7 +11531,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 64.77 161.29 180)
+		(at 64.77 161.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11087,7 +11549,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "100"
@@ -11098,11 +11560,11 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 66.548 161.29 90)
+			(at 62.992 161.29 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11124,6 +11586,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 64.77 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805W8F1000T5E"
 			(at 64.77 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -11216,6 +11689,17 @@
 				)
 			)
 		)
+		(property "MPN" "CC0805KRX7R9BB333"
+			(at 132.08 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c66f79fe-5d69-4875-b4ea-8a4d3d72b1e4")
 		)
@@ -11285,6 +11769,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 193.04 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805W8F1003T5E"
 			(at 193.04 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -11455,6 +11950,17 @@
 				)
 			)
 		)
+		(property "MPN" "1717020"
+			(at 123.19 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "71895a01-e5a4-4fee-8e03-ea0cf936413f")
 		)
@@ -11559,6 +12065,17 @@
 				)
 			)
 		)
+		(property "MPN" "1N4007"
+			(at 247.65 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7725c209-1ff1-4d5d-b38c-fc179e740f6c")
 		)
@@ -11628,6 +12145,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 185.42 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805W8F1000T5E"
 			(at 185.42 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -11718,6 +12246,17 @@
 				)
 			)
 		)
+		(property "MPN" "0805W8F1001T5E"
+			(at 72.39 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9af2bc6f-4498-46f3-a292-fdcab21413df")
 		)
@@ -11788,6 +12327,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 36.83 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MFR0W4F2002A50"
 			(at 36.83 158.75 0)
 			(hide yes)
 			(show_name no)
