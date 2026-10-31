@@ -10909,6 +10909,17 @@
 				)
 			)
 		)
+		(property "MPN" "USBLC6-2SC6 "
+			(at 101.6 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5e143497-1353-434e-86c4-95bd5025fb3c")
 		)

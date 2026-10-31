@@ -566,7 +566,7 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Value",
           "name": "Value",
           "show": true
@@ -602,7 +602,7 @@
           "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -611,7 +611,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -635,7 +635,7 @@
           "group_by": false,
           "label": "Sim.Device",
           "name": "Sim.Device",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -647,7 +647,7 @@
           "group_by": false,
           "label": "Sim.Name",
           "name": "Sim.Name",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -759,14 +759,6 @@
     [
       "487ef637-7a03-4925-80c1-798e0c6f0bbd",
       "smart_supply"
-    ],
-    [
-      "4afa77e3-011c-47b7-b4a4-3a54e6ff5b81",
-      "Current Sensor Sim"
-    ],
-    [
-      "78ed7862-57f9-462b-ac3c-68f24f48418e",
-      "Rectifier Simulation"
     ],
     [
       "f9380e13-e191-4828-b42d-2cc7f479b711",
