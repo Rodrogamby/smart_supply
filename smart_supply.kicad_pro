@@ -572,34 +572,34 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Simulation",
           "name": "${EXCLUDE_FROM_SIM}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Position Files",
           "name": "${EXCLUDE_FROM_POS_FILES}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -635,7 +635,7 @@
           "group_by": false,
           "label": "Sim.Device",
           "name": "Sim.Device",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -647,7 +647,7 @@
           "group_by": false,
           "label": "Sim.Name",
           "name": "Sim.Name",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -683,7 +683,7 @@
           "group_by": false,
           "label": "MPN",
           "name": "MPN",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -752,7 +752,7 @@
         "uuid": "487ef637-7a03-4925-80c1-798e0c6f0bbd"
       }
     ],
-    "used_designators": "T1,#PWR32-33,#PWR35-38,#PWR49,#PWR67-70,#PWR75-82,#PWR98-121,D7-10,D14,R19-23,R44-53,U10-11,C14,C16-17,C29,C31-34,C37-38,C47-60,K1-6,Y3,H5,Q1-4,J6,J8-12,SW2,IC3-4,RV1-2",
+    "used_designators": "T1,#PWR32-38,#PWR49,#PWR62,#PWR67-72,#PWR75-82,#PWR84,#PWR86,#PWR98-129,D6-10,D14,D16-19,#FLG1-7,R19-23,R44-57,U6,U10-11,C14,C16-17,C29,C31-34,C37-38,C47-64,K1-6,Y3,H5-9,Q1-4,J6,J8-12,J14-16,SW2,IC3-4,RV1-2,FB3-5,TP1-3",
     "variants": []
   },
   "sheets": [
@@ -771,10 +771,6 @@
     [
       "f9380e13-e191-4828-b42d-2cc7f479b711",
       "MCU"
-    ],
-    [
-      "21684dc7-d3bf-41d6-9154-934c515daf55",
-      "ADE Module"
     ],
     [
       "ec25a9df-b47e-476b-804e-5c9e6193e727",
