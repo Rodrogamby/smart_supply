@@ -1,6 +1,6 @@
 # Dashboard
 
-Dashboard for the Smart Programmable Power Source project, built with HTML, CSS, JavaScript, Vite, and MQTT.js
+Dashboard for the project, built with HTML, CSS, JavaScript, Vite, and MQTT.js
 
 The current prototype displays real sensor readings from an ESP32-S3 in the Channel 1 area
 
