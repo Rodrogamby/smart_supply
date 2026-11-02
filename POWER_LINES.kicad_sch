@@ -10799,7 +10799,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 31.75 109.728 90)
 			(hide yes)
 			(show_name no)
@@ -10832,7 +10832,7 @@
 				)
 			)
 		)
-		(property "MPN" "MFR01SF4702A10"
+		(property "MPN" "AF1206FR-0747KL"
 			(at 31.75 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -12372,7 +12372,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 41.91 109.728 90)
 			(hide yes)
 			(show_name no)
@@ -12405,7 +12405,7 @@
 				)
 			)
 		)
-		(property "MPN" "MFR01SF4702A10"
+		(property "MPN" "AF1206FR-0747KL"
 			(at 41.91 107.95 0)
 			(hide yes)
 			(show_name no)
