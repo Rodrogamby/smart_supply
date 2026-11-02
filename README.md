@@ -63,4 +63,8 @@ The ESP32 publishes JSON messages like this on `test2`:
 | `package-lock.json` | Locked dependency versions |
 
 
+#Access the Virtual Machine
+
+```cmd
+```
 
