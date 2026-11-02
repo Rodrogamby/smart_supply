@@ -63,8 +63,11 @@ The ESP32 publishes JSON messages like this on `test2`:
 | `package-lock.json` | Locked dependency versions |
 
 
-#Access the Virtual Machine
+# Access the Virtual Machine
+
+Use Tec Visitantes Network
 
 ```cmd
+ssh -i "path of the  smart_supply\VM\vm1_key.pem file" azureuser@158.23.60.51
 ```
 
