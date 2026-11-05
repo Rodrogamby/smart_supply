@@ -1,0 +1,214 @@
+(footprint "MOV14D241K"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "MOV-14D241K-3")
+	(tags "Varistor")
+	(property "Reference" "RV**"
+		(at 3.75 0 0)
+		(layer "F.SilkS")
+		(uuid "df7cd25d-c495-4415-8954-62d5b941155a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "MOV14D241K"
+		(at 3.75 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "0144b67c-73dd-48fd-ad4a-8e39a98cdc3d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3225f6bc-de66-4ad4-9b19-4d6e78a5f2f0")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "28790d3d-1163-4e1e-a6ac-d2ad38505307")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.5 -2)
+		(end 12 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c92cb4f1-46ff-4e76-b240-6bc6a9211f2f")
+	)
+	(fp_line
+		(start -4.5 2)
+		(end -4.5 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e4f8fb0d-39e4-4737-a468-92e905b892d7")
+	)
+	(fp_line
+		(start 12 -2)
+		(end 12 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f5a9f1f4-468a-484d-8e2d-7004cde1ee17")
+	)
+	(fp_line
+		(start 12 2)
+		(end -4.5 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "090dff33-1604-48c1-9906-0e3745f0a22f")
+	)
+	(fp_line
+		(start -5.5 -3)
+		(end 13 -3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a34ff634-45f1-4b22-b9ca-82188b8ec4dc")
+	)
+	(fp_line
+		(start -5.5 3)
+		(end -5.5 -3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d96c5b08-932c-4f8e-a24c-bc501dd14fce")
+	)
+	(fp_line
+		(start 13 -3)
+		(end 13 3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ea1bcc80-1eae-45fb-995d-bb11904ff50f")
+	)
+	(fp_line
+		(start 13 3)
+		(end -5.5 3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e46d9141-359e-4b27-acfe-235a82bbfe34")
+	)
+	(fp_line
+		(start -4.5 -2)
+		(end 12 -2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "cb91d005-b566-47d7-8ad7-e8ed8942bb99")
+	)
+	(fp_line
+		(start -4.5 2)
+		(end -4.5 -2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "603f3c50-c0d7-4a3d-a336-f7c3e0c91a8b")
+	)
+	(fp_line
+		(start 12 -2)
+		(end 12 2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f75a1346-6013-4b63-b39b-bac654448745")
+	)
+	(fp_line
+		(start 12 2)
+		(end -4.5 2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "554e3060-89cc-4cd9-9ba2-73770421c8e5")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 3.75 0 0)
+		(layer "F.Fab")
+		(uuid "2136e923-4a7e-4847-8e7c-46564ccc00ae")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3f0c4d36-3e8f-4cbe-8229-0b786ad2a5b1")
+	)
+	(pad "2" thru_hole circle
+		(at 7.5 0)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "35b3cee4-7a2b-456e-b946-b6abf45b28d5")
+	)
+	(embedded_fonts no)
+	(model "MOV-14D241K.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
