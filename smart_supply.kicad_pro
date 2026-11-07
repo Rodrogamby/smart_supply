@@ -60,7 +60,7 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.5,
+          "min_clearance": 0.0,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 1,
@@ -69,7 +69,13 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -140,7 +146,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.15,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -153,8 +159,8 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
-        "min_via_annular_width": 0.1,
+        "min_track_width": 0.15,
+        "min_via_annular_width": 0.15,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
@@ -203,7 +209,9 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +238,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -752,13 +765,21 @@
         "uuid": "487ef637-7a03-4925-80c1-798e0c6f0bbd"
       }
     ],
-    "used_designators": "IC3-4,K1-6,J6,J8-12,J14-16,SW2,RV1-2,FB3-5,R19-23,R44-57,TP1-3,H5-9,Y3,#PWR6,#PWR32-38,#PWR49,#PWR62,#PWR67-72,#PWR75-82,#PWR84,#PWR86,#PWR98-129,T1,Q1-4,U2,U6,U10-11,D6-10,D14,D16-19,C14,C16-17,C29,C31-34,C37-38,C47-64,#FLG1-7",
+    "used_designators": "IC1-4,J2-12,J14-18,#FLG1-7,R1,R3,R19-23,R44-57,K1-6,SW2,FB2-5,TP1-3,F3-5,RV1-2,H1-9,Y1,Y3,#PWR6,#PWR32-38,#PWR49,#PWR62,#PWR67-72,#PWR75-82,#PWR84,#PWR86,#PWR98-135,T1,Q1-4,U1-3,U6,U10-11,D1,D6-10,D14,D16-19,C1,C3-4,C6-14,C16-17,C29,C31-34,C37-38,C47-64",
     "variants": []
   },
   "sheets": [
     [
       "487ef637-7a03-4925-80c1-798e0c6f0bbd",
       "smart_supply"
+    ],
+    [
+      "b4528913-156a-4325-be2d-744306dfbe63",
+      "ADEsensing"
+    ],
+    [
+      "54337bdd-12b3-4101-b658-edcd985935d6",
+      "breakout pins"
     ],
     [
       "f9380e13-e191-4828-b42d-2cc7f479b711",
