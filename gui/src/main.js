@@ -1,447 +1,332 @@
 import './style.css'
 import mqtt from 'mqtt'
 
-// =====================================================
-// CONFIGURATION
-//  device ID and topics 
-// =====================================================
+// Temporary soil-sensor test
+const TOPIC = 'test2'
+const COMMAND_TOPIC = 'smart_supply/ch1/command'
+const STATE_TOPIC = 'smart_supply/ch1/state'
+let device = null
+let lastStateAt = 0
+let measuring = false
+let subscribed = false
+let pending = null
 
-const DEVICE_ID = 'spps-01'
-const TOPIC = `spps/${DEVICE_ID}`
-const STALE_AFTER_MS = 10000
-
-// Find an HTML element by its ID.
-const $ = (id) => document.getElementById(id)
-
-// Build MQTT topics
-const topic = (suffix) => `${TOPIC}/${suffix}`
-
-// Connection state and latest measurements
-let client = null
-let lastTelemetryAt = 0
-let deviceOnline = false
-let hasFault = false
-const measurements = {}
-
-// =====================================================
-// INTERFACE HELPERS
-// =====================================================
-
-// Update a status badge and its CSS appearance
-function badge(id, label, type) {
-  const element = $(id)
-  element.textContent = label
-  element.className = `badge ${type}`
-}
-
-// Display a message above the channel cards
-function notice(message, isError = false) {
-  $('notice').textContent = message
-  $('notice').classList.toggle('error', isError)
-}
-
-// Add a timestamped event, keeping the latest 30 entries
-function log(message) {
-  const item = document.createElement('li')
-  const time = document.createElement('time')
-
-  time.textContent = new Date().toLocaleTimeString()
-  item.append(time, document.createTextNode(message))
-  $('event-log').prepend(item)
-
-  while ($('event-log').children.length > 30) {
-    $('event-log').lastElementChild.remove()
-  }
-}
-
-// Enable controls only when the ESP32 is communicating
-// Faults block ON requests, while OFF remains available
-function controlsEnabled() {
-  const fresh = Date.now() - lastTelemetryAt < STALE_AFTER_MS
-  const available = client?.connected && deviceOnline && fresh
-
-  document.querySelectorAll('.channel-command').forEach((button) => {
-    const turningOn = button.dataset.enabled === 'true'
-    button.disabled = !available || (hasFault && turningOn)
+function buttons() {
+  const ready = client?.connected && subscribed && device &&
+    Date.now() - lastStateAt < 10000 && !pending
+  document.querySelectorAll('[data-channel][data-enabled]').forEach((button) => {
+    button.disabled = button.dataset.channel !== 'ch1' || !ready
   })
 }
 
-// Format numbers; missing or invalid values appear as a dash
-function reading(value, digits) {
-  return typeof value === 'number' && Number.isFinite(value)
-    ? value.toFixed(digits)
-    : '—'
+function resetDevice() {
+  device = null
+  lastStateAt = 0
+  measuring = false
+  subscribed = false
+  pending = null
+  buttons()
 }
 
+function handleState(payload, packet) {
+  if (packet?.retain) return 
+  let state
+  try { state = JSON.parse(payload.toString()) } catch { return }
+  if (!state || typeof state.device !== 'string' ||
+      typeof state.online !== 'boolean' || typeof state.enabled !== 'boolean') return
 
-
-// =====================================================
-// INCOMING MQTT DATA
-// =====================================================
-
-// Refresh the channel cards using measurements from the ESP32
-// Output badges change here, rather than immediately on a click
-function renderTelemetry(data) {
-  if (!data || typeof data !== 'object') return
-
-  lastTelemetryAt = Date.now()
-  let anyFault = false
-
-  for (const channel of ['ch1', 'ch2']) {
-    const state = data[channel]
-    if (!state || typeof state !== 'object') continue
-
-    measurements[channel] = state
-
-    if (typeof state.enabled === 'boolean') {
-      badge(
-        `${channel}-state`,
-        state.enabled ? 'ON' : 'OFF',
-        state.enabled ? 'good' : 'neutral'
-      )
-    }
-
-    $(`${channel}-voltage`).textContent = reading(state.voltage, 1)
-    $(`${channel}-current`).textContent = reading(state.current, 2)
-    $(`${channel}-power`).textContent = reading(state.power, 1)
-
-    const fault = state.fault === true
-    anyFault ||= fault
-
-    $(`${channel}-fault`).textContent = fault
-      ? 'Fault reported by ESP32'
-      : 'No fault reported'
-
-    $(`${channel}-fault`).classList.toggle('active', fault)
+      if (device && state.device !== device) return
+  device = state.device
+  setText('ch1-device', device)
+  if (!state.online) {
+    lastStateAt = 0
+    measuring = false
+    pending = null
+    badge('device-status', 'ESP32 offline', 'bad')
+    badge('ch1-state', 'Offline', 'bad')
+    notice('ESP32 disconnected.')
+    buttons()
+    return
   }
-
-  hasFault = anyFault
-  deviceOnline = true
-
-  $('last-update').textContent = new Date().toLocaleTimeString()
-  badge('device-status', 'ESP32 reporting', 'good')
-
-  renderTriangle()
-  controlsEnabled()
+  lastStateAt = Date.now()
+  if (measuring !== state.enabled) { lastLiveAt = Date.now(); stale = false }
+  measuring = state.enabled
+  badge('device-status', 'ESP32 online', 'good')
+  if (pending && state.request_id === pending.id) {
+    log('ESP32 confirmed: ' + (measuring ? 'measurements started' : 'measurements stopped'))
+    pending = null
+  }
+  if (!pending) {
+    badge('ch1-state', measuring ? 'Running' : 'Stopped', measuring ? 'good' : 'neutral')
+    notice(measuring ? 'ESP32 is publishing sensor measurements.' : 'ESP32 connected. Press Turn on to start measurements.')
+  }
+  buttons()
 }
 
-// Parse JSON messages and route them by their MQTT topic
-function handleMessage(name, payload) {
-  let data
+function sendCommand(enabled) {
+  if (!client?.connected || !subscribed || !device || pending || Date.now() - lastStateAt >= 10000) return
+  const id = crypto.randomUUID()
+  pending = { id, at: Date.now() }
+  buttons()
+  notice('Waiting for the ESP32 to confirm ' + (enabled ? 'Turn on…' : 'Turn off…'))
+  const connection = client
+  // Do not retain commands or queue them for a later connection.
+  connection.publish(COMMAND_TOPIC, JSON.stringify({device, enabled, request_id: id}),
+    {qos: 0, retain: false}, (error) => {
+      if (client !== connection || pending?.id !== id) return
+      if (error) {
+        pending = null
+        notice('Could not send command: ' + error.message, true)
+        buttons()
+      }
+    })
+}
+const STALE_AFTER_MS = 10000
+const $ = (id) => document.getElementById(id)
 
+function setText(id, value) {
+  const element = $(id)
+  if (element) element.textContent = value
+}
+
+function setDisabled(id, value) {
+  const element = $(id)
+  if (element) element.disabled = value
+}
+let client = null
+let lastLiveAt = 0
+let stale = false
+
+function badge(id, text, type) {
+  const element = $(id)
+  if (!element) return
+  element.textContent = text
+  element.classList.remove('good', 'bad', 'neutral', 'demo')
+  element.classList.add('badge', type)
+}
+
+function notice(text, error = false) {
+  const element = $('notice')
+  if (element) {
+    element.textContent = text
+    element.classList.toggle('error', error)
+  }
+  if (error) console.error(text)
+}
+
+function log(text) {
+  const list = $('event-log')
+  if (!list) { console.info(text); return }
+  const item = document.createElement('li')
+  const clock = document.createElement('time')
+  clock.textContent = new Date().toLocaleTimeString()
+  item.append(clock, document.createTextNode(text))
+  list.prepend(item)
+  while (list.children.length > 30) {
+    list.lastElementChild.remove()
+  }
+}
+
+function resetReadings() {
+  for (const id of ['ch1-adc', 'ch1-sample', 'ch1-device', 'ch1-received', 'last-update']) {
+    setText(id, '—')
+  }
+}
+
+function disconnect() {
+  resetDevice()
+  const previous = client
+  client = null
+  previous?.removeAllListeners()
+  previous?.end(true)
+  lastLiveAt = 0
+  stale = false
+  badge('broker-status', 'Broker disconnected', 'bad')
+  badge('device-status', 'ESP32 unknown', 'neutral')
+  badge('ch1-state', 'Disconnected', 'neutral')
+  setDisabled('connect-btn', false)
+  setDisabled('disconnect-btn', true)
+}
+
+function handleMessage(name, payload, packet) {
+  if (name === STATE_TOPIC) { handleState(payload, packet); return }
+  if (name !== TOPIC) return
+  let data
   try {
     data = JSON.parse(payload.toString())
   } catch {
-    log(`Ignored invalid JSON on ${name}`)
+    log('Ignored non-JSON message on ' + name)
+    return
+  }
+  if (!data || data.sensor !== 'soil_moisture' ||
+      typeof data.device !== 'string' ||
+      !Number.isInteger(data.adc_raw) ||
+      data.adc_raw < 0 || data.adc_raw > 65535) {
+    log('Ignored message with an unexpected sensor format')
     return
   }
 
-  if (name === topic('telemetry')) {
-    renderTelemetry(data)
-  } else if (name === topic('status')) {
-    deviceOnline = data.online === true
+  if (device && data.device !== device) return
+  const now = new Date()
+  setText('ch1-adc', data.adc_raw.toLocaleString())
+  setText('ch1-sample', Number.isInteger(data.sample) ? String(data.sample) : '—')
+  setText('ch1-device', data.device)
+  setText('ch1-received', now.toLocaleTimeString())
+  setText('last-update', now.toLocaleTimeString())
 
-    badge(
-      'device-status',
-      deviceOnline ? 'ESP32 online' : 'ESP32 offline',
-      deviceOnline ? 'good' : 'bad'
-    )
-
-    controlsEnabled()
-    log(`Device status: ${deviceOnline ? 'online' : 'offline'}`)
-  } else if (name === topic('ack')) {
-    // An acknowledgement reports command acceptance
-    // Telemetry separately reports the actual output state
-    const result = data.accepted === true ? 'accepted' : 'rejected'
-    const reason = data.reason ? ` (${String(data.reason)})` : ''
-
-    log(`Command ${String(data.id ?? '?')}: ${result}${reason}`)
+  if (packet?.retain) {
+    badge('ch1-state', 'Stored reading', 'neutral')
+    notice('Retained reading received; waiting for live sensor data.')
+    return
   }
+
+  if (!lastLiveAt || stale) log('Receiving soil measurements from ' + data.device)
+  lastLiveAt = Date.now()
+  stale = false
+  if (measuring && !pending) badge('ch1-state', 'Running', 'good')
 }
 
-// =====================================================
-// MQTT CONNECTION
-// =====================================================
-
-// Close the connection and reset device availability.
-function disconnect() {
-  const old = client
-  client = null
-  old?.end(true)
-
-  deviceOnline = false
-  lastTelemetryAt = 0
-
-  badge('broker-status', 'Broker disconnected', 'bad')
-  badge('device-status', 'ESP32 unknown', 'neutral')
-
-  $('connect-btn').disabled = false
-  $('disconnect-btn').disabled = true
-
-  controlsEnabled()
-}
-
-// Connect using the broker URL entered in the interface.
-// Browsers require ws:// or wss://, rather than raw MQTT TCP.
 function connect() {
-  disconnect()
-
+  const missing = ['broker-url', 'mqtt-user', 'mqtt-password'].filter((id) => !$(id))
+  if (missing.length) {
+    notice('Missing connection control IDs: ' + missing.join(', '), true)
+    return
+  }
   const url = $('broker-url').value.trim()
+  const username = $('mqtt-user').value.trim()
+  const password = $('mqtt-password').value
 
-  if (!/^wss?:\/\//i.test(url)) {
-    notice('Enter a ws:// or wss:// broker WebSocket URL.', true)
+  try {
+    const parsed = new URL(url)
+    if (!['ws:', 'wss:'].includes(parsed.protocol)) throw new Error()
+  } catch {
+    notice('Enter a valid ws:// or wss:// broker URL.', true)
+    return
+  }
+  if (!username || !password) {
+    notice('Enter your MQTT username and password.', true)
     return
   }
 
-  // Every browser tab gets a unique MQTT client ID.
-  const next = mqtt.connect(url, {
-    clientId: `spps-web-${crypto.randomUUID()}`,
-    reconnectPeriod: 2000,
-    connectTimeout: 5000,
-    clean: true,
-  })
-
+  disconnect()
+  resetReadings()
+  let next
+  try {
+    next = mqtt.connect(url, {
+      username,
+      password,
+      clientId: 'spps-web-' + crypto.randomUUID(),
+      reconnectPeriod: 3000,
+      connectTimeout: 10000,
+      clean: true,
+      queueQoSZero: false,
+    })
+  } catch (error) {
+    notice('MQTT: ' + error.message, true)
+    return
+  }
   client = next
-
-  $('connect-btn').disabled = true
-  $('disconnect-btn').disabled = false
-
+  setDisabled('connect-btn', true)
+  setDisabled('disconnect-btn', false)
   badge('broker-status', 'Connecting…', 'neutral')
-  notice(`Connecting to ${url}`)
+  badge('ch1-state', 'Waiting', 'neutral')
+  notice('Connecting to ' + url)
 
-  // Subscribe again whenever the broker connection is established.
   next.on('connect', () => {
     if (client !== next) return
-
+    resetDevice()
     badge('broker-status', 'Broker connected', 'good')
-    notice('Connected. Waiting for ESP32 telemetry…')
+    badge('ch1-state', 'Waiting', 'neutral')
+    notice('Connected. Waiting for soil-sensor measurements…')
     log('Connected to MQTT broker')
-
-    next.subscribe(
-      [topic('telemetry'), topic('status'), topic('ack')],
-      { qos: 1 },
-      (error) => {
-        if (error) log(`Subscription failed: ${error.message}`)
+    next.subscribe([TOPIC, STATE_TOPIC], { qos: 1 }, (error, granted) => {
+      if (client !== next) return
+      if (error || !granted?.length || granted.some((entry) => entry.qos >= 128)) {
+        notice('Subscription failed. Check MQTT permissions.', true)
+        log('Subscription failed: ' + (error?.message ?? 'broker rejected topic'))
+      } else {
+        subscribed = true
+        buttons()
+        log('Subscribed to measurements and ESP32 state')
       }
-    )
-
-    controlsEnabled()
+    })
   })
-
-  // Ignore events from a connection that has been replaced.
-  next.on('message', (name, payload) => {
-    if (client === next) handleMessage(name, payload)
+  next.on('message', (name, payload, packet) => {
+    if (client === next) handleMessage(name, payload, packet)
   })
-
   next.on('reconnect', () => {
-    if (client === next) {
-      badge('broker-status', 'Reconnecting…', 'neutral')
-    }
+    if (client === next) badge('broker-status', 'Reconnecting…', 'neutral')
   })
-
   next.on('close', () => {
     if (client !== next) return
-
+    resetDevice()
+    lastLiveAt = 0
+    stale = false
     badge('broker-status', 'Broker disconnected', 'bad')
-    deviceOnline = false
-    controlsEnabled()
+    badge('device-status', 'ESP32 unknown', 'neutral')
+    badge('ch1-state', 'Disconnected', 'neutral')
   })
-
   next.on('error', (error) => {
     if (client !== next) return
-
-    notice(`MQTT: ${error.message}`, true)
-    log(`MQTT error: ${error.message}`)
+    notice('MQTT: ' + error.message, true)
+    log('MQTT error: ' + error.message)
+    console.error(error)
   })
 }
 
-// =====================================================
-// OUTPUT COMMANDS
-// =====================================================
-
-// Send an explicit ON/OFF request to the ESP32.
-// The ESP32 must also validate commands and enforce protection.
-function sendChannelCommand(channel, enabled) {
-  if (!['ch1', 'ch2'].includes(channel)) return
-
-  const stale = Date.now() - lastTelemetryAt >= STALE_AFTER_MS
-
-  if (!client?.connected || !deviceOnline || stale) {
-    notice('ESP32 status or telemetry is stale. Command was not sent.', true)
-    controlsEnabled()
-    return
-  }
-
-  if (hasFault && enabled) {
-    notice('ESP32 reported a fault. ON command was not sent.', true)
-    return
-  }
-
-  const command = {
-    id: crypto.randomUUID(),
-    action: 'set_channel',
-    channel,
-    enabled,
-  }
-
-  // Do not retain commands: old requests must not replay on reconnect.
-  // QoS 1 can deliver duplicates; firmware should recognize repeated IDs.
-  client.publish(
-    topic('command'),
-    JSON.stringify(command),
-    { qos: 1, retain: false },
-    (error) => {
-      if (error) {
-        log(`Publish failed: ${error.message}`)
-      } else {
-        log(
-          `Requested ${channel.toUpperCase()} ${enabled ? 'ON' : 'OFF'} ` +
-          `(${command.id.slice(0, 8)}); awaiting ESP32 acknowledgement`
-        )
-      }
-    }
-  )
+if (!$('connect-btn')) {
+  notice('Missing connection button: keep id="connect-btn" on your Connect button.', true)
 }
-
-// =====================================================
-// POWER TRIANGLE
-// =====================================================
-
-// Display the selected channel's P, Q, S and power factor
-// Q must come from the ESP32; RMS voltage/current cannot reveal its sign
-function renderTriangle() {
-  const channel = $('power-channel').value
-  const data = measurements[channel] ?? {}
-  const number = (value) =>
-    typeof value === 'number' && Number.isFinite(value)
-
-  const p = number(data.power) ? data.power : null
-  const q = number(data.reactivePower) ? data.reactivePower : null
-
-  // Prefer reported apparent power; otherwise calculate Vrms × Irms
-  const s = number(data.apparentPower)
-    ? data.apparentPower
-    : number(data.voltage) && number(data.current)
-      ? data.voltage * data.current
-      : null
-
-  // PF is undefined when apparent power is zero
-  const pf = s > 0 && p !== null ? p / s : null
-
-  $('triangle-p').textContent = reading(p, 1)
-  $('triangle-q').textContent = reading(q, 1)
-  $('triangle-s').textContent = reading(s, 1)
-  $('triangle-pf').textContent = reading(pf, 3)
-
-  const valid =
-    p !== null && q !== null && p >= 0 && s !== null && s >= 0
-
-  $('triangle-vectors').setAttribute(
-    'visibility',
-    valid ? 'visible' : 'hidden'
-  )
-
-  if (!valid) {
-    $('triangle-note').textContent =
-      'Waiting for valid P, S and signed Q measurements.'
-    $('triangle-title').textContent =
-      'Power triangle: waiting for measurements'
-    return
-  }
-
-  // One scale for both axes preserves the triangle angle.
-  const scale = Math.min(
-    315 / Math.max(p, 1),
-    115 / Math.max(Math.abs(q), 1)
-  )
-
-  const x = 45 + p * scale
-
-  // SVG coordinates grow downward, so positive Q is subtracted.
-  const y = 150 - q * scale
-
-  // Update an SVG line's endpoints.
-  const line = (id, x1, y1, x2, y2) => {
-    const element = $(id)
-
-    for (const [key, value] of Object.entries({ x1, y1, x2, y2 })) {
-      element.setAttribute(key, value)
-    }
-  }
-
-  line('p-vector', 45, 150, x, 150)
-  line('q-vector', x, 150, x, y)
-  line('s-vector', 45, 150, x, y)
-
-  // Position labels near their corresponding vectors.
-  const labels = [
-    ['p-label', (45 + x) / 2, 173],
-    ['q-label', x + 12, (150 + y) / 2],
-    ['s-label', (45 + x) / 2 - 10, (150 + y) / 2 - 12],
-  ]
-
-  for (const [id, tx, ty] of labels) {
-    $(id).setAttribute('x', tx)
-    $(id).setAttribute('y', ty)
-  }
-
-  // S² = P² + Q² applies to the classical sinusoidal power triangle.
-  // Distortion or inconsistent data can make the vector length differ from S.
-  const mismatch =
-    Math.abs(Math.hypot(p, q) - s) > Math.max(1, s * 0.05)
-
-  $('s-label').textContent = mismatch ? '|P + jQ|' : 'S'
-
-  if (mismatch) {
-    $('triangle-note').textContent =
-      'P–Q vector shown. Its length differs from S; distortion or ' +
-      'inconsistent measurements may be present.'
-  } else if (s === 0) {
-    $('triangle-note').textContent =
-      'No apparent power; power factor is undefined.'
-  } else if (q > 0) {
-    $('triangle-note').textContent = 'Inductive load · lagging current'
-  } else if (q < 0) {
-    $('triangle-note').textContent = 'Capacitive load · leading current'
-  } else {
-    $('triangle-note').textContent = 'Zero reactive power'
-  }
-
-  $('triangle-title').textContent =
-    `${channel}: P ${p} W, Q ${q} var, S ${s} VA`
-}
-
-// =====================================================
-// BUTTONS AND PERIODIC CONNECTION CHECK
-// =====================================================
-
-$('power-channel').addEventListener('change', renderTriangle)
-$('connect-btn').addEventListener('click', connect)
-
-$('disconnect-btn').addEventListener('click', () => {
+$('connect-btn')?.addEventListener('click', connect)
+$('disconnect-btn')?.addEventListener('click', () => {
   disconnect()
-  notice('Disconnected from broker.')
+  notice('Disconnected. Displayed measurements are historical.')
+})
+$('clear-log')?.addEventListener('click', () => $('event-log')?.replaceChildren())
+
+// Channel 1 controls acquisition; Channel 2 remains disabled.
+document.querySelectorAll('[data-channel][data-enabled]').forEach((button) => {
+  button.disabled = true
+  if (button.dataset.channel === 'ch1') {
+    button.addEventListener('click', () => sendCommand(button.dataset.enabled === 'true'))
+  }
 })
 
-$('clear-log').addEventListener('click', () => {
-  $('event-log').replaceChildren()
-})
+function renderTrianglePlaceholder() {
+  $('triangle-vectors')?.setAttribute('visibility', 'hidden')
+  setText('triangle-title', 'Power triangle: waiting for electrical measurements')
+  for (const id of ['triangle-p', 'triangle-q', 'triangle-s', 'triangle-pf']) {
+    setText(id, '—')
+  }
+  setText('triangle-note', 'Waiting for electrical measurements. Soil readings do not produce a power triangle.')
+}
+$('power-channel')?.addEventListener('change', renderTrianglePlaceholder)
+renderTrianglePlaceholder()
 
-document.querySelectorAll('.channel-command').forEach((button) => {
-  button.addEventListener('click', () => {
-    sendChannelCommand(
-      button.dataset.channel,
-      button.dataset.enabled === 'true'
-    )
-  })
-})
-
-// Disable controls if telemetry stops arriving.
 setInterval(() => {
   if (!client?.connected) return
-
-  if (lastTelemetryAt && Date.now() - lastTelemetryAt >= STALE_AFTER_MS) {
-    badge('device-status', 'ESP32 telemetry stale', 'bad')
-    controlsEnabled()
+  if (pending && Date.now() - pending.at >= 8000) {
+    pending = null
+    notice('No command confirmation. Check the ESP32; its state is not confirmed.', true)
+    log('Command confirmation timed out')
+  }
+  if (lastStateAt && Date.now() - lastStateAt >= 10000) {
+    lastStateAt = 0
+    pending = null
+    badge('device-status', 'ESP32 not responding', 'bad')
+    badge('ch1-state', 'Unknown', 'neutral')
+    notice('ESP32 heartbeat stopped. Controls are disabled.', true)
+  }
+  buttons()
+  if (!lastStateAt || !measuring || !lastLiveAt || stale) return
+  if (Date.now() - lastLiveAt >= STALE_AFTER_MS) {
+    stale = true
+    badge('ch1-state', 'Stale', 'bad')
+    badge('device-status', 'Sensor telemetry stale', 'bad')
+    notice('No live sensor measurements for 10 seconds. Last values remain displayed.')
+    log('Soil telemetry stopped arriving')
   }
 }, 1000)
+
+window.addEventListener('pagehide', () => client?.end(true))
+

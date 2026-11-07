@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "mqtt": "^5.14.1"
+    "mqtt": "^5.16.1"
   },
   "devDependencies": {
     "vite": "^7.3.0"
