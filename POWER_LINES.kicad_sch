@@ -5,6 +5,135 @@
 	(uuid "6e51c710-516b-4b6e-9df0-24c51a0f4de2")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x01"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x01"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x01_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -3578,18 +3707,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(circle
-		(center 155.194 85.344)
-		(radius 1.7961)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "3558789e-c35e-4601-a26d-ec4eb9f3e63e")
-	)
 	(rectangle
 		(start 90.17 96.52)
 		(end 149.86 146.05)
@@ -3602,30 +3719,6 @@
 		)
 		(uuid "400ae686-5632-495e-b9dd-54726f229b9f")
 	)
-	(circle
-		(center 149.86 85.09)
-		(radius 1.7961)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "492cf1dc-1492-4a41-9cbf-b91e44ddb467")
-	)
-	(circle
-		(center 148.59 22.86)
-		(radius 1.7961)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "5156f0cd-76fc-463b-974b-83096e422c20")
-	)
 	(rectangle
 		(start 13.97 12.7)
 		(end 165.1 93.98)
@@ -3637,18 +3730,6 @@
 			(type none)
 		)
 		(uuid "5354be45-8b41-4a42-86c2-b20190ee0e40")
-	)
-	(circle
-		(center 143.51 22.86)
-		(radius 1.7961)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "6361c598-759b-46cc-a4e1-50e328eef6c1")
 	)
 	(rectangle
 		(start 16.51 51.816)
@@ -3873,6 +3954,12 @@
 		(uuid "fc183e52-3d78-4265-b26b-06fd7d5baa02")
 	)
 	(junction
+		(at 152.4 22.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0426e3bc-ddd6-4657-93e6-616d7edb391b")
+	)
+	(junction
 		(at 132.08 186.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3901,12 +3988,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2f65bb9f-0d7d-435c-ae69-68e284daf9d5")
-	)
-	(junction
-		(at 152.4 22.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "300aabf1-0039-42b5-b8e3-257552c5bee8")
 	)
 	(junction
 		(at 64.77 167.64)
@@ -4340,16 +4421,6 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 22.86) (xy 152.4 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b71a48e-b0a8-4457-bff5-bdc0ff5821d5")
-	)
-	(wire
-		(pts
 			(xy 25.4 158.75) (xy 33.02 158.75)
 		)
 		(stroke
@@ -4507,6 +4578,16 @@
 			(type default)
 		)
 		(uuid "2bf5a740-d5bb-44c2-bb8f-9e67d8471236")
+	)
+	(wire
+		(pts
+			(xy 146.05 22.86) (xy 152.4 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2efc15e3-e37b-42e9-9fd8-5c49cbd24941")
 	)
 	(wire
 		(pts
@@ -4880,6 +4961,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 85.09) (xy 158.75 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "651615cf-ac97-4bdc-821e-0bbb5c23802b")
+	)
+	(wire
+		(pts
 			(xy 193.04 73.66) (xy 196.85 73.66)
 		)
 		(stroke
@@ -5100,7 +5191,17 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 90.17) (xy 158.75 90.17)
+			(xy 137.16 22.86) (xy 142.24 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f35eb7e-c41f-434a-b3cd-39a3a4a7f0b1")
+	)
+	(wire
+		(pts
+			(xy 123.19 90.17) (xy 156.21 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5780,7 +5881,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 85.09) (xy 158.75 85.09)
+			(xy 142.24 85.09) (xy 147.32 85.09)
 		)
 		(stroke
 			(width 0)
@@ -6048,6 +6149,16 @@
 		)
 		(uuid "1db56d7a-51b4-448f-9ec5-57c484f00ef3")
 	)
+	(label "CH2_N"
+		(at 156.21 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "37d00023-a38e-40e9-a78b-92e09e553392")
+	)
 	(label "CH1_L_OUT"
 		(at 46.99 59.69 0)
 		(effects
@@ -6068,15 +6179,75 @@
 		)
 		(uuid "3ef40286-1dd9-4475-b99c-d9660fcab5ba")
 	)
-	(label "CH2_N"
-		(at 264.16 97.79 180)
+	(label "CT1_1"
+		(at 142.24 22.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "46e420d3-6188-4a10-a81f-de08df0e264c")
+		(uuid "47d0a623-d5c3-473a-9cee-ed99e20fd3ac")
+	)
+	(label "csns2P2"
+		(at 102.87 180.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "52f947bb-4361-411f-8bd5-e0b76dcaaeb0")
+	)
+	(label "CH2_N"
+		(at 25.4 163.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "56001027-296f-44d6-82f5-2256b7914eaf")
+	)
+	(label "csns2P1"
+		(at 102.87 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5a10dc49-e9b8-41ef-8258-a0b5b22084d2")
+	)
+	(label "CT2_2"
+		(at 152.4 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "65d7c26c-2c2c-44e9-acc8-32060c119bf2")
+	)
+	(label "CT2_1"
+		(at 146.05 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "69bf9307-fa6a-43fe-9446-cd38be03ca31")
+	)
+	(label "csns1P1"
+		(at 102.87 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "70185889-f1ab-40bf-a4e2-28eba84239fb")
 	)
 	(label "CH2_L_OUT"
 		(at 226.06 97.79 0)
@@ -6087,16 +6258,6 @@
 			(justify left bottom)
 		)
 		(uuid "76ade35a-51a5-4611-a33d-35c3cd12e992")
-	)
-	(label "CH2_N"
-		(at 25.4 163.83 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "7d337311-8791-4380-a29a-e98d833d5c93")
 	)
 	(label "CH1_N_OUT"
 		(at 46.99 64.77 0)
@@ -6138,6 +6299,16 @@
 		)
 		(uuid "8d56c8d9-75d8-49f6-bad1-4986bc16491a")
 	)
+	(label "CT1_2"
+		(at 147.32 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "95887220-6836-4961-bd8a-e9527bf8e93c")
+	)
 	(label "CH1_N_OUT"
 		(at 266.7 62.23 0)
 		(effects
@@ -6158,16 +6329,6 @@
 		)
 		(uuid "a35f1500-c3d5-4e62-b9b7-7b0ee1227c38")
 	)
-	(label "CH2_N"
-		(at 264.16 135.89 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a48189e4-b62b-4d6a-b4eb-f4423b8b01aa")
-	)
 	(label "CH2_L"
 		(at 25.4 158.75 180)
 		(effects
@@ -6187,6 +6348,16 @@
 			(justify right bottom)
 		)
 		(uuid "c6b87b10-82a1-4fc2-9711-872585c2fa46")
+	)
+	(label "csns1P2"
+		(at 102.87 128.8677 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cc6e56db-832c-4fdd-b66d-0d0bbca8c551")
 	)
 	(label "L"
 		(at 38.1 31.75 180)
@@ -6229,14 +6400,24 @@
 		(uuid "d6402735-bbfe-41b9-9d83-2afedede5d08")
 	)
 	(label "CH2_N"
-		(at 158.75 90.17 0)
+		(at 264.16 135.89 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "ffa10ed7-ef11-47cb-bd49-b31b7c312ecd")
+		(uuid "f2cea634-9d89-4f86-94b4-797f25faeab8")
+	)
+	(label "CH2_N"
+		(at 264.16 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fe24ef96-bdf9-43f7-9f30-b5269c60ae80")
 	)
 	(global_label "RLY_CH1"
 		(shape input)
@@ -6259,6 +6440,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "ACDCsupply"
+		(shape input)
+		(at 116.84 22.86 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "45c71a37-8727-4d14-af4f-91e5564b81ce")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.84 9.5225 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -8246,6 +8451,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x01")
+		(at 146.05 27.94 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "403d9a84-4b1b-48b9-b008-367500753039")
+		(property "Reference" "J19"
+			(at 146.812 26.162 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x01"
+			(at 142.24 30.734 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Wire:SolderWire-2.5sqmm_1x01_D2.4mm_OD4.4mm"
+			(at 146.05 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 146.05 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2f4818a7-bd5a-44bc-9c3e-66b4f825ff65")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "J19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 193.04 157.48 0)
 		(unit 1)
@@ -9918,6 +10201,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x01")
+		(at 147.32 80.01 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "73eab0ea-c64c-497e-8d37-658cee06c8aa")
+		(property "Reference" "J20"
+			(at 143.51 81.28 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x01"
+			(at 139.954 76.2 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Wire:SolderWire-2.5sqmm_1x01_D2.4mm_OD4.4mm"
+			(at 147.32 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 147.32 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc251c17-d142-4691-ae0f-588c2edbcd5c")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "J20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 116.84 118.11 90)
 		(mirror x)
@@ -10068,6 +10430,85 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "#FLG06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x01")
+		(at 152.4 80.01 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7bfacdd6-e5cf-464f-b667-3b684efdc714")
+		(property "Reference" "J21"
+			(at 153.162 81.788 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x01"
+			(at 148.59 77.216 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Wire:SolderWire-2.5sqmm_1x01_D2.4mm_OD4.4mm"
+			(at 152.4 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 152.4 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ffa83533-b8d6-467e-931d-da853b41272e")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "J21")
 					(unit 1)
 				)
 			)
@@ -13520,6 +13961,84 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "R36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x01")
+		(at 142.24 27.94 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ff7b4d33-f23a-4b4f-9034-dc8420ba174e")
+		(property "Reference" "J7"
+			(at 138.43 26.67 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x01"
+			(at 134.874 31.75 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Wire:SolderWire-2.5sqmm_1x01_D2.4mm_OD4.4mm"
+			(at 142.24 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 142.24 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4253653f-392f-4a22-b701-38381ee70980")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "J7")
 					(unit 1)
 				)
 			)

@@ -4669,280 +4669,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SmartSupplyLib:TPD1E10B06DPYR"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 12.7 8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" "TPD1E10B06DPYR"
-				(at 12.7 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "TPD1E10B06DPYR"
-				(at 12.7 -93.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Datasheet" ""
-				(at 12.7 -193.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Description" "ESD Suppressors / TVS Diodes Sgl Channel ESD TPD1E10B06 Single-Channel ESD Protection Diode in 0402 Package"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Height" "0.45"
-				(at 12.7 -393.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Mouser Part Number" "595-TPD1E10B06DPYR"
-				(at 12.7 -493.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPD1E10B06DPYR?qs=UFc95S4Z4CaJYpQ4xqTc0g%3D%3D"
-				(at 12.7 -593.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Manufacturer_Name" "Texas Instruments"
-				(at 12.7 -693.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Manufacturer_Part_Number" "TPD1E10B06DPYR"
-				(at 12.7 -793.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(symbol "TPD1E10B06DPYR_1_1"
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 10.16 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 9.144 2.54) (xy 10.16 2.032)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 15.24 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.032) (xy 10.16 2.032)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.032) (xy 11.176 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 15.24 2.54) (xy 10.16 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 15.24 2.54) (xy 15.24 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 0 180)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Switch:SW_Push"
 			(pin_numbers
 				(hide yes)
@@ -5954,12 +5680,6 @@
 		(uuid "fd66839d-abf0-411e-96eb-ca4751daaf49")
 	)
 	(junction
-		(at 17.78 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02588f79-67ae-43e1-b068-73fec7303398")
-	)
-	(junction
 		(at 109.22 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6098,12 +5818,6 @@
 		(uuid "d66178b5-4770-461a-a341-ba7d57d4fe73")
 	)
 	(junction
-		(at 33.02 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dca16632-4544-424b-bc0f-19f92dd1018b")
-	)
-	(junction
 		(at 93.98 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6178,16 +5892,6 @@
 			(type default)
 		)
 		(uuid "03979778-2771-49c6-848b-8776456e7e15")
-	)
-	(wire
-		(pts
-			(xy 17.78 105.41) (xy 21.59 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "043f9439-861a-4d79-b9c7-d596bb10e3e8")
 	)
 	(wire
 		(pts
@@ -6371,16 +6075,6 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 105.41) (xy 17.78 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f676426-3e1d-4089-9bb8-394820ea8038")
-	)
-	(wire
-		(pts
 			(xy 186.69 19.05) (xy 186.69 22.86)
 		)
 		(stroke
@@ -6531,16 +6225,6 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 100.33) (xy 33.02 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3567df12-bcba-416a-ad8c-ebc3eefb0596")
-	)
-	(wire
-		(pts
 			(xy 172.72 60.96) (xy 172.72 63.5)
 		)
 		(stroke
@@ -6548,6 +6232,16 @@
 			(type default)
 		)
 		(uuid "3930540c-29a0-4375-bd92-4df551c83dec")
+	)
+	(wire
+		(pts
+			(xy 60.96 50.8) (xy 64.77 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "397629cd-da39-45d0-9902-9cba70407320")
 	)
 	(wire
 		(pts
@@ -6851,16 +6545,6 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 104.14) (xy 44.45 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54f01777-7834-4f08-828f-39b9a8e2f1d1")
-	)
-	(wire
-		(pts
 			(xy 58.42 107.95) (xy 58.42 109.22)
 		)
 		(stroke
@@ -6981,6 +6665,26 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 100.33) (xy 44.45 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66511cb1-359c-4e3a-83f4-552bdccceb01")
+	)
+	(wire
+		(pts
+			(xy 60.96 55.88) (xy 64.77 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66c75d8b-96fc-40fb-a6fe-d5c0c199fab2")
+	)
+	(wire
+		(pts
 			(xy 223.52 40.64) (xy 227.33 40.64)
 		)
 		(stroke
@@ -7051,7 +6755,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 121.92) (xy 173.99 123.19)
+			(xy 173.99 115.57) (xy 173.99 123.19)
 		)
 		(stroke
 			(width 0)
@@ -7098,6 +6802,16 @@
 			(type default)
 		)
 		(uuid "78948a6e-13b2-4dae-b34d-11d3c053a80b")
+	)
+	(wire
+		(pts
+			(xy 173.99 101.6) (xy 173.99 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a6168f3-6e5f-4a82-b04e-0a886c449ff3")
 	)
 	(wire
 		(pts
@@ -7191,6 +6905,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 53.34) (xy 64.77 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87458179-cb57-4eb7-b92e-96a56224348d")
+	)
+	(wire
+		(pts
 			(xy 179.07 77.47) (xy 184.15 77.47)
 		)
 		(stroke
@@ -7271,7 +6995,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 100.33) (xy 33.02 100.33)
+			(xy 30.48 100.33) (xy 35.56 100.33)
 		)
 		(stroke
 			(width 0)
@@ -7378,16 +7102,6 @@
 			(type default)
 		)
 		(uuid "9ff0684b-d60a-4aad-b924-e8df01ad22b5")
-	)
-	(wire
-		(pts
-			(xy 29.21 105.41) (xy 33.02 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a12b1d94-a33c-4498-ba3b-fd0f1e28ed3e")
 	)
 	(wire
 		(pts
@@ -7571,7 +7285,7 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 100.33) (xy 17.78 105.41)
+			(xy 17.78 100.33) (xy 17.78 109.22)
 		)
 		(stroke
 			(width 0)
@@ -7598,16 +7312,6 @@
 			(type default)
 		)
 		(uuid "c23a4bce-9a1b-45ce-ac36-499ab5f9fa16")
-	)
-	(wire
-		(pts
-			(xy 33.02 100.33) (xy 36.83 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5b6f8c1-e215-480c-8aa3-ae72ef675cc6")
 	)
 	(wire
 		(pts
@@ -7751,6 +7455,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 100.33) (xy 44.45 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4c96eac-960b-420b-8138-8e8b70fc64c3")
+	)
+	(wire
+		(pts
 			(xy 264.16 29.21) (xy 264.16 30.48)
 		)
 		(stroke
@@ -7781,7 +7495,7 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 148.59) (xy 30.48 148.59)
+			(xy 21.59 148.59) (xy 30.48 148.59)
 		)
 		(stroke
 			(width 0)
@@ -8010,7 +7724,7 @@
 		(uuid "21966ea9-faee-40ad-bf87-623daf0a4a6c")
 	)
 	(label "CLK_SD"
-		(at 66.04 85.09 0)
+		(at 64.77 53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8060,7 +7774,7 @@
 		(uuid "53b005be-7fb3-4557-a0be-99e574332434")
 	)
 	(label "D0_SD"
-		(at 66.04 87.63 0)
+		(at 64.77 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8099,8 +7813,18 @@
 		)
 		(uuid "73b57d6b-6454-459f-b468-e6bb9eab91e7")
 	)
+	(label "VBUS"
+		(at 119.38 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7640855a-709f-4726-8ddc-1537b28cbdd5")
+	)
 	(label "CMD"
-		(at 66.04 82.55 0)
+		(at 64.77 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8158,6 +7882,16 @@
 			(justify right bottom)
 		)
 		(uuid "ada919bc-63eb-456a-80bf-acdaf71ac05e")
+	)
+	(label "FUSEL"
+		(at 53.34 132.08 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "af66a77d-4c56-46df-badf-4d683f2a725e")
 	)
 	(label "D0_SD"
 		(at 223.52 40.64 180)
@@ -8263,6 +7997,30 @@
 			)
 		)
 	)
+	(global_label "ACDCsupply"
+		(shape input)
+		(at 21.59 124.46 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0b31f8e9-1a23-456a-bac5-5a00bc861ca0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 21.59 137.7975 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "IRQ2"
 		(shape input)
 		(at 72.39 33.02 0)
@@ -8348,30 +8106,6 @@
 		(uuid "35a1afdf-662b-452b-a77f-049330fcb3a8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 21.0128 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "CH1_L"
-		(shape input)
-		(at 21.59 124.46 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "598ff699-d0d5-4d4a-85a2-ae6ac9f7815f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 13.4533 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8599,6 +8333,30 @@
 			)
 		)
 	)
+	(global_label "CH1_N"
+		(shape input)
+		(at 21.59 148.59 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c91e8129-77b1-40a0-b441-f87b7bc01ed9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 13.1509 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "LED1"
 		(shape input)
 		(at 57.15 163.83 90)
@@ -8660,30 +8418,6 @@
 		(uuid "e48f067b-b225-48e3-a889-4ea58b3f36fe")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 19.8639 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "CH1_N"
-		(shape input)
-		(at 20.32 148.59 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e50ee3c1-1448-4b8a-a650-2e34b6d8f006")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 11.8809 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8982,6 +8716,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 39.37 100.33 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0663b494-f2a1-42b9-90ed-94ebef930dbb")
+		(property "Reference" "R58"
+			(at 40.64 98.298 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470"
+			(at 41.91 102.87 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 39.37 98.552 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 39.37 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0805W8F4700T5E"
+			(at 39.37 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8038c816-6120-43ed-b363-223131da3ed5")
+		)
+		(pin "1"
+			(uuid "00fd07ff-3e19-4401-9729-c631e9054268")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
+					(reference "R58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 125.73 91.44 270)
 		(unit 1)
@@ -9160,7 +8987,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "1uF"
 			(at 91.694 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9171,7 +8998,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 93.0148 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -9204,7 +9031,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0805KRX7R9BB104"
+		(property "MPN" "CL21B105KAFNFNE"
 			(at 93.98 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -10152,161 +9979,6 @@
 		)
 	)
 	(symbol
-		(lib_id "SmartSupplyLib:TPD1E10B06DPYR")
-		(at 173.99 101.6 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "33297e44-420d-406c-9298-00c7591ea310")
-		(property "Reference" "D14"
-			(at 177.8 110.4899 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TPD1E10B06DPYR"
-			(at 177.8 113.0299 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SON:Texas_DPY0002A_0.6x1mm_P0.65mm"
-			(at 80.34 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Datasheet" ""
-			(at -19.66 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Description" "ESD Suppressors / TVS Diodes Sgl Channel ESD TPD1E10B06 Single-Channel ESD Protection Diode in 0402 Package"
-			(at 173.99 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "0.45"
-			(at -219.66 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Mouser Part Number" "595-TPD1E10B06DPYR"
-			(at -319.66 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPD1E10B06DPYR?qs=UFc95S4Z4CaJYpQ4xqTc0g%3D%3D"
-			(at -419.66 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at -519.66 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Manufacturer_Part_Number" "TPD1E10B06DPYR"
-			(at -619.66 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "MPN" "TPD1E10B06DPYR"
-			(at 173.99 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "8606c39b-e2dd-4ef7-ac2a-730f905e62ac")
-		)
-		(pin "1"
-			(uuid "184b777c-f136-40ef-a815-a78d8730964d")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
-					(reference "D14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Power_Protection:USBLC6-2SC6")
 		(at 101.6 49.53 180)
 		(unit 1)
@@ -11247,97 +10919,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
 					(reference "R22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 40.64 100.33 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "54a74574-70d8-48c9-92f1-fb8beb59081f")
-		(property "Reference" "R2"
-			(at 40.64 93.98 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 40.64 96.52 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 40.64 102.108 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 40.64 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0805W8F0000T5E"
-			(at 40.64 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "c16e0a59-c084-417e-bfbe-f719cbd0cc09")
-		)
-		(pin "1"
-			(uuid "ec6cd5cf-6711-4332-903d-bf5540760297")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
-					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -13690,6 +13271,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:SMF5V0A")
+		(at 173.99 111.76 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a8816c14-903c-46f9-a81b-0b38d978f19e")
+		(property "Reference" "D20"
+			(at 176.53 110.4899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMF3.3"
+			(at 176.53 113.0299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 168.91 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 173.99 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SMF3.3 Littlefuse"
+			(at 173.99 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "547fb68d-3e31-42e3-be61-cc8d67481ebb")
+		)
+		(pin "2"
+			(uuid "e3daa351-024f-4936-a870-99df644d9f48")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
+					(reference "D20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x06_Pin")
 		(at 57.15 171.45 90)
 		(unit 1)
@@ -14779,98 +14453,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
 					(reference "D17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 25.4 105.41 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c923c155-7199-4106-b7b1-7e45f964b830")
-		(property "Reference" "C52"
-			(at 26.67 107.696 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 24.13 107.696 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 21.59 106.3752 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 25.4 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 25.4 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CC0805KRX7R9BB104"
-			(at 25.4 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c74a4a0e-40b9-4d17-b521-09d35534480b")
-		)
-		(pin "2"
-			(uuid "b48adf3a-395a-49b4-aa0a-e3f308f263b9")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/f9380e13-e191-4828-b42d-2cc7f479b711"
-					(reference "C52")
 					(unit 1)
 				)
 			)

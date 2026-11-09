@@ -1,0 +1,5 @@
+(version 1)
+
+(rule "Relay K4 contacts"
+  (condition "A.memberOfFootprint('K4') || B.memberOfFootprint('K4')")
+  (constraint clearance (min 1.5mm)))

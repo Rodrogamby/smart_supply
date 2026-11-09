@@ -50,7 +50,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "border_display_style": 2,
+          "border_display_style": 0,
           "border_hatch_pitch": 0.5,
           "corner_radius": 0.0,
           "corner_smoothing": 0,
@@ -64,7 +64,7 @@
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 1,
-          "remove_islands": 0,
+          "remove_islands": 1,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
         }
@@ -525,6 +525,66 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.3,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "CH2",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.5,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4
+      },
+      {
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.4,
+        "name": "Low voltage",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.6,
+        "tuning_profile": "",
+        "via_diameter": 0.8,
+        "via_drill": 0.4
+      },
+      {
+        "clearance": 2.0,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Mains",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 5.5,
+        "tuning_profile": "",
+        "via_diameter": 1.0,
+        "via_drill": 0.5
+      },
+      {
+        "clearance": 0.2,
+        "diff_pair_gap": 0.2,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "USB diff pair",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       }
     ],
     "meta": {
@@ -532,7 +592,108 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Mains",
+        "pattern": "/MCU/FUSEL"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "/POWER LINES/CH1_L_OUT"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "/POWER LINES/CH1_N_OUT"
+      },
+      {
+        "netclass": "CH2",
+        "pattern": "/POWER LINES/CH2_L"
+      },
+      {
+        "netclass": "CH2",
+        "pattern": "/POWER LINES/CH2_L_OUT"
+      },
+      {
+        "netclass": "CH2",
+        "pattern": "/POWER LINES/CH2_N"
+      },
+      {
+        "netclass": "CH2",
+        "pattern": "/POWER LINES/CH2_N_OUT"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "/POWER LINES/CT1_1"
+      },
+      {
+        "netclass": "CH2",
+        "pattern": "/POWER LINES/CT1_2"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "/POWER LINES/L"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "CH1_L"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "CH1_N"
+      },
+      {
+        "netclass": "CH2",
+        "pattern": "Net-(F3-Pad1)"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "Net-(F5-Pad1)"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "Net-(U4-AC/L)"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "/POWER LINES/N"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "ACDCsupply"
+      },
+      {
+        "netclass": "Mains",
+        "pattern": "PE"
+      },
+      {
+        "netclass": "Low voltage",
+        "pattern": "/POWER LINES/csns2P2"
+      },
+      {
+        "netclass": "Low voltage",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Low voltage",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "Low voltage",
+        "pattern": "+3.3V"
+      },
+      {
+        "netclass": "Low voltage",
+        "pattern": "/MCU/VBUS"
+      },
+      {
+        "netclass": "USB diff pair",
+        "pattern": "/MCU/USB_D+"
+      },
+      {
+        "netclass": "USB diff pair",
+        "pattern": "/MCU/USB_D-"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -765,7 +926,7 @@
         "uuid": "487ef637-7a03-4925-80c1-798e0c6f0bbd"
       }
     ],
-    "used_designators": "IC1-4,J2-12,J14-18,#FLG1-7,R1,R3,R19-23,R44-57,K1-6,SW2,FB2-5,TP1-3,F3-5,RV1-2,H1-9,Y1,Y3,#PWR6,#PWR32-38,#PWR49,#PWR62,#PWR67-72,#PWR75-82,#PWR84,#PWR86,#PWR98-135,T1,Q1-4,U1-3,U6,U10-11,D1,D6-10,D14,D16-19,C1,C3-4,C6-14,C16-17,C29,C31-34,C37-38,C47-64",
+    "used_designators": "IC1-4,J2-12,J14-21,#FLG1-7,R1,R3,R19-23,R44-58,K1-6,SW2,FB2-5,TP1-3,F3-5,RV1-2,H1-9,Y1,Y3,#PWR6,#PWR32-38,#PWR49,#PWR62,#PWR67-72,#PWR75-82,#PWR84,#PWR86,#PWR98-135,T1,Q1-4,U1-3,U6,U10-11,D1-2,D6-10,D14,D16-20,C1,C3-4,C6-14,C16-17,C29,C31-34,C37-38,C47-64",
     "variants": []
   },
   "sheets": [
