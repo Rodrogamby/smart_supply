@@ -9,3 +9,6 @@ if [ "$1" != "" ]; then
 else
   printf "Usage: upload.sh [port]\nExample: upload.sh /dev/ttyACM0\n"
 fi
+
+
+# TODO: Windows version
