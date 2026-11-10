@@ -345,3 +345,79 @@ select { background: #0d1727; color: #e7eef9; border: 1px solid #3a5066; border-
   .power-layout { grid-template-columns: 1fr; }
   .power-panel .section-heading { flex-wrap: wrap; }
 }
+
+.measurement-history {
+  margin-top: 28px;
+  margin-bottom: 20px;
+}
+
+.measurement-history h3 {
+  margin: 0 0 14px;
+}
+
+.measurement-history > .history-grid + .eyebrow {
+  margin-top: 35px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.history-chart {
+  grid-column: span 2;
+  min-width: 0;
+  padding: 16px;
+  background: #0d1727;
+  border: 1px solid #2a3b51;
+  border-radius: 12px;
+}
+
+/* Center the power graph across the two middle grid columns. */
+.history-chart-power {
+  grid-column: 2 / 4;
+}
+
+.history-chart h4 {
+  margin: 0 0 8px;
+}
+
+.history-chart h4 span {
+  color: #9cadbf;
+  font-weight: 400;
+}
+
+.history-chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.history-chart svg text {
+  fill: #9cadbf;
+  font-size: 11px;
+}
+
+.chart-axis {
+  fill: none;
+  stroke: #456078;
+  stroke-width: 1;
+}
+
+.chart-trace {
+  fill: none;
+  stroke: #60d5b4;
+  stroke-width: 2;
+}
+
+/* Stack the graphs on narrow screens. */
+@media (max-width: 780px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-chart {
+    grid-column: 1 / -1;
+  }
+}

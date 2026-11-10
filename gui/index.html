@@ -37,14 +37,17 @@
         <section class="channels" aria-label="Output channels">
           <article class="panel channel" data-channel="ch1">
             <div class="channel-heading">
-              <div><p class="eyebrow">CHANNEL 01</p></div>
-              <span id="ch1-state" class="badge neutral">Waiting</span>
+              <div>
+                <p class="eyebrow">CHANNEL 01</p>
+                <h2>120 VAC output</h2>
+              </div>
+              <span id="ch1-state" class="badge neutral">Unknown</span>
             </div>
             <div class="readings">
-              <div><span>Raw ADC</span><strong id="ch1-adc">—</strong><small></small></div>
-              <div><span>Last received</span><strong id="ch1-received">—</strong><small>local time</small></div>
+              <div><span>Voltage</span><strong id="ch1-voltage">—</strong><small>V RMS</small></div>
+              <div><span>Current</span><strong id="ch1-current">—</strong><small>A RMS</small></div>
+              <div><span>Power</span><strong id="ch1-power">—</strong><small>W</small></div>
             </div>
-            <p class="muted">Device: <span id="ch1-device">—</span></p>
             <div class="button-row">
               <button class="channel-command" data-channel="ch1" data-enabled="true" disabled>Turn on</button>
               <button class="channel-command secondary" data-channel="ch1" data-enabled="false" disabled>Turn off</button>
@@ -59,6 +62,40 @@
             </div>
             <div class="button-row"><button class="channel-command" data-channel="ch2" data-enabled="true" disabled>Turn on</button><button class="channel-command secondary" data-channel="ch2" data-enabled="false" disabled>Turn off</button></div>
           </article>
+        </section>
+        <section  class="panel measurement-history" aria-labelledby="history-title">
+          <h3 id="history-title"> Measurement history</h3>
+          <p class="eyebrow">CHANNEL 01</p>
+          <div class="history-grid">
+            <div class="history-chart">
+              <h4>Voltage <span>V RMS</span></h4>
+              <H5>gráfica aquí</H5>
+            </div>
+            <div class="history-chart">
+              <h4>Current <span>A RMS</span></h4>
+              <h5>gráfica aqui</h5>
+            </div>
+            <div class="history-chart history-chart-power">
+              <h4>Active Power <span>W</span></h4>
+              <h5>gráfica aqui</h5>
+            </div>
+          </div>
+
+          <p class="eyebrow">CHANNEL 02</p>
+          <div class="history-grid">
+            <div class="history-chart">
+              <h4>Voltage <span>V RMS</span></h4>
+              <H5>gráfica aquí</H5>
+            </div>
+            <div class="history-chart">
+              <h4>Current <span>A RMS</span></h4>
+              <h5>gráfica aqui</h5>
+            </div>
+            <div class="history-chart history-chart-power">
+              <h4>Active Power <span>W</span></h4>
+              <h5>gráfica aqui</h5>
+            </div>
+          </div>
         </section>
         <section class="panel power-panel" aria-labelledby="power-title">
           <div class="section-heading">
