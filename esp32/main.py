@@ -42,18 +42,24 @@ def cast_to_int32(data):
     # '>i' bigendian 32bit int
     return unpack('>i', data)[0]
 
+def cast_to_uint32(data):
+    return unpack('>I', data)[0]
+
 def cast_to_int16(data):
-    # '>i' bigendian 32bit int
     return unpack('>h', data)[0]
 
 def cast_to_uint16(data):
-    # '>i' bigendian 32bit int
     return unpack('>H', data)[0]
 
 def raw_to_volts(raw : int):
     scale_factor = 1e-3 # 1m: 180V -> 180mV
     fullcount = 6500000 # 500mV
-    return (500e-3 * raw) / (fullcount * scale_factor)
+    return (250e-3 * raw) / (fullcount * scale_factor)
+
+def raw_to_power(raw : int):
+    scale = 1e-3 # 1m: 180V -> 180mV
+    fullcount = 4862401
+    return (250000 * raw) / (fullcount)
 
 def get_voltage():
     rx = comm(ADE7953.V.addr, True, ADE7953.V.bits)
@@ -63,6 +69,10 @@ def get_voltage_rms(): # shuold be read synchronously to the zx signal
     rx = comm(ADE7953.VRMS.addr, True, ADE7953.VRMS.bits)
     return raw_to_volts(cast_to_int32(rx))
 
+def get_voltage_peak():
+    rx = comm(ADE7953.VPEAK.addr, True, ADE7953.VPEAK.bits)
+    return raw_to_volts(cast_to_uint32(rx))
+
 def get_period(): # p.36
     rx = comm(ADE7953.Period.addr, True, ADE7953.Period.bits)
     rx = cast_to_uint16(rx)
@@ -70,3 +80,31 @@ def get_period(): # p.36
 
 def get_frequency():
     return 1/get_period()
+
+def get_powerfactor():
+	rx = comm(ADE7953.PFA.addr, True, ADE7953.PFA.bits)
+	return cast_to_int16(rx)
+
+def get_angle():
+	rx = comm(ADE7953.ANGLE_A.addr, True, ADE7953.ANGLE_A.bits)
+	return cast_to_int16(rx)
+
+def get_current_rms():
+	rx = comm(ADE7953.IRMSA.addr, True, ADE7953.IRMSA.bits)
+	return raw_to_volts(cast_to_uint32(rx))
+
+def get_current_peak():
+	rx = comm(ADE7953.IAPEAK.addr, True, ADE7953.IAPEAK.bits)
+	return raw_to_volts(cast_to_uint32(rx))
+
+def get_apparent_power():
+	rx = comm(ADE7953.AVA.addr, True, ADE7953.AVA.bits)
+	return raw_to_power(cast_to_int32(rx))
+
+def get_active_power():
+	rx = comm(ADE7953.AWATT.addr, True, ADE7953.AWATT.bits)
+	return raw_to_power(cast_to_int32(rx))
+
+def get_reactive_power():
+	rx = comm(ADE7953.AVAR.addr, True, ADE7953.AVAR.bits)
+	return raw_to_power(cast_to_int32(rx))
