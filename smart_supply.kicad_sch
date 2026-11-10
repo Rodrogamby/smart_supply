@@ -60,7 +60,7 @@
 		(size 12.7 13.97)
 		(exclude_from_sim yes)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
@@ -148,11 +148,103 @@
 		)
 	)
 	(sheet
-		(at 49.53 21.59)
-		(size 12.7 12.7)
+		(at 72.898 43.942)
+		(size 12.7 11.176)
 		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "54337bdd-12b3-4101-b658-edcd985935d6")
+		(property "Sheetname" "breakout pins"
+			(at 72.898 43.2304 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "breakoutBoard.kicad_sch"
+			(at 72.898 55.7026 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 23.622 41.91)
+		(size 14.732 15.494)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b4528913-156a-4325-be2d-744306dfbe63")
+		(property "Sheetname" "ADEsensing"
+			(at 23.622 41.1984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADEsensing.kicad_sch"
+			(at 23.622 57.9886 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 49.53 21.59)
+		(size 12.7 12.7)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
