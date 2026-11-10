@@ -51,15 +51,27 @@ def cast_to_int16(data):
 def cast_to_uint16(data):
     return unpack('>H', data)[0]
 
+#for 180V (peak)
+#circuit: 180V --(transformer)--> 180mV
 def raw_to_volts(raw : int):
-    scale_factor = 1e-3 # 1m: 180V -> 180mV
-    fullcount = 6500000 # 500mV
-    return (250e-3 * raw) / (fullcount * scale_factor)
+    print(f'raw value: {raw}')
+    scale_factor = 1/1000 # 1m: 180V -> 180mV
+    fullcount = 6500000
+    return (500e-3 * raw) / (fullcount * scale_factor)
+
+#for 10A (RMS) -> 14.15A (peak)
+#circuit: 14.2A --(transformer)--> 14.2mA --(33Ω resistor)--> 468.6mV
+def raw_to_current(raw : int):
+    print(f'raw value: {raw}')
+    scale_factor = 33/1000 # 14.2A -> 468.6mV
+    fullcount = 6500000
+    return (500e-3 * raw) / (fullcount * scale_factor)
 
 def raw_to_power(raw : int):
-    scale = 1e-3 # 1m: 180V -> 180mV
+    print(f'fullscale: ${raw}')
+    fullscale_power = 500 * 15.15 #Vmax * Amax (peak)
     fullcount = 4862401
-    return (250000 * raw) / (fullcount)
+    return fullscale_power * raw / fullcount
 
 def get_voltage():
     rx = comm(ADE7953.V.addr, True, ADE7953.V.bits)
@@ -67,7 +79,7 @@ def get_voltage():
 
 def get_voltage_rms(): # shuold be read synchronously to the zx signal
     rx = comm(ADE7953.VRMS.addr, True, ADE7953.VRMS.bits)
-    return raw_to_volts(cast_to_int32(rx))
+    return raw_to_volts(cast_to_uint32(rx))
 
 def get_voltage_peak():
     rx = comm(ADE7953.VPEAK.addr, True, ADE7953.VPEAK.bits)
@@ -82,29 +94,32 @@ def get_frequency():
     return 1/get_period()
 
 def get_powerfactor():
-	rx = comm(ADE7953.PFA.addr, True, ADE7953.PFA.bits)
-	return cast_to_int16(rx)
+    rx = comm(ADE7953.PFB.addr, True, ADE7953.PFB.bits)
+    print(rx)
+    pf_dec = cast_to_int16(rx)
+    print(f'pf_dec: {pf_dec}')
+    return pf_dec/32767
 
 def get_angle():
-	rx = comm(ADE7953.ANGLE_A.addr, True, ADE7953.ANGLE_A.bits)
+	rx = comm(ADE7953.ANGLE_B.addr, True, ADE7953.ANGLE_B.bits)
 	return cast_to_int16(rx)
 
 def get_current_rms():
-	rx = comm(ADE7953.IRMSA.addr, True, ADE7953.IRMSA.bits)
-	return raw_to_volts(cast_to_uint32(rx))
+	rx = comm(ADE7953.IRMSB.addr, True, ADE7953.IRMSB.bits)
+	return raw_to_current(cast_to_uint32(rx))
 
 def get_current_peak():
-	rx = comm(ADE7953.IAPEAK.addr, True, ADE7953.IAPEAK.bits)
+	rx = comm(ADE7953.IBPEAK.addr, True, ADE7953.IBPEAK.bits)
 	return raw_to_volts(cast_to_uint32(rx))
 
 def get_apparent_power():
-	rx = comm(ADE7953.AVA.addr, True, ADE7953.AVA.bits)
+	rx = comm(ADE7953.BVA.addr, True, ADE7953.BVA.bits)
 	return raw_to_power(cast_to_int32(rx))
 
 def get_active_power():
-	rx = comm(ADE7953.AWATT.addr, True, ADE7953.AWATT.bits)
+	rx = comm(ADE7953.BWATT.addr, True, ADE7953.BWATT.bits)
 	return raw_to_power(cast_to_int32(rx))
 
 def get_reactive_power():
-	rx = comm(ADE7953.AVAR.addr, True, ADE7953.AVAR.bits)
+	rx = comm(ADE7953.BVAR.addr, True, ADE7953.BVAR.bits)
 	return raw_to_power(cast_to_int32(rx))
