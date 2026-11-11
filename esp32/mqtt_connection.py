@@ -1,9 +1,9 @@
 import machine
-import network
 import ntptime
 import ssl
 from binascii import hexlify
 from umqtt.simple import MQTTClient
+from network_interface import Nif
 
 BROKER = "retotest.mexicocentral.cloudapp.azure.com"
 PORT = 8883
@@ -11,10 +11,16 @@ CA_FILE = "/isrgrootx1.der"
 
 
 def connect_mqtt(username, password):
-    # Use the Wi-Fi connection you already set up
-    wifi = network.WLAN(network.STA_IF)
-    if not wifi.isconnected():
-        raise RuntimeError("Connect the ESP32 to Wi-Fi first")
+    # Use the Wi-Fi connection
+    if not Nif.sta.isconnected():
+        wifi = Nif()
+        wifi.setup_sta()
+        print("Connecting to Wi-Fi...")
+
+        while not Nif.sta.isconnected():
+            pass
+
+    print("Wi-Fi connected:", Nif.sta.ifconfig()[0])
 
     # TLS certificate validation needs the correct date and time.
     print("synchronizing clock...")
