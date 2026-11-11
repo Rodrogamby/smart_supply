@@ -71,7 +71,7 @@ function connect() {
     if (topic !='telemetry/ch1') return
 
     try {
-      const readings = JSON.pase(message.toString())
+      const readings = JSON.parse(message.toString())
       console.log('CH1 readings:', readings)
     }catch (error){
       console.error('Invalid telemetry:', error)
