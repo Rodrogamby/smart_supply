@@ -2,6 +2,8 @@ from machine import Pin, SPI
 from binascii import hexlify
 from ade7953 import ADE7953
 from struct import unpack
+from mqtt_connection import connect_mqtt
+
 
 en = Pin(14, mode=Pin.OUT, value=1) # enable
 cs = Pin(10, mode=Pin.OUT, value=1) # chip select
@@ -123,3 +125,6 @@ def get_active_power():
 def get_reactive_power():
 	rx = comm(ADE7953.BVAR.addr, True, ADE7953.BVAR.bits)
 	return raw_to_power(cast_to_int32(rx))
+
+
+client = connect_mqtt(b"reto", b"reto")
