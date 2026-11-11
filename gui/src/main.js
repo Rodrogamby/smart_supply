@@ -39,8 +39,8 @@ function connect() {
     client = mqtt.connect(url, {
       username,
       password,
-      reconnectPeriod: 0,    // Reconnect manually using the Connect button.
-      connectTimeout: 10000, // Wait up to 10 seconds for a connection.
+      reconnectPeriod: 0,    // Reconnect manually using the Connect button
+      connectTimeout: 10000, // Wait up to 10 seconds for a connection
     })
   } catch (error) {
     // Handle errors thrown while creating the client
@@ -53,12 +53,30 @@ function connect() {
   $('disconnect-btn').disabled = false
   setStatus('Connecting…', 'neutral')
 
-  // This runs once the broker accepts the MQTT connection.
+  // This runs once the broker accepts the MQTT connection
   client.on('connect', () => {
     setStatus('Broker connected', 'good')
     log('Connected to MQTT')
+
+    client.subscribe('telemetry/ch1',(error, granted) => {
+      if (error || !granted?.length || granted[0].qos >= 128) {
+        console.error('Subscription failed:', error || granted)
+        return
+      }
+      console.log('Listening on telemetry/ch1')
+    })
   })
 
+  client.on('message', (topic, message) => {
+    if (topic !='telemetry/ch1') return
+
+    try {
+      const readings = JSON.pase(message.toString())
+      console.log('CH1 readings:', readings)
+    }catch (error){
+      console.error('Invalid telemetry:', error)
+    }
+  })
   // Show errors reported by the MQTT client
   client.on('error', (error) => {
     setStatus(`MQTT error: ${error.message}`, 'bad')
