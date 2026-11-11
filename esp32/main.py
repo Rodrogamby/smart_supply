@@ -15,9 +15,9 @@ ade7953.setup()
 
 if client is not None:
     readings = {
-        "voltage_rms(vrms)": ade7953.get_voltage_rms(),
-        "current_rms(arms)": ade7953.get_current_rms(),
-        "active_power(w)": ade7953.get_active_power(),
+        "voltage_rms(vrms)": ade7953.get_vrms(),
+        "current_rms(arms)": ade7953.get_irms(),
+        "active_power(w)": ade7953.get_p(),
     }
 
     readings_json = json.dumps(readings)
