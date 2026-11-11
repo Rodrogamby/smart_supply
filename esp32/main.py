@@ -3,6 +3,7 @@ from binascii import hexlify
 from ade7953 import ADE7953
 from struct import unpack
 from mqtt_connection import connect_mqtt
+import json
 
 
 en = Pin(14, mode=Pin.OUT, value=1) # enable
@@ -128,3 +129,16 @@ def get_reactive_power():
 
 
 client = connect_mqtt(b"reto", b"reto")
+
+if client is not None:
+    readings = {
+        "voltage_rms(vrms)": get_voltage_rms(),
+        "current_rms(arms)": get_current_rms(),
+        "active_power(w)": get_active_power(),
+    }
+
+    readings_json = json.dumps(readings)
+    client.publish(b"telemetry/ch1", readings_json.encode("utf-8"), qos=1)
+    print("Published to telemetry/ch1 topic:", readings_json)
+else:
+    print("Not MQTTT connection")
