@@ -2,7 +2,9 @@ import machine
 import ssl
 from binascii import hexlify
 from umqtt.simple import MQTTClient
+from logger import Log
 import json
+
 
 class Sender:
     Sender = None
@@ -32,13 +34,15 @@ class Sender:
         )
 
 
-    def connect(self):
+    def connect(self): # throws exception
+        Log.debug(f'Attempting connection to {self.client.user}@{self.client.server}:{self.client.port}')
         self.client.connect()
-        print('Connection established?')
+        Log.info(f'Connected to broker: {self.client.server}:{self.client.port}')
 
-    def send(self, message):
+    def send(self, message):  # throws exception
         topic = b'telemetry/ch1'
+        jsonized = json.dumps(message)
         self.client.publish(
                 topic,
-                json.dumps(message).encode("utf-8"),
-                qos=1)
+                jsonized.encode("utf-8"),
+                qos=0)
