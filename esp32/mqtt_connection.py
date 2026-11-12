@@ -11,20 +11,15 @@ CA_FILE = "/isrgrootx1.der"
 
 
 def connect_mqtt(username, password):
-    # Use the Wi-Fi connection
+
     if not Nif.sta.isconnected():
         wifi = Nif()
         wifi.setup_sta()
         print("Connecting to Wi-Fi...")
-
-        while not Nif.sta.isconnected():
+        while not Nif.sta.isconnected(): # todo: async call
             pass
 
-    print("Wi-Fi connected:", Nif.sta.ifconfig()[0])
-
-    # TLS certificate validation needs the correct date and time.
-    print("synchronizing clock...")
-    ntptime.settime()
+    print("Connected to Wi-Fi:", Nif.sta.ifconfig()[0])
 
     # Load the CA certificate and require broker verification
     tls = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
