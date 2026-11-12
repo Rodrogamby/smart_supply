@@ -1,0 +1,5 @@
+{
+    "broker": {"host":"monitor.fla.mx", "port":"8883"},
+    "credentials": {"user":"reto", "password":"reto"}
+}
+

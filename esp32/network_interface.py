@@ -3,6 +3,7 @@ import machine
 import led
 import ntptime
 import json
+from mqtt_connection import Sender
 
 class Nif:
     sta = network.WLAN(network.STA_IF)
@@ -13,10 +14,12 @@ class Nif:
             self.led.green()
             self.led.on()
             self.wificheck()
+            #log.info("Connection recovered.")
             if self.wanAccess and not self.timeSync:
                 ntptime.settime()
                 self.timeSync = True  # handle exception
-            #log.info("Connection recovered.")
+            for fun in self.callbacks:
+                fun()
             return
 
         if Nif.sta.status() < 1000:
@@ -46,10 +49,11 @@ class Nif:
                        freq=2,
                        callback=self.wifirecover_)
 
-    def __init__(self, wanAccess=False):
+    def __init__(self, callbacks=[], wanAccess=True):
         self.keys = json.load(open('keys.json'))
         self.tim1 = machine.Timer(1)
         self.led = led.Led()
+        self.callbacks = callbacks
         self.wanAccess = wanAccess
         self.timeSync = False
 

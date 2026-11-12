@@ -2,26 +2,21 @@ from machine import Pin, SPI
 from binascii import hexlify
 from ade7953 import ADE7953
 from struct import unpack
-from mqtt_connection import connect_mqtt
-import json
+from mqtt_connection import Sender
 import ade7953
 
 
-
-
-client = connect_mqtt(b"reto", b"reto")
-
 ade7953.setup()
+sender = Sender.Sender
 
-if client is not None:
+def callback():
     readings = {
-        "voltage_rms(vrms)": ade7953.get_vrms(),
-        "current_rms(arms)": ade7953.get_irms(),
-        "active_power(w)": ade7953.get_p(),
+        "vrms": ade7953.get_vrms(),
+        "irms": ade7953.get_irms(),
+        "p": ade7953.get_p(),
+        "q": ade7953.get_q(),
+        "s": ade7953.get_s(),
+        "pf": ade7953.get_pf(),
+        "angle": ade7953.get_angle()
     }
-
-    readings_json = json.dumps(readings)
-    client.publish(b"telemetry/ch1", readings_json.encode("utf-8"), qos=1)
-    print("Published to telemetry/ch1 topic:", readings_json)
-else:
-    print("Not MQTTT connection")
+    sender.send(readings)
