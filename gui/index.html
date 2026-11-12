@@ -21,7 +21,7 @@
           <div><h2 id="connection-title">Connection</h2></div>
           <div class="connection-controls">
             <label for="broker-url">MQTT WebSocket URL</label>
-            <input id="broker-url" type="url" value="wss://retotest.mexicocentral.cloudapp.azure.com:8084/mqtt" spellcheck="false" />
+            <input id="broker-url" type="url" value="wss://monitor.fla.mx:8084/mqtt" spellcheck="false" />
             <label for="mqtt-user">MQTT username</label>
             <input id="mqtt-user" value="reto" autocomplete="username" />
             <label for="mqtt-password">MQTT password</label>
@@ -118,10 +118,10 @@
               </svg>
             </div>
             <div class="power-values">
-              <div><span>Active power · P</span><strong id="triangle-p">—</strong><small>W</small></div>
-              <div><span>Reactive power · Q</span><strong id="triangle-q">—</strong><small>var</small></div>
-              <div><span>Apparent power · S</span><strong id="triangle-s">—</strong><small>VA</small></div>
-              <div><span>Power factor · PF</span><strong id="triangle-pf">—</strong><small></small></div>
+              <div><span>Active power · P</span><strong id="p_ch1">—</strong><small>W</small></div>
+              <div><span>Reactive power · Q</span><strong id="q_ch1">—</strong><small>var</small></div>
+              <div><span>Apparent power · S</span><strong id="s_ch1">—</strong><small>VA</small></div>
+              <div><span>Power factor · PF</span><strong id="pf_ch1">—</strong><small></small></div>
             </div>
           </div>
           <p id="triangle-note" class="muted power-help">Waiting for electrical measurements.</p>

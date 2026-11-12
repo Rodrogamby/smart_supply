@@ -72,6 +72,14 @@ function connect() {
 
     try {
       const readings = JSON.parse(message.toString())
+      $('ch1-voltage').textContent = readings['vrms'].toFixed(2)
+      $('ch1-current').textContent = readings['irms'].toFixed(2)
+      $('ch1-power').textContent = readings['p'].toFixed(2)
+      $('p_ch1').textContent = readings['p'].toFixed(2)
+      $('q_ch1').textContent = readings['q'].toFixed(2)
+      $('s_ch1').textContent = readings['s'].toFixed(2)
+      $('pf_ch1').textContent = readings['pf'].toFixed(2)
+
       console.log('CH1 readings:', readings)
     }catch (error){
       console.error('Invalid telemetry:', error)
