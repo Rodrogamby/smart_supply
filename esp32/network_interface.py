@@ -4,58 +4,62 @@ import led
 import ntptime
 import json
 from mqtt_connection import Sender
+from logger import Log
 
 class Nif:
     sta = network.WLAN(network.STA_IF)
     ap = network.WLAN(network.AP_IF)
+
+    online = False
+
     def wifirecover_(self, t):
         if Nif.sta.status() == network.STAT_GOT_IP:
-            t.deinit()
+            Nif.online = True
             self.led.green()
             self.led.on()
-            self.wificheck()
-            #log.info("Connection recovered.")
-            if self.wanAccess and not self.timeSync:
+            Log.info(f"Connected. IPv4={Nif.sta.ifconfig()[0]}.")
+            if self.wanAccess and not self.timeSynced:
                 ntptime.settime()
-                self.timeSync = True  # handle exception
-            for fun in self.callbacks:
-                fun()
+                self.timeSynced = True  # handle exception
+            self.wificheck()
             return
 
         if Nif.sta.status() < 1000:
             self.led.red()
             self.led.toggle()
-            # return
         else:
             self.led.amber()
             self.led.toggle()
 
+        self.wifirecover()
+
     def wificheck_(self, t):
         if Nif.sta.status() != network.STAT_GOT_IP:
-            t.deinit()
+            Nif.online = False
+            Log.warn("Connection lost.")
             self.wifirecover()
-            #log.info("Connection lost.")
             return
+
+        self.wificheck()
 
     def wificheck(self):
         self.tim1.init(
-                       mode=machine.Timer.PERIODIC,
-                       freq=0.5,
+                       mode=machine.Timer.ONE_SHOT,
+                       period=2000,
                        callback=self.wificheck_)
 
     def wifirecover(self):
         self.tim1.init(
-                       mode=machine.Timer.PERIODIC,
-                       freq=2,
+                       mode=machine.Timer.ONE_SHOT,
+                       period=500,
                        callback=self.wifirecover_)
 
-    def __init__(self, callbacks=[], wanAccess=True):
+    def __init__(self, wanAccess=True):
         self.keys = json.load(open('keys.json'))
         self.tim1 = machine.Timer(1)
         self.led = led.Led()
-        self.callbacks = callbacks
         self.wanAccess = wanAccess
-        self.timeSync = False
+        self.timeSynced = False
 
     def setup_ap(self):
         Nif.ap.active(True)

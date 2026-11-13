@@ -13,9 +13,6 @@ class ADE7953:
             self.writable = writable  # True = R/W, False = R-Only
             self.signed = signed
 
-        def __repr__(self):
-            return f'Register(addr=0x{self.addr:03X}, bits={self.bits}, writable={mode}, signed={signed})'
-
     # --- 8-Bit Registers ---
     SAGCYC = Register(0x000, 8, True, False)
     DISNOLOAD = Register(0x001, 8, True, False)
@@ -124,10 +121,10 @@ def comm(register, read_only, payload=b''):
 
     cs(0)
     spi.write(tx)
-    print(f'Sent data: {hexlify(tx)}')
+    #log.debug(f'Sent data: {hexlify(tx)}')
     if read_only == True:
         spi.readinto(rx, 0x0)
-        print(f'Received data: {hexlify(rx)}')
+        #log.debug(f'Received data: {hexlify(rx)}')
     cs(1)
     # todo: verify success
     return rx

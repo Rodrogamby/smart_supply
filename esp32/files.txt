@@ -1,10 +1,8 @@
 boot.py
 main.py
+worker.py
 ade7953.py
-keys.json
-led.py
 logger.py
 main.py
-mqtt_test.py
+mqtt_connection.py
 network_interface.py
-ntptime.py
