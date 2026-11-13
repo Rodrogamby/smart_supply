@@ -411,6 +411,12 @@ select { background: #0d1727; color: #e7eef9; border: 1px solid #3a5066; border-
   stroke-width: 2;
 }
 
+.history-chart canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Stack the graphs on narrow screens. */
 @media (max-width: 780px) {
   .history-grid {
@@ -419,5 +425,23 @@ select { background: #0d1727; color: #e7eef9; border: 1px solid #3a5066; border-
 
   .history-chart {
     grid-column: 1 / -1;
+  }
+}
+
+.power-triangles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.power-triangles svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .power-triangles {
+    grid-template-columns: 1fr;
   }
 }
