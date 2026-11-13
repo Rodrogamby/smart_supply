@@ -16,7 +16,7 @@ class Worker:
         self.tim  = Timer(2)
 
         self.cnt = 0
-        self.meas = [0,0,0,0,0,0,0]
+        self.meas = [0,0,0,0,0,0,0,0]
 
         self.recover()
 
@@ -63,12 +63,13 @@ class Worker:
         self.meas[4] += self.meter.get_s()
         self.meas[5] += self.meter.get_pf()
         self.meas[6] += self.meter.get_angle()
+        self.meas[7] += self.meter.get_frequency()
         if self.cnt >= Worker.sample_rate * Worker.publish_interval:
             for i in range(len(self.meas)):
                 self.meas[i] /= self.cnt
             self.publish()
             self.cnt = 0
-            self.meas = [0, 0, 0, 0, 0, 0 ,0]
+            self.meas = [0, 0, 0, 0, 0, 0 ,0, 0]
 
     def publish(self):
         readings = {
@@ -78,7 +79,8 @@ class Worker:
             "q": self.meas[3],
             "s": self.meas[4], 
             "pf": self.meas[5], 
-            "angle": self.meas[6] 
+            "angle": self.meas[6],
+            "freq": self.meas[7]
         }
         self.sender.send(readings)
         Log.debug('Published readings.')

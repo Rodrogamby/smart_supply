@@ -124,10 +124,10 @@ class ADE7953:
         def __init__(self, en, cs, v_fscale=500, i_fscale=500):
             self.en = Pin(en, mode=Pin.OUT, value=1) # enable
             self.cs = Pin(cs, mode=Pin.OUT, value=1) # chip select
-            self.v_fscale = v_scale
+            self.v_fscale = v_fscale
             self.i_fscale = i_fscale
 
-        def comm(register, read_only, payload=b''):
+        def comm(self, register, read_only, payload=b''):
             size = int(register.bits/8) # bytes
             addr = bytearray([(register.addr >> 8) & 0xFF, register.addr & 0xFF])
             mode = b'\x80' if read_only else b'\x00'
@@ -136,9 +136,9 @@ class ADE7953:
             rx = bytearray(size)
 
             self.cs(0)
-            Module.spi.write(tx)
+            ADE7953.Module.spi.write(tx)
             if read_only == True:
-            Module.spi.readinto(rx, 0x0)
+                ADE7953.Module.spi.readinto(rx, 0x0)
             self.cs(1)
             # todo: verify success
             return rx
@@ -161,71 +161,71 @@ class ADE7953:
                 return b16[signed](rx)
 
         ### unitful conversion ###
-        def conv_v(raw : int):   # p.21
+        def conv_v(self, raw : int):   # p.21
             fullcount = 6500000
             return self.v_fscale * raw / fullcount
 
-        def conv_vrms(raw: int):  # p.23
+        def conv_vrms(self, raw: int):  # p.23
             fullcount = 9032007
             return self.v_fscale * raw / (fullcount * sqrt2)
 
-        def conv_i(raw : int):
+        def conv_i(self, raw : int):
             # 10A_rms -(trns)-> 14.2mA -(33Ω)-> 468.6mV
             fullcount = 6500000
             return self.i_fscale * raw / fullcount
 
-        def conv_irms(raw: int): # p.23
+        def conv_irms(self, raw: int): # p.23
             fullcount = 9032007
             return self.i_fscale * raw / (fullcount * sqrt2)
 
-        def conv_va(raw : int): # p. 28
+        def conv_va(self, raw : int): # p. 28
             p_fscale = self.v_fscale * self.i_fscale / 2
             fullcount = 4862401
             return p_fscale * raw / fullcount
 
         ### voltage ###
-        def get_v(): 
+        def get_v(self): 
             return self.conv_v(self.read(ADE7953.V))
 
-        def get_vrms():  # todo: synchronous read
+        def get_vrms(self):  # todo: synchronous read
             return self.conv_vrms(self.read(ADE7953.VRMS))
 
-        def get_vpeak():  # p.46
+        def get_vpeak(self):  # p.46
             return self.conv_v(self.read(ADE7953.VPEAK))
 
         ### current ###
-        def get_i():
+        def get_i(self):
             return self.conv_i(self.read(ADE7953.IB))
 
-        def get_irms():  # todo: synchronous read
+        def get_irms(self):  # todo: synchronous read
             return self.conv_irms(self.read(ADE7953.IRMSB))
 
-        def get_ipeak():  # p.46
+        def get_ipeak(self):  # p.46
             return self.conv_i(self.read(ADE7953.IBPEAK))
 
         ### power ###
-        def get_p():  # p.24
+        def get_p(self):  # p.24
             return self.conv_va(self.read(ADE7953.BWATT))
 
-        def get_q():  # p.28
+        def get_q(self):  # p.28
             return self.conv_va(self.read(ADE7953.BVAR))
 
-        def get_s():  # p.31
+        def get_s(self):  # p.31
             return self.conv_va(self.read(ADE7953.BVA))
 
         ### phase & frequency ###
-        def get_period():  # p.36, seconds
+        def get_period(self):  # p.36, seconds
             rx = self.read(ADE7953.Period)
             return (rx + 1) / (223.75e3)
 
-        def get_frequency():
+        def get_frequency(self):
             return 1 / self.get_period()
 
-        def get_pf():  # p.38
+        def get_pf(self):  # p.38
             rx = self.read(ADE7953.PFB)
             return rx / 0x7FFF
 
-        def get_angle(): # p.39 (radians)
+        def get_angle(self): # p.39 (radians)
             rx = self.read(ADE7953.ANGLE_B)
             #delta = 4.47e-6  # sec
             return rx * 2 * pi * self.get_frequency() / 223e3
