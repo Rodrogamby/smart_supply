@@ -3,6 +3,20 @@ from machine import Pin, SPI
 from math import pi
 from struct import unpack
 
+sqrt2 = 2**0.5
+
+def to_int32(data):
+    return unpack('>i', data)[0]
+
+def to_uint32(data):
+    return unpack('>I', data)[0]
+
+def to_int16(data):
+    return unpack('>h', data)[0]
+
+def to_uint16(data):
+    return unpack('>H', data)[0]
+
 class ADE7953:
     class Register:
         __slots__ = ('addr', 'bits', 'writable', 'signed')
@@ -103,130 +117,115 @@ class ADE7953:
     BVAROS = Register(0x396, 32, True, True)
     BVAOS = Register(0x397, 32, True, True)
     LAST_RWDATA_32 = Register(0x3FF, 32, False, False)
+    
+    class Module():
+        spi = SPI(2, sck=Pin(12), miso=Pin(11), mosi=(13), polarity=1, baudrate=1000000) # share hardware spi
 
+        def __init__(self, en, cs, v_fscale=500, i_fscale=500):
+            self.en = Pin(en, mode=Pin.OUT, value=1) # enable
+            self.cs = Pin(cs, mode=Pin.OUT, value=1) # chip select
+            self.v_fscale = v_scale
+            self.i_fscale = i_fscale
 
+        def comm(register, read_only, payload=b''):
+            size = int(register.bits/8) # bytes
+            addr = bytearray([(register.addr >> 8) & 0xFF, register.addr & 0xFF])
+            mode = b'\x80' if read_only else b'\x00'
 
-en = Pin(14, mode=Pin.OUT, value=1) # enable
-cs = Pin(10, mode=Pin.OUT, value=1) # chip select
-spi = SPI(2, sck=Pin(12), miso=Pin(11), mosi=(13), polarity=1, baudrate=1000000) # hardware spi
+            tx = addr + mode + payload
+            rx = bytearray(size)
 
-'''Query the ADE7953 IC over SPI'''
-def comm(register, read_only, payload=b''):
-    size = int(register.bits/8) # bytes
-    addr = bytearray([(register.addr >> 8) & 0xFF, register.addr & 0xFF])
-    mode = b'\x80' if read_only else b'\x00'
+            self.cs(0)
+            Module.spi.write(tx)
+            if read_only == True:
+            Module.spi.readinto(rx, 0x0)
+            self.cs(1)
+            # todo: verify success
+            return rx
 
-    tx = addr + mode + payload
-    rx = bytearray(size)
+        def setup(self):
+            # unlock and set default settings (p. 18)
+            unlock = ADE7953.Register(0xfe, 8, False, False)
+            settings = ADE7953.Register(0x120, 8, False, False)
+            self.comm(unlock, False, b'\x00\xad')
+            self.comm(settings, False, b'\x00\x30')
 
-    cs(0)
-    spi.write(tx)
-    #log.debug(f'Sent data: {hexlify(tx)}')
-    if read_only == True:
-        spi.readinto(rx, 0x0)
-        #log.debug(f'Received data: {hexlify(rx)}')
-    cs(1)
-    # todo: verify success
-    return rx
+        def read(self, address, cast=True):
+            rx = self.comm(address, True)
+            b32 = [to_uint32, to_int32]
+            b16 = [to_uint16, to_int16]
+            signed = 1 if address.signed else 0
+            if address.bits == 32:
+                return b32[signed](rx)
+            else:
+                return b16[signed](rx)
 
-def setup():
-    # unlock and set default settings (p. 18)
-    unlock = ADE7953.Register(0xfe, 8, False, False)
-    settings = ADE7953.Register(0x120, 8, False, False)
-    comm(unlock, False, b'\x00\xad')
-    comm(settings, False, b'\x00\x30')
+        ### unitful conversion ###
+        def conv_v(raw : int):   # p.21
+            fullcount = 6500000
+            return self.v_fscale * raw / fullcount
 
-def to_int32(data):
-    return unpack('>i', data)[0]
+        def conv_vrms(raw: int):  # p.23
+            fullcount = 9032007
+            return self.v_fscale * raw / (fullcount * sqrt2)
 
-def to_uint32(data):
-    return unpack('>I', data)[0]
+        def conv_i(raw : int):
+            # 10A_rms -(trns)-> 14.2mA -(33Ω)-> 468.6mV
+            fullcount = 6500000
+            return self.i_fscale * raw / fullcount
 
-def to_int16(data):
-    return unpack('>h', data)[0]
+        def conv_irms(raw: int): # p.23
+            fullcount = 9032007
+            return self.i_fscale * raw / (fullcount * sqrt2)
 
-def to_uint16(data):
-    return unpack('>H', data)[0]
+        def conv_va(raw : int): # p. 28
+            p_fscale = self.v_fscale * self.i_fscale / 2
+            fullcount = 4862401
+            return p_fscale * raw / fullcount
 
-def read(address, cast=True):
-    rx = comm(address, True)
-    b32 = [to_uint32, to_int32]
-    b16 = [to_uint16, to_int16]
-    signed = 1 if address.signed else 0
-    if address.bits == 32:
-        return b32[signed](rx)
-    else:
-        return b16[signed](rx)
+        ### voltage ###
+        def get_v(): 
+            return self.conv_v(self.read(ADE7953.V))
 
-def conv_v(raw : int):   # p.21
-    fullscale = 500  # 500mV -> 500V
-    fullcount = 6500000
-    return fullscale * raw / fullcount
+        def get_vrms():  # todo: synchronous read
+            return self.conv_vrms(self.read(ADE7953.VRMS))
 
-def conv_vrms(raw: int):  # p.23
-    fullscale = 500 * 2**(-0.5)
-    fullcount = 9032007
-    return fullscale * raw / fullcount
+        def get_vpeak():  # p.46
+            return self.conv_v(self.read(ADE7953.VPEAK))
 
-def conv_i(raw : int):
-    # 10A_rms -(trns)-> 14.2mA -(33Ω)-> 468.6mV
-    fullscale = 500 / 33
-    fullcount = 6500000
-    return fullscale * raw / fullcount
+        ### current ###
+        def get_i():
+            return self.conv_i(self.read(ADE7953.IB))
 
-def conv_irms(raw: int): # p.23
-    fullscale = 500 * 2**(-0.5) / 33
-    fullcount = 9032007
-    return fullscale * raw / fullcount
+        def get_irms():  # todo: synchronous read
+            return self.conv_irms(self.read(ADE7953.IRMSB))
 
-def conv_va(raw : int): # p. 28
-    fullscale_power = 500 * 500 / 33
-    fullcount = 4862401
-    return fullscale_power * raw / fullcount
+        def get_ipeak():  # p.46
+            return self.conv_i(self.read(ADE7953.IBPEAK))
 
-  ### voltage ###
-def get_v(): 
-    return conv_v(read(ADE7953.V))
+        ### power ###
+        def get_p():  # p.24
+            return self.conv_va(self.read(ADE7953.BWATT))
 
-def get_vrms():  # todo: synchronous read
-    return conv_vrms(read(ADE7953.VRMS))
+        def get_q():  # p.28
+            return self.conv_va(self.read(ADE7953.BVAR))
 
-def get_vpeak():  # p.46
-    return conv_v(read(ADE7953.VPEAK))
+        def get_s():  # p.31
+            return self.conv_va(self.read(ADE7953.BVA))
 
-  ### current ###
-def get_i():
-    return conv_i(read(ADE7953.IB))
+        ### phase & frequency ###
+        def get_period():  # p.36, seconds
+            rx = self.read(ADE7953.Period)
+            return (rx + 1) / (223.75e3)
 
-def get_irms():  # todo: synchronous read
-    return conv_irms(read(ADE7953.IRMSB))
+        def get_frequency():
+            return 1 / self.get_period()
 
-def get_ipeak():  # p.46
-    return conv_i(read(ADE7953.IBPEAK))
+        def get_pf():  # p.38
+            rx = self.read(ADE7953.PFB)
+            return rx / 0x7FFF
 
-  ### power ###
-def get_p():  # p.24
-    return conv_va(read(ADE7953.BWATT))
-
-def get_q():  # p.28
-    return conv_va(read(ADE7953.BVAR))
-
-def get_s():  # p.31
-    return conv_va(read(ADE7953.BVA))
-
-  ### phase & frequency ###
-def get_period():  # p.36, seconds
-    rx = read(ADE7953.Period)
-    return (rx + 1) / (223.75e3)
-
-def get_frequency():
-    return 1 / get_period()
-
-def get_pf():  # p.38
-    rx = read(ADE7953.PFB)
-    return rx / 0x7FFF
-
-def get_angle(): # p.39 (radians)
-    rx = read(ADE7953.ANGLE_B)
-    delta = 4.47e-6  # sec
-    return rx * 2 * pi * get_frequency() / 223e3
+        def get_angle(): # p.39 (radians)
+            rx = self.read(ADE7953.ANGLE_B)
+            #delta = 4.47e-6  # sec
+            return rx * 2 * pi * self.get_frequency() / 223e3

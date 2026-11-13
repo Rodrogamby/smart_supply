@@ -5,10 +5,12 @@ from struct import unpack
 from mqtt_connection import Sender
 from worker import Worker
 from logger import Log
-import ade7953
+import ade7953.ADE7953.Module as Meter
 
 Log.level = 0
 
-ade7953.setup()
+meter = Meter(14, 10, i_fscale = 500/33)
+meter.setup()
+
 sender = Sender()
 worker = Worker(sender)

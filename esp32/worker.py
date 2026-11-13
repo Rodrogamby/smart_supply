@@ -1,20 +1,17 @@
 from machine import Timer
 from network_interface import Nif
 from logger import Log
-import ade7953
 
-
-'''
-### Class for making measurements and
-### keeping the Sender object 'alive'
-'''
+## Class for making measurements and
+## keeping the Sender object 'alive'
 class Worker:
     sample_rate = 30 # hz
     publish_interval = 1 # sec
     retry_cooldown = 3000 # msec
 
-    def __init__(self, sender):
+    def __init__(self, sender, meter):
         self.sender = sender
+        self.meter = meter
 
         self.tim  = Timer(2)
 
@@ -59,13 +56,13 @@ class Worker:
 
     def measure(self):
         self.cnt += 1
-        self.meas[0] += ade7953.get_vrms() # TODO: Continuous SPI transmission 
-        self.meas[1] += ade7953.get_irms()
-        self.meas[2] += ade7953.get_p()
-        self.meas[3] += ade7953.get_q()
-        self.meas[4] += ade7953.get_s()
-        self.meas[5] += ade7953.get_pf()
-        self.meas[6] += ade7953.get_angle()
+        self.meas[0] += self.meter.get_vrms() # TODO: Continuous SPI transmission 
+        self.meas[1] += self.meter.get_irms()
+        self.meas[2] += self.meter.get_p()
+        self.meas[3] += self.meter.get_q()
+        self.meas[4] += self.meter.get_s()
+        self.meas[5] += self.meter.get_pf()
+        self.meas[6] += self.meter.get_angle()
         if self.cnt >= Worker.sample_rate * Worker.publish_interval:
             for i in range(len(self.meas)):
                 self.meas[i] /= self.cnt
