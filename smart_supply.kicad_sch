@@ -35,9 +35,7 @@
 		(effects
 			(font
 				(size 3.2512 3.2512)
-				(thickness 0.6502)
-				(bold yes)
-				(color 255 153 0 1)
+				(thickness 0.4064)
 			)
 		)
 		(uuid "3c98e418-d16e-4098-bd44-4617349b6943")
@@ -48,16 +46,14 @@
 		(effects
 			(font
 				(size 3.2512 3.2512)
-				(thickness 0.6502)
-				(bold yes)
-				(color 0 0 255 1)
+				(thickness 0.4064)
 			)
 		)
 		(uuid "d27dd13a-0cd3-4756-8efc-c8dae2a823b8")
 	)
 	(sheet
-		(at 73.66 21.59)
-		(size 12.7 13.97)
+		(at 69.85 21.59)
+		(size 12.7 12.7)
 		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board no)
@@ -71,8 +67,8 @@
 			(color 0 0 0 0)
 		)
 		(uuid "2c9929a5-2c00-45f1-baca-5f3ca7d07447")
-		(property "Sheetname" "Panel"
-			(at 73.66 20.8784 0)
+		(property "Sheetname" "Display Panel"
+			(at 69.85 20.8784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -83,7 +79,7 @@
 			)
 		)
 		(property "Sheetfile" "panel.kicad_sch"
-			(at 73.66 36.1446 0)
+			(at 69.85 34.8746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -96,13 +92,13 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
-					(page "8")
+					(page "5")
 				)
 			)
 		)
 	)
 	(sheet
-		(at 49.53 41.91)
+		(at 21.59 41.91)
 		(size 12.7 12.7)
 		(exclude_from_sim yes)
 		(in_bom yes)
@@ -117,8 +113,8 @@
 			(color 0 0 0 0)
 		)
 		(uuid "34ab41b0-567d-4411-99e8-070d64ace837")
-		(property "Sheetname" "POWER LINES"
-			(at 49.53 41.1984 0)
+		(property "Sheetname" "Power"
+			(at 21.59 41.1984 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -129,7 +125,7 @@
 			)
 		)
 		(property "Sheetfile" "POWER_LINES.kicad_sch"
-			(at 49.53 55.1946 0)
+			(at 21.59 55.1946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -142,105 +138,13 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
-					(page "7")
+					(page "4")
 				)
 			)
 		)
 	)
 	(sheet
-		(at 72.898 43.942)
-		(size 12.7 11.176)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "54337bdd-12b3-4101-b658-edcd985935d6")
-		(property "Sheetname" "breakout pins"
-			(at 72.898 43.2304 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "breakoutBoard.kicad_sch"
-			(at 72.898 55.7026 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
-					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 23.622 41.91)
-		(size 14.732 15.494)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "b4528913-156a-4325-be2d-744306dfbe63")
-		(property "Sheetname" "ADEsensing"
-			(at 23.622 41.1984 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "ADEsensing.kicad_sch"
-			(at 23.622 57.9886 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 49.53 21.59)
+		(at 44.45 21.59)
 		(size 12.7 12.7)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -255,8 +159,8 @@
 			(color 0 0 0 0)
 		)
 		(uuid "ec25a9df-b47e-476b-804e-5c9e6193e727")
-		(property "Sheetname" "ADE_final"
-			(at 49.53 20.8784 0)
+		(property "Sheetname" "Meter Modules"
+			(at 44.45 20.8784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -267,7 +171,7 @@
 			)
 		)
 		(property "Sheetfile" "ADE_final.kicad_sch"
-			(at 49.53 34.8746 0)
+			(at 44.45 34.8746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -280,7 +184,7 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
-					(page "6")
+					(page "3")
 				)
 			)
 		)
@@ -326,7 +230,7 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
-					(page "4")
+					(page "2")
 				)
 			)
 		)

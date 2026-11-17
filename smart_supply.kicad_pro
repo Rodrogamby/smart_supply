@@ -926,7 +926,7 @@
         "uuid": "487ef637-7a03-4925-80c1-798e0c6f0bbd"
       }
     ],
-    "used_designators": "IC1-4,J2-12,J14-21,#FLG1-7,R1,R3,R19-23,R44-58,K1-6,SW2,FB2-5,TP1-3,F3-5,RV1-2,H1-9,Y1,Y3,#PWR6,#PWR32-38,#PWR49,#PWR62,#PWR67-72,#PWR75-82,#PWR84,#PWR86,#PWR98-135,T1,Q1-4,U1-3,U6,U10-11,D1-2,D6-10,D14,D16-20,C1,C3-4,C6-14,C16-17,C29,C31-34,C37-38,C47-64",
+    "used_designators": "J2-12,J14-25,TR1-2,Csns2-3,IC1-4,#FLG1-7,Q1-4,RV1-2,FB2-5,C1,C3-4,C6-17,C29,C31-38,C40-42,C44-45,C47-64,U1-3,U6,U10-11,SW2,K1-6,H1-9,R1-4,R8-23,R26-27,R44-58,#PWR6,#PWR18,#PWR32-38,#PWR49,#PWR59,#PWR62,#PWR65-82,#PWR84,#PWR86-87,#PWR98-135,D1-4,D6-10,D14,D16-20,Y1-3,F3-5,TP1-3,T1-3",
     "variants": []
   },
   "sheets": [
@@ -935,28 +935,20 @@
       "smart_supply"
     ],
     [
-      "b4528913-156a-4325-be2d-744306dfbe63",
-      "ADEsensing"
-    ],
-    [
-      "54337bdd-12b3-4101-b658-edcd985935d6",
-      "breakout pins"
-    ],
-    [
       "f9380e13-e191-4828-b42d-2cc7f479b711",
       "MCU"
     ],
     [
       "ec25a9df-b47e-476b-804e-5c9e6193e727",
-      "ADE_final"
+      "Meter Modules"
     ],
     [
       "34ab41b0-567d-4411-99e8-070d64ace837",
-      "POWER LINES"
+      "Power"
     ],
     [
       "2c9929a5-2c00-45f1-baca-5f3ca7d07447",
-      "Panel"
+      "Display Panel"
     ]
   ],
   "text_variables": {},
