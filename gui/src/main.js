@@ -4,14 +4,55 @@ import mqtt from 'mqtt'
 // Shortcut for finding an HTML element by its id
 const $ = (id) => document.getElementById(id)
 
-// Holds the current MQTT client ( null means there is no active client)
+// Holds the current MQTT client 
 let client = null
 
 const ch1History = []
+const ch2History = []
 const max_readings = 60
 
-function drawhistory(canvasid, field, unit, min, max){
+
+// auto: true fits the Y axis to received readings
+// auto: false to use the fixed min max values
+const graphLimits = {
+  ch1: {
+    voltage: { min: 0, max: 150, auto: true },
+    current: { min: 0, max: 12, auto: true },
+    power: { min: 0, max: 1500, auto: true },
+  },
+  ch2: {
+    voltage: { min: 0, max: 35, auto: true },
+    current: { min: 0, max: 4, auto: true },
+    power: { min: 0, max: 100, auto: true },
+  },
+}
+
+function drawChannelHistory(channel) {
+  const history = channel === 'ch1' ? ch1History : ch2History
+  for (const [name, field, unit] of [
+    ['voltage', 'vrms', 'V'], ['current', 'irms', 'A'], ['power', 'p', 'W'],
+  ]) {
+    const limits = graphLimits[channel][name]
+    let { min, max } = limits
+    if (limits.auto && history.length) {
+      const values = history.map(sample => sample[field])
+      min = Math.min(...values)
+      max = Math.max(...values)
+      const padding = (max - min) * 0.1 || Math.max(Math.abs(max) * 0.1, 0.01)
+      min -= padding
+      max += padding
+    }
+    drawhistory(`${channel}-${name}-chart`, field, unit, min, max, history)
+  }
+}
+
+function drawhistory(canvasid, field, unit, min, max, history = []) {
   const canvas = $(canvasid)
+  if (!canvas) return
+  if (!(Number.isFinite(min) && Number.isFinite(max) && max > min)) {
+    console.error('Invalid graph limits:', canvasid, min, max)
+    return
+  }
   const ctx = canvas.getContext('2d')
   const left = 64
   const right = canvas.width -16
@@ -38,27 +79,31 @@ function drawhistory(canvasid, field, unit, min, max){
   ctx.textAlign = 'left'
   ctx.fillText('0 s', left, bottom + 18)
 
-  if (ch1History.length === 0) return
+  if (history.length === 0) return
 
-  const firstTime = ch1History[0].time
-  const lastTime = ch1History[ch1History.length - 1].time
+  const firstTime = history[0].time
+  const lastTime = history[history.length - 1].time
   const duration = lastTime - firstTime
 
   ctx.textAlign = 'right'
   ctx.fillText(`${(duration / 1000).toFixed(1)} s`, right, bottom + 18)
 
+  ctx.save()
+  ctx.beginPath()
+  ctx.rect(left, top, right - left, bottom - top)
+  ctx.clip()
   ctx.strokeStyle = '#60d5b4'
   ctx.fillStyle = '#60d5b4'
   ctx.lineWidth = 2
   ctx.beginPath()
 
-  ch1History.forEach((sample, index) => {
+  history.forEach((sample, index) => {
     const x = duration
       ? left + (sample.time - firstTime) / duration * (right - left)
       : (left + right) / 2
     const y = bottom - (sample[field] - min) / (max - min) * (bottom - top)
 
-    if (ch1History.length === 1) {
+    if (history.length === 1) {
       ctx.arc(x, y, 3, 0, 2 * Math.PI)
       ctx.fill()
     } else if (index === 0) {
@@ -68,58 +113,81 @@ function drawhistory(canvasid, field, unit, min, max){
     }
   })
 
-  if (ch1History.length > 1) ctx.stroke()
+  if (history.length > 1) ctx.stroke()
+  ctx.restore()
   
 }
 
-function drawPowerTriangle(p, q) {
-  const vectors = $('triangle-vectors')
+function drawPowerTriangle(p, q, channel = 'ch1') {
+  const suffix = channel === 'ch2' ? '-ch2' : ''
+  const name = channel === 'ch2' ? 'Channel 2' : 'Channel 1'
+  const triangleEl = (id) => $(`${id}${suffix}`)
 
-  if (!Number.isFinite(p) || !Number.isFinite(q) || p < 0) {
+  const vectors = triangleEl('triangle-vectors')
+  const note = triangleEl('triangle-note')
+
+  if (!vectors || !note) {
+    console.error('Missing triangle HTML IDs for', channel)
+    return
+  }
+
+  if (!Number.isFinite(p) || !Number.isFinite(q)) {
     vectors.setAttribute('visibility', 'hidden')
-    $('triangle-note').textContent = 'Cannot plot this reading.'
+    note.textContent = 'Cannot plot this reading.'
     return
   }
 
   const x0 = 45
   const y0 = 150
-
-  const scale = Math.min(
-    330 / Math.max(p, 1),
-    110 / Math.max(Math.abs(q), 1)
+  const magnitude = Math.max(Math.abs(p), Math.abs(q))
+  const scale = magnitude === 0 ? 1 : Math.min(
+    p === 0 ? Infinity : 330 / Math.abs(p),
+    q === 0 ? Infinity : 110 / Math.abs(q)
   )
 
+  const svg = triangleEl('triangle')
+  const axes = svg.querySelectorAll('.triangle-axis')
+  if (axes.length >= 2) {
+    axes[0].setAttribute('x1', 45)
+    axes[0].setAttribute('x2', 410)
+    axes[1].setAttribute('x1', x0)
+    axes[1].setAttribute('x2', x0)
+  }
+  const qAxisLabel = [...svg.querySelectorAll('.axis-label')]
+    .find(label => label.textContent.includes('Q'))
+  if (qAxisLabel) qAxisLabel.setAttribute('x', 10)
+
   const x = x0 + p * scale
-  const y = y0 - q * scale // En SVG Y aumenta hacia abajo
+  const y = y0 - q * scale // In SVG, positive y points down.
 
   function setLine(id, x1, y1, x2, y2) {
-    const line = $(id)
+    const line = triangleEl(id)
     line.setAttribute('x1', x1)
     line.setAttribute('y1', y1)
     line.setAttribute('x2', x2)
     line.setAttribute('y2', y2)
   }
 
-  setLine('p-vector', x0, y0, x, y0) // P: horizontal
-  setLine('q-vector', x, y0, x, y)   // Q: vertical
-  setLine('s-vector', x0, y0, x, y)  // S: diagonal
+  setLine('p-vector', x0, y0, x, y0)
+  setLine('q-vector', x, y0, x, y)
+  setLine('s-vector', x0, y0, x, y)
 
   function setLabel(id, labelX, labelY, visible) {
-    const label = $(id)
+    const label = triangleEl(id)
     label.setAttribute('x', labelX)
     label.setAttribute('y', labelY)
     label.setAttribute('visibility', visible ? 'visible' : 'hidden')
   }
 
   setLabel('p-label', (x0 + x) / 2, y0 + 16, p !== 0)
-  setLabel('q-label', x + 8, (y0 + y) / 2, q !== 0)
+  setLabel('q-label', x + 8, (y0 + y) / 2, q !== 0)  
   setLabel('s-label', (x0 + x) / 2, (y0 + y) / 2 - 8, q !== 0)
 
   vectors.setAttribute('visibility', 'visible')
-  $('triangle-title').textContent = 'Channel 1 power triangle'
-  $('triangle-note').textContent = q === 0
-    ? 'Channel 1 · Q = 0 var'
-    : 'Channel 1 · Live measurements'
+  triangleEl('triangle-title').textContent = `${name} power triangle`
+  note.textContent = q === 0
+    ? `${name} · Q = 0 var`
+    : `${name} · Live measurements`
 }
 
 
@@ -172,45 +240,74 @@ function connect() {
     setStatus('Broker connected', 'good')
     log('Connected to MQTT')
 
-    client.subscribe('telemetry/ch1',(error, granted) => {
-      if (error || !granted?.length || granted[0].qos >= 128) {
+    //enable relay buttons
+    document.querySelectorAll('.channel-command').forEach(button => {
+      button.disabled = false
+    });
+
+    client.subscribe(['telemetry/ch1', 'telemetry/ch2', 'state/ch1', 'state/ch2'],(error, granted) => {
+      if (error || !granted?.length || granted.some(item => item.qos >= 128)) {
         console.error('Subscription failed:', error || granted)
         return
       }
-      console.log('Listening on telemetry/ch1')
+      console.log('Listening to telemetry')
     })
   })
 
   client.on('message', (topic, message) => {
-    if (topic !='telemetry/ch1') return
+    // Update the indicator using the state reported by the ESP
+    if (topic === 'state/ch1' || topic === 'state/ch2') {
+      const channel = topic.split('/')[1]
+      const state = message.toString()
+
+      if (state !== '1' && state !== '0') return
+
+      const enabled = state === '1'
+      const badge = $(`${channel}-state`)
+
+      badge.textContent = enabled ? 'On' : 'Off'
+      badge.className = `badge ${enabled ? 'good' : 'neutral'}`
+
+      log(`${channel.toUpperCase()} reported ${enabled ? 'ON' : 'OFF'}`)
+      return
+    }
+
+    let channel
+    if (topic === 'telemetry/ch1') channel = 'ch1'
+    else if (topic ==='telemetry/ch2') channel = 'ch2'
+    else return
 
     try {
       const readings = JSON.parse(message.toString())
-      $('ch1-voltage').textContent = readings['vrms'].toFixed(2)
-      $('ch1-current').textContent = readings['irms'].toFixed(2)
-      $('ch1-power').textContent = readings['p'].toFixed(2)
-      $('p_ch1').textContent = readings['p'].toFixed(2)
-      $('q_ch1').textContent = readings['q'].toFixed(2)
-      $('s_ch1').textContent = readings['s'].toFixed(2)
-      $('pf_ch1').textContent = readings['pf'].toFixed(2)
-      $('f_ch1').textContent = readings['f'].toFixed(2)
+      const { vrms, irms, p, q, s, pf, freq } = readings
+      function show(id, value) {
+          const element = $(id)
+          if (element) {
+            element.textContent = Number.isFinite(value) ? value.toFixed(2) : '—'
+          }
+        }
+      show(`${channel}-voltage`, vrms)
+      show(`${channel}-current`, irms)
+      show(`${channel}-power`, p)
+      show(`${channel}-frequency`, freq)
 
-      console.log('CH1 readings:', readings)
-      ch1History.push({
-        time: Date.now(),
-        vrms: readings.vrms,
-        irms: readings.irms,
-        p: readings.p
-      })
+      show(`p_${channel}`, p)
+      show(`q_${channel}`, q)
+      show(`s_${channel}`, s)
+      show(`pf_${channel}`, pf)
 
-      if(ch1History.length > max_readings) 
-        ch1History.shift()
+      console.log(`${channel.toUpperCase()} readings:`, readings)
 
-      drawhistory('ch1-voltage-chart', 'vrms', 'V', 0, 150)
-      drawhistory('ch1-current-chart', 'irms', 'A', 0, 12)
-      drawhistory('ch1-power-chart', 'p', 'W', 0, 1500)
+      const history = channel === 'ch1' ? ch1History : ch2History
 
-      drawPowerTriangle(readings.p, readings.q)
+      if ([vrms, irms, p].every(Number.isFinite)) {
+        history.push({ time: Date.now(), vrms, irms, p, f: freq })
+        if (history.length > max_readings) history.shift()
+
+        drawChannelHistory(channel)
+      }
+
+      drawPowerTriangle(p, q, channel)
 
     }catch (error){
       console.error('Invalid telemetry:', error)
@@ -226,6 +323,18 @@ function connect() {
   // When the connection closes, reset the buttons for another attempt
   client.on('close', () => {
     client = null
+
+    // Disable relay controls and clear their displayed states
+    document.querySelectorAll('.channel-command').forEach(button => {
+      button.disabled = true
+    })
+
+    for (const channel of ['ch1', 'ch2']) {
+      const badge = $(`${channel}-state`)
+      badge.textContent = 'Unknown'
+      badge.className = 'badge neutral'
+    }
+
     $('connect-btn').disabled = false
     $('disconnect-btn').disabled = true
     setStatus('Broker disconnected', 'bad')
@@ -238,14 +347,37 @@ $('connect-btn').addEventListener('click', connect)
 // Close the connection if a client exists
 $('disconnect-btn').addEventListener('click', () => client?.end(true))
 
-// Remove all entries from the Event Log
+// Remove all entries from the Event Log  
 $('clear-log').addEventListener('click', () => $('event-log').replaceChildren())
 
 
-drawhistory('ch1-voltage-chart', 'vrms', 'V', 0, 150)
-drawhistory('ch1-current-chart', 'irms', 'A', 0, 12)
-drawhistory('ch1-power-chart', 'p', 'W', 0, 1500)
+// Draw empty axes using the same limits used for live updates
+drawChannelHistory('ch1')
+drawChannelHistory('ch2')
 
-drawhistory('ch2-voltage-chart', 'vrms', 'V', 0, 150)
-drawhistory('ch2-current-chart', 'irms', 'A', 0, 12)
-drawhistory('ch2-power-chart', 'p', 'W', 0, 1500)
+// Publish a command when a relay button is clicked
+document.querySelectorAll('.channel-command').forEach(button => {
+  button.addEventListener('click', () => {
+    if (!client?.connected) {
+      $('notice').textContent = 'Connect to the broker first.'
+      return
+    }
+
+    const channel = button.dataset.channel
+    const command = button.dataset.enabled === 'true' ? '1' : '0'
+
+    client.publish(
+      `command/${channel}`,
+      command,
+      { retain: false, qos: 0 },
+      error => {
+        if (error) {
+          log(`Could not send command: ${error.message}`)
+          return
+        }
+
+        log(`${channel.toUpperCase()} command sent: ${command}`)
+      }
+    )
+  })
+})

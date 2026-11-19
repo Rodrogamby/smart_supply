@@ -47,6 +47,7 @@ class Worker:
 
     def _poll_publish(self, t):
         try:
+            self.sender.check_commands()
             self.measure()
             self.poll_publish()
         except Exception as e:

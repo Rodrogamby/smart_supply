@@ -9,7 +9,7 @@ from ade7953 import ADE7953
 
 Log.level = 0
 
-meter = ADE7953.Module(14, 10, i_fscale = 500/33)
+meter = ADE7953.Module(14, 9, i_fscale = 500/33)
 meter.setup()
 
 sender = Sender()
