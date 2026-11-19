@@ -4,6 +4,9 @@
 	(generator_version "10.0")
 	(uuid "487ef637-7a03-4925-80c1-798e0c6f0bbd")
 	(paper "A4")
+	(title_block
+		(date "2026-11-17")
+	)
 	(lib_symbols)
 	(rectangle
 		(start 92.71 17.78)
@@ -52,10 +55,10 @@
 		(uuid "d27dd13a-0cd3-4756-8efc-c8dae2a823b8")
 	)
 	(sheet
-		(at 69.85 21.59)
-		(size 12.7 12.7)
-		(exclude_from_sim yes)
-		(in_bom yes)
+		(at 96.52 21.59)
+		(size 33.02 31.75)
+		(exclude_from_sim no)
+		(in_bom no)
 		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -66,9 +69,9 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "2c9929a5-2c00-45f1-baca-5f3ca7d07447")
-		(property "Sheetname" "Display Panel"
-			(at 69.85 20.8784 0)
+		(uuid "059b84f1-90f8-4f09-bdd9-73a1ad439af0")
+		(property "Sheetname" "Simulation"
+			(at 96.52 20.8784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -78,8 +81,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "panel.kicad_sch"
-			(at 69.85 34.8746 0)
+		(property "Sheetfile" "simulation.kicad_sch"
+			(at 96.52 53.9246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -92,7 +95,7 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd"
-					(page "5")
+					(page "6")
 				)
 			)
 		)
@@ -147,8 +150,8 @@
 		(at 44.45 21.59)
 		(size 12.7 12.7)
 		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board no)
+		(in_bom yes)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(stroke

@@ -4,6 +4,9 @@
 	(generator_version "10.0")
 	(uuid "1a35c132-0ae5-4b3a-bfb0-ce7dbbc97cfa")
 	(paper "A4")
+	(title_block
+		(date "2026-11-17")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x06_Pin"
 			(pin_names
@@ -1133,7 +1136,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06103af2-6fbb-464b-a300-6a8e4bbfa2ae")
-		(property "Reference" "R48"
+		(property "Reference" "R36"
 			(at 45.72 25.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1208,7 +1211,7 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/2c9929a5-2c00-45f1-baca-5f3ca7d07447"
-					(reference "R48")
+					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -1226,7 +1229,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e4368c7-00b1-43eb-be5d-9fc05e24b633")
-		(property "Reference" "R46"
+		(property "Reference" "R34"
 			(at 21.59 25.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1301,7 +1304,7 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/2c9929a5-2c00-45f1-baca-5f3ca7d07447"
-					(reference "R46")
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -1319,7 +1322,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "311d9b5c-0973-46c8-926c-bfa306e804cf")
-		(property "Reference" "J13"
+		(property "Reference" "J22"
 			(at 72.39 33.02 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1393,7 +1396,7 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/2c9929a5-2c00-45f1-baca-5f3ca7d07447"
-					(reference "J13")
+					(reference "J22")
 					(unit 1)
 				)
 			)
@@ -1515,7 +1518,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78d0412d-1c2e-4d66-ba42-7d552715921a")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR081"
 			(at 19.05 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -1575,7 +1578,7 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/2c9929a5-2c00-45f1-baca-5f3ca7d07447"
-					(reference "#PWR015")
+					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -1593,7 +1596,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a599bed1-43ee-46c6-a04b-488b49564659")
-		(property "Reference" "#PWR067"
+		(property "Reference" "#PWR082"
 			(at 85.09 21.59 0)
 			(hide yes)
 			(show_name no)
@@ -1654,7 +1657,7 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/2c9929a5-2c00-45f1-baca-5f3ca7d07447"
-					(reference "#PWR067")
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)
@@ -1776,7 +1779,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee5172ad-e310-4e44-becd-2e11c6c4b9c8")
-		(property "Reference" "R47"
+		(property "Reference" "R35"
 			(at 34.29 25.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1851,7 +1854,7 @@
 		(instances
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/2c9929a5-2c00-45f1-baca-5f3ca7d07447"
-					(reference "R47")
+					(reference "R35")
 					(unit 1)
 				)
 			)

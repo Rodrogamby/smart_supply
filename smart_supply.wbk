@@ -3,24 +3,14 @@
   "last_sch_text_sim_command": "",
   "tabs": [
     {
-      "analysis": "TRAN",
+      "analysis": "OP",
       "commands": [
-        ".tran 10u 200m 50m",
+        ".op",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
         ".probe allp"
-      ],
-      "dottedSecondary": true,
-      "margins": {
-        "bottom": 45,
-        "left": 70,
-        "right": 70,
-        "top": 30
-      },
-      "measurements": [],
-      "showGrid": true,
-      "traces": []
+      ]
     }
   ],
   "user_defined_signals": [],
