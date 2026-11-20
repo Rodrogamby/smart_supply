@@ -52,8 +52,8 @@
         "zones": {
           "border_display_style": 0,
           "border_hatch_pitch": 0.5,
-          "corner_radius": 0.0,
-          "corner_smoothing": 0,
+          "corner_radius": 0.2,
+          "corner_smoothing": 1,
           "fill_mode": 0,
           "hatch_gap": 1.5,
           "hatch_orientation": 0.0,
@@ -63,7 +63,7 @@
           "min_clearance": 0.0,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 1,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
@@ -162,7 +162,7 @@
         "min_track_width": 0.15,
         "min_via_annular_width": 0.15,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -210,7 +210,10 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        1.2,
+        2.55,
+        4.04
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -727,7 +730,7 @@
     },
     "bom_presets": [],
     "bom_settings": {
-      "exclude_dnp": false,
+      "exclude_dnp": true,
       "fields_ordered": [
         {
           "group_by": false,
@@ -876,7 +879,7 @@
       ],
       "filter_string": "",
       "group_symbols": true,
-      "include_excluded_from_bom": true,
+      "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
@@ -936,7 +939,7 @@
         "uuid": "487ef637-7a03-4925-80c1-798e0c6f0bbd"
       }
     ],
-    "used_designators": "T1-3,V1-4,F1-5,TP1-3,Y1-3,RLA1,D1-20,#PWR1-88,#PWR98-135,H1-9,R1-38,R44-58,K1-6,SW1-2,U1-6,U10-11,C1-42,C44-45,C47-64,FB1-5,RV1-2,Q1-6,#FLG1-7,IC1-4,TR1-2,Csns1-3,J1-25",
+    "used_designators": "TP1-3,F1-5,V1-4,T1-3,Y1-3,D1-20,#PWR1-88,#PWR98-135,RLA1,R1-38,R44-58,H1-9,K1-6,SW1-2,U1-6,U10-11,C1-42,C44-45,C47-64,FB1-5,RV1-2,Q1-6,#FLG1-7,IC1-4,TR1-2,Csns1-3,J1-25",
     "variants": []
   },
   "sheets": [
