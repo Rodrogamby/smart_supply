@@ -60,11 +60,11 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.0,
+          "min_clearance": 2.0,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 2,
-          "remove_islands": 1,
+          "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
         }
@@ -76,24 +76,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "unconnected_items|59200000|105050000|F.Cu|4|91d9b8ff-1e70-44d8-9c88-65fce9b94bbb|46611626-abf4-4307-9fea-12be3885e2b6",
-          ""
-        ],
-        [
-          "unconnected_items|67200000|100550000|F.Cu|4|bf94cd07-9052-489c-88e7-8cb2d38c8d99|95e89ffe-ddbf-43b7-af48-063361163365",
-          ""
-        ],
-        [
-          "unconnected_items|81200000|83950000|F.Cu|4|5719f37f-2eb5-40f2-8e76-777a0a9a24dc|92c13aed-c5ae-4dcd-87bd-1569d267fff3",
-          ""
-        ],
-        [
-          "unconnected_items|87600000|79450000|F.Cu|4|26b2125a-8fc5-4662-87dc-95060d2222d6|ae085c7c-9923-41f7-ae18-cee7100f9e62",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -300,7 +283,12 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "power_pin_not_driven|1041400|1447800|3fc7e8f7-7346-4d63-810f-0768ce99f0d8|00000000-0000-0000-0000-000000000000|/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837|/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -696,7 +684,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "${PROJECTNAME}_bom.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -715,7 +703,7 @@
           "group_by": false,
           "label": "Reference",
           "name": "Reference",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -727,7 +715,7 @@
           "group_by": false,
           "label": "Value",
           "name": "Value",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -763,7 +751,7 @@
           "group_by": false,
           "label": "Footprint",
           "name": "Footprint",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -838,7 +826,7 @@
           "show": false
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "MPN",
           "name": "MPN",
           "show": true
@@ -854,6 +842,12 @@
           "label": "Height",
           "name": "Height",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser",
+          "name": "Mouser",
+          "show": true
         }
       ],
       "filter_string": "",
@@ -918,7 +912,7 @@
         "uuid": "487ef637-7a03-4925-80c1-798e0c6f0bbd"
       }
     ],
-    "used_designators": "TP1-3,F1-5,V1-4,T1-3,Y1-3,RLA1,#PWR1-88,#PWR98-135,D1-20,H1-9,R1-42,R44-58,K1-6,SW1-2,U1-6,U10-11,C1-42,C44-45,C47-64,FB1-5,RV1-2,Q1-6,#FLG1-7,IC1-4,TR1-2,Csns1-3,J1-25",
+    "used_designators": "TP1-3,F1-5,V1-4,T1-3,Y1-3,#PWR1-88,#PWR98-135,D1-20,RLA1,R1-58,H1-9,K1-6,SW1-2,U1-7,U10-11,C1-42,C44-45,C47-64,FB1-5,RV1-2,Q1-6,#FLG1-7,IC1-4,TR1-2,Csns1-3,J1-25",
     "variants": []
   },
   "sheets": [

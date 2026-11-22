@@ -2212,169 +2212,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Fuse_1"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "F1"
-				(at 6.35 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Fuse"
-				(at 3.81 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "SmartSupplyLib:Fuseholder_Littelfuse_100_series_5x20mm"
-				(at -1.778 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Fuse"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "100020"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "fuse"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "*Fuse*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Fuse_1_0_1"
-				(rectangle
-					(start -0.762 -2.54)
-					(end 0.762 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Fuse_1_1_1"
-				(pin power_out line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Relay:G2RL-1A-E"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4064,6 +3901,26 @@
 		)
 		(uuid "f9236286-6ec8-423b-9365-7bd2c5f4c164")
 	)
+	(text_box "Note: Fuse holder quantity in BOM must be duplicated."
+		(exclude_from_sim no)
+		(at 95.25 168.91 0)
+		(size 38.1 20.32)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "942cdbb2-20c3-45f1-aa4e-ac56a1126fc9")
+	)
 	(junction
 		(at 140.97 144.78)
 		(diameter 0)
@@ -4075,6 +3932,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0d941f74-bda6-46cc-8826-3d159cdae0f1")
+	)
+	(junction
+		(at 156.21 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11fcb819-00a2-4cfd-b502-9c601a59968a")
+	)
+	(junction
+		(at 64.77 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "18834251-6ee7-4671-a3e0-cdde354647ae")
 	)
 	(junction
 		(at 198.12 127)
@@ -4089,13 +3958,19 @@
 		(uuid "2e209120-cfdc-41d9-8f4e-89d5431f3c6b")
 	)
 	(junction
-		(at 67.31 107.95)
+		(at 64.77 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3bfd29c9-fcec-4f4a-878a-24fe2422fa9f")
+	)
+	(junction
+		(at 64.77 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3f2652ba-6948-448c-881f-891504805737")
 	)
 	(junction
-		(at 148.59 116.84)
+		(at 144.78 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "478fc1a7-d350-4efb-bafd-dfefd0eacd7f")
@@ -4107,10 +3982,10 @@
 		(uuid "4a944f62-e30d-454c-8af3-24f820654d61")
 	)
 	(junction
-		(at 67.31 118.11)
+		(at 156.21 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4eac3d4a-2040-4ae9-a8d0-ea547c74b0ff")
+		(uuid "57b5f9e8-1d5e-4dfe-8c3e-d1ddd7f3c9db")
 	)
 	(junction
 		(at 62.23 22.86)
@@ -4125,13 +4000,13 @@
 		(uuid "68ec1295-1f9d-4a16-a013-6c47bc1d1aa5")
 	)
 	(junction
-		(at 149.86 59.69)
+		(at 144.78 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7d18a81f-4725-4b38-879d-7d0a6a9a60b6")
 	)
 	(junction
-		(at 148.59 97.79)
+		(at 144.78 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7d630e4b-4bbb-4afd-a718-40d9af4e4db0")
@@ -4167,13 +4042,19 @@
 		(uuid "b370e8f1-92cf-424d-bfc4-412082c1cbd3")
 	)
 	(junction
+		(at 156.21 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b8628f40-e43f-4239-ad96-5c28b9e28768")
+	)
+	(junction
 		(at 140.97 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bac0d158-2fd2-4878-9279-98531464694c")
 	)
 	(junction
-		(at 149.86 78.74)
+		(at 144.78 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c49e61b4-e938-4a57-9a3a-88a93c5dfe64")
@@ -4185,10 +4066,10 @@
 		(uuid "cf54c4d1-bdc7-4573-8754-008da3e7dde7")
 	)
 	(junction
-		(at 67.31 144.78)
+		(at 64.77 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "daa95d4c-1cf1-4272-9bce-5eeb3ea0363f")
+		(uuid "e8523695-dc3c-494a-9211-ec04eaa5df7f")
 	)
 	(junction
 		(at 198.12 48.26)
@@ -4215,10 +4096,10 @@
 		(uuid "f577aa70-8790-46e7-8a50-9e174aad97eb")
 	)
 	(junction
-		(at 67.31 154.94)
+		(at 156.21 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f5ac0ad5-e429-4ce7-b1f3-26a368ec5278")
+		(uuid "fddf30e3-3558-498c-a0a0-df50da0f57ba")
 	)
 	(wire
 		(pts
@@ -4259,6 +4140,16 @@
 			(type default)
 		)
 		(uuid "0bdfe590-2527-4f0d-96ec-4c9f771b37f7")
+	)
+	(wire
+		(pts
+			(xy 156.21 101.6) (xy 156.21 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c27bb15-550d-46fb-b71d-e173f3f5489e")
 	)
 	(wire
 		(pts
@@ -4312,7 +4203,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 144.78) (xy 30.48 144.78)
+			(xy 25.4 144.78) (xy 30.48 144.78)
 		)
 		(stroke
 			(width 0)
@@ -4322,7 +4213,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 154.94) (xy 44.45 154.94)
+			(xy 25.4 154.94) (xy 44.45 154.94)
 		)
 		(stroke
 			(width 0)
@@ -4382,7 +4273,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 118.11) (xy 44.45 118.11)
+			(xy 26.67 118.11) (xy 44.45 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4442,16 +4333,6 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 107.95) (xy 77.47 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2e32936d-5fa9-424f-b55b-4e1455544386")
-	)
-	(wire
-		(pts
 			(xy 241.3 46.99) (xy 255.27 46.99)
 		)
 		(stroke
@@ -4462,7 +4343,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 97.79) (xy 143.51 101.6)
+			(xy 139.7 101.6) (xy 139.7 105.41)
 		)
 		(stroke
 			(width 0)
@@ -4492,7 +4373,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 73.66) (xy 144.78 78.74)
+			(xy 139.7 73.66) (xy 139.7 78.74)
 		)
 		(stroke
 			(width 0)
@@ -4522,7 +4403,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 59.69) (xy 153.67 59.69)
+			(xy 144.78 59.69) (xy 147.32 59.69)
 		)
 		(stroke
 			(width 0)
@@ -4562,7 +4443,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 107.95) (xy 30.48 107.95)
+			(xy 26.67 107.95) (xy 30.48 107.95)
 		)
 		(stroke
 			(width 0)
@@ -4579,6 +4460,16 @@
 			(type default)
 		)
 		(uuid "41d25827-3f37-4851-8ec3-1a81ac97f05e")
+	)
+	(wire
+		(pts
+			(xy 64.77 144.78) (xy 67.31 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43da1abe-54b1-4920-9db2-ac483ddb4d68")
 	)
 	(wire
 		(pts
@@ -4602,6 +4493,16 @@
 	)
 	(wire
 		(pts
+			(xy 74.93 144.78) (xy 77.47 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48f50043-baa0-495a-9c0c-dd9e00effc3c")
+	)
+	(wire
+		(pts
 			(xy 77.47 153.67) (xy 77.47 154.94)
 		)
 		(stroke
@@ -4622,6 +4523,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 120.65) (xy 157.48 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cd0bc11-8390-4723-8405-292c6243517a")
+	)
+	(wire
+		(pts
 			(xy 52.07 62.23) (xy 71.12 62.23)
 		)
 		(stroke
@@ -4629,6 +4540,16 @@
 			(type default)
 		)
 		(uuid "4e3deaa4-f0aa-4990-a5fc-b39af5d5a970")
+	)
+	(wire
+		(pts
+			(xy 64.77 107.95) (xy 67.31 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ed721dd-325c-45a9-a665-54d88a6f35dd")
 	)
 	(wire
 		(pts
@@ -4652,6 +4573,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 59.69) (xy 156.21 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "516aa322-8ce8-4c9b-8e07-170357eebae7")
+	)
+	(wire
+		(pts
 			(xy 185.42 57.15) (xy 186.69 57.15)
 		)
 		(stroke
@@ -4662,13 +4593,13 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 154.94) (xy 77.47 154.94)
+			(xy 63.5 144.78) (xy 64.77 144.78)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5276a924-01d8-4c84-b7fa-a1108295129e")
+		(uuid "531beadf-bc1b-4fef-bed7-257d2a9cc6aa")
 	)
 	(wire
 		(pts
@@ -4682,7 +4613,17 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 59.69) (xy 144.78 63.5)
+			(xy 63.5 107.95) (xy 64.77 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58c1908c-c532-4ee0-aa73-f8f7adf19215")
+	)
+	(wire
+		(pts
+			(xy 139.7 59.69) (xy 139.7 63.5)
 		)
 		(stroke
 			(width 0)
@@ -4712,7 +4653,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 78.74) (xy 153.67 78.74)
+			(xy 144.78 78.74) (xy 147.32 78.74)
 		)
 		(stroke
 			(width 0)
@@ -4732,17 +4673,17 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 118.11) (xy 64.77 118.11)
+			(xy 154.94 78.74) (xy 156.21 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "60add122-74d5-46a0-8387-e733a56dc1f1")
+		(uuid "6314bfb9-5a7e-4fee-ae4d-ebe682e62584")
 	)
 	(wire
 		(pts
-			(xy 144.78 59.69) (xy 149.86 59.69)
+			(xy 139.7 59.69) (xy 144.78 59.69)
 		)
 		(stroke
 			(width 0)
@@ -4752,7 +4693,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 116.84) (xy 148.59 116.84)
+			(xy 139.7 120.65) (xy 144.78 120.65)
 		)
 		(stroke
 			(width 0)
@@ -4762,7 +4703,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 110.49) (xy 148.59 116.84)
+			(xy 144.78 114.3) (xy 144.78 120.65)
 		)
 		(stroke
 			(width 0)
@@ -4772,7 +4713,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 97.79) (xy 148.59 97.79)
+			(xy 139.7 101.6) (xy 144.78 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4789,16 +4730,6 @@
 			(type default)
 		)
 		(uuid "6aa39b5c-2f52-479d-a5c0-e9ed6bd716d3")
-	)
-	(wire
-		(pts
-			(xy 64.77 144.78) (xy 67.31 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c8846d5-1f7f-4d14-8151-2f972bdf8b39")
 	)
 	(wire
 		(pts
@@ -4832,13 +4763,23 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 116.84) (xy 67.31 118.11)
+			(xy 74.93 154.94) (xy 77.47 154.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "707a2245-f0b9-492c-b7b9-99385d5f97de")
+		(uuid "71dd5bc0-2e4b-4065-9c77-333d5b5bf3f7")
+	)
+	(wire
+		(pts
+			(xy 74.93 118.11) (xy 77.47 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7239e3a7-6127-4278-aad6-74f3a815c067")
 	)
 	(wire
 		(pts
@@ -4872,6 +4813,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 59.69) (xy 157.48 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77755edb-9da6-412f-a0f1-1c6e3466fd5e")
+	)
+	(wire
+		(pts
 			(xy 246.38 135.89) (xy 248.92 135.89)
 		)
 		(stroke
@@ -4900,6 +4851,16 @@
 		)
 		(uuid "7b72d233-f250-4ed3-9abc-2ac98a8bfcaf")
 	)
+	(wire
+		(pts
+			(xy 63.5 116.84) (xy 63.5 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fddc8e7-f8a6-44c0-a0c7-fd2c6c22a1f9")
+	)
 	(polyline
 		(pts
 			(xy 82.55 48.26) (xy 82.55 92.71)
@@ -4912,7 +4873,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 146.05) (xy 67.31 144.78)
+			(xy 63.5 146.05) (xy 63.5 144.78)
 		)
 		(stroke
 			(width 0)
@@ -4992,7 +4953,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 72.39) (xy 149.86 78.74)
+			(xy 144.78 72.39) (xy 144.78 78.74)
 		)
 		(stroke
 			(width 0)
@@ -5019,6 +4980,16 @@
 			(type default)
 		)
 		(uuid "9c63c60f-a07e-434c-a3a7-a7f31503f457")
+	)
+	(wire
+		(pts
+			(xy 154.94 101.6) (xy 156.21 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e198ff6-64eb-4c6f-8536-37e9c92dec99")
 	)
 	(wire
 		(pts
@@ -5052,23 +5023,23 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 118.11) (xy 67.31 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aaa04285-b364-47ca-9dc2-badb82940150")
-	)
-	(wire
-		(pts
-			(xy 148.59 116.84) (xy 152.4 116.84)
+			(xy 144.78 120.65) (xy 147.32 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "aad2699b-d9eb-4eff-ab64-c3a6fc8b3b68")
+	)
+	(wire
+		(pts
+			(xy 64.77 154.94) (xy 67.31 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "add44eca-d3bd-405d-8626-8f4661637838")
 	)
 	(wire
 		(pts
@@ -5082,7 +5053,27 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 64.77) (xy 149.86 59.69)
+			(xy 156.21 78.74) (xy 157.48 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afc74c2a-2258-44f9-acb2-1d7134644319")
+	)
+	(wire
+		(pts
+			(xy 156.21 101.6) (xy 157.48 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b163c147-d8ee-4498-91cd-bf2bbc7aa496")
+	)
+	(wire
+		(pts
+			(xy 144.78 64.77) (xy 144.78 59.69)
 		)
 		(stroke
 			(width 0)
@@ -5152,6 +5143,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 154.94) (xy 64.77 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4dfe1bd-b1d1-49fe-9c3d-c68cdcc28e67")
+	)
+	(wire
+		(pts
 			(xy 198.12 24.13) (xy 198.12 27.94)
 		)
 		(stroke
@@ -5162,7 +5163,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 109.22) (xy 67.31 107.95)
+			(xy 63.5 109.22) (xy 63.5 107.95)
 		)
 		(stroke
 			(width 0)
@@ -5182,7 +5183,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 97.79) (xy 148.59 102.87)
+			(xy 144.78 101.6) (xy 144.78 106.68)
 		)
 		(stroke
 			(width 0)
@@ -5202,6 +5203,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 118.11) (xy 67.31 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce7d97b2-f672-4f49-98ec-6209450204e0")
+	)
+	(wire
+		(pts
 			(xy 198.12 27.94) (xy 198.12 30.48)
 		)
 		(stroke
@@ -5212,7 +5223,27 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 153.67) (xy 67.31 154.94)
+			(xy 156.21 114.3) (xy 156.21 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d17c3882-c112-48ea-998c-2560808008e1")
+	)
+	(wire
+		(pts
+			(xy 74.93 107.95) (xy 77.47 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d191864a-2e65-4ad8-8703-b605a1302fcb")
+	)
+	(wire
+		(pts
+			(xy 63.5 153.67) (xy 63.5 154.94)
 		)
 		(stroke
 			(width 0)
@@ -5242,7 +5273,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 78.74) (xy 149.86 78.74)
+			(xy 139.7 78.74) (xy 144.78 78.74)
 		)
 		(stroke
 			(width 0)
@@ -5282,6 +5313,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 118.11) (xy 64.77 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcc7bd4a-0655-48a3-be41-a5c8657dfdac")
+	)
+	(wire
+		(pts
 			(xy 184.15 34.29) (xy 184.15 27.94)
 		)
 		(stroke
@@ -5292,23 +5333,13 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 97.79) (xy 152.4 97.79)
+			(xy 144.78 101.6) (xy 147.32 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e07720a4-2cc7-4c8b-80c5-25d11de7081c")
-	)
-	(wire
-		(pts
-			(xy 64.77 107.95) (xy 67.31 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e08af6ea-40bd-4263-85b3-5730a5c08a6b")
 	)
 	(wire
 		(pts
@@ -5329,6 +5360,16 @@
 			(type default)
 		)
 		(uuid "e2fe5c79-45ac-4669-823c-9b6489839cfd")
+	)
+	(wire
+		(pts
+			(xy 154.94 120.65) (xy 156.21 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e38c4573-7009-488d-bbb1-111a7e7868fd")
 	)
 	(wire
 		(pts
@@ -5362,13 +5403,13 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 154.94) (xy 64.77 154.94)
+			(xy 156.21 72.39) (xy 156.21 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e8b8c6b6-4d76-4f5c-a246-596605928de2")
+		(uuid "ec13e52f-be82-42bb-b0fc-dd35434d3931")
 	)
 	(wire
 		(pts
@@ -5382,7 +5423,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 111.76) (xy 143.51 116.84)
+			(xy 139.7 115.57) (xy 139.7 120.65)
 		)
 		(stroke
 			(width 0)
@@ -5392,13 +5433,13 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 144.78) (xy 77.47 144.78)
+			(xy 156.21 59.69) (xy 156.21 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fb366385-c18f-4c07-8aa0-618d2249b31d")
+		(uuid "f24c50a7-92f2-4392-81c8-af854abe4919")
 	)
 	(wire
 		(pts
@@ -5541,7 +5582,7 @@
 		(uuid "46e39d5e-4ae4-4c2e-9677-639fbcf45649")
 	)
 	(label "CH1_N_OUT"
-		(at 22.86 118.11 180)
+		(at 26.67 118.11 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5601,7 +5642,7 @@
 		(uuid "5c78fbcf-0ae3-491a-9c00-5fc0602dd2f9")
 	)
 	(label "CH1_L_OUT"
-		(at 22.86 107.95 180)
+		(at 26.67 107.95 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5651,7 +5692,7 @@
 		(uuid "874223ed-19ca-4bf9-b24a-135413f1dfae")
 	)
 	(label "CH2_N_OUT"
-		(at 22.86 154.94 180)
+		(at 25.4 154.94 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5741,7 +5782,7 @@
 		(uuid "c20730f5-b15b-43a5-be8d-5f9411782309")
 	)
 	(label "CH2_L_OUT"
-		(at 22.86 144.78 180)
+		(at 25.4 144.78 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5846,7 +5887,7 @@
 	)
 	(global_label "IBP2"
 		(shape input)
-		(at 153.67 59.69 0)
+		(at 157.48 59.69 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5856,7 +5897,7 @@
 		)
 		(uuid "0925137b-d6e0-48ed-8e35-2814cc1a3255")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 160.3553 59.69 0)
+			(at 164.1653 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5870,7 +5911,7 @@
 	)
 	(global_label "IBP1"
 		(shape input)
-		(at 152.4 97.79 0)
+		(at 157.48 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5880,7 +5921,7 @@
 		)
 		(uuid "1fe18ed6-d86a-494c-b62a-f5eac56d94c5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.0853 97.79 0)
+			(at 164.1653 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5894,7 +5935,7 @@
 	)
 	(global_label "IBN1"
 		(shape input)
-		(at 152.4 116.84 0)
+		(at 157.48 120.65 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5904,7 +5945,7 @@
 		)
 		(uuid "2204eb40-1c41-4057-aeef-53f1261e2f26")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.1458 116.84 0)
+			(at 164.2258 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6038,7 +6079,7 @@
 	)
 	(global_label "IBN2"
 		(shape input)
-		(at 153.67 78.74 0)
+		(at 157.48 78.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6048,7 +6089,7 @@
 		)
 		(uuid "cd9fed6b-53eb-4869-ac08-210756dcdfc8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 160.4158 78.74 0)
+			(at 164.2258 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6188,7 +6229,7 @@
 	)
 	(symbol
 		(lib_id "Transformer:ZMCT103C")
-		(at 144.78 68.58 90)
+		(at 139.7 68.58 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -6199,7 +6240,7 @@
 		(dnp no)
 		(uuid "08464c56-b30f-4640-8d4d-eec1c8023e4f")
 		(property "Reference" "Csns2"
-			(at 142.24 66.9289 90)
+			(at 137.16 66.9289 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6210,7 +6251,7 @@
 			)
 		)
 		(property "Value" "ZMCT103C"
-			(at 142.24 69.4689 90)
+			(at 137.16 69.4689 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6221,7 +6262,7 @@
 			)
 		)
 		(property "Footprint" "Transformer_THT:Transformer_Zeming_ZMCT103C"
-			(at 144.78 68.58 0)
+			(at 139.7 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6232,7 +6273,7 @@
 			)
 		)
 		(property "Datasheet" "https://5krorwxhmqqirik.leadongcdn.com/ZMCT103C+specification-aidirBqoKomRilSjpimnokp.pdf"
-			(at 137.795 68.58 0)
+			(at 132.715 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6243,7 +6284,7 @@
 			)
 		)
 		(property "Description" "Qingxian Zeming Langxi Electronic ZMCT103C current transformer 1000:1 10A"
-			(at 144.78 68.58 0)
+			(at 139.7 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6254,62 +6295,7 @@
 			)
 		)
 		(property "MPN" "ZMCT103C"
-			(at 144.78 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 144.78 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 144.78 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 144.78 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 144.78 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 144.78 68.58 90)
+			(at 139.7 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6412,51 +6398,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 184.15 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 184.15 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 184.15 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 184.15 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "512-SS34"
 			(at 184.15 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -6558,51 +6500,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 102.87 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 102.87 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 102.87 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 102.87 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "534-4901"
 			(at 102.87 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -6702,51 +6600,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 20.32 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 20.32 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 20.32 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 20.32 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "534-4901"
 			(at 20.32 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -6845,51 +6699,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 132.08 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 132.08 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 132.08 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 132.08 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "534-4901"
 			(at 132.08 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -6979,7 +6789,7 @@
 				)
 			)
 		)
-		(property "MPN" "ESR01MZPF1002"
+		(property "MPN" "RC0402FR-7D10KL"
 			(at 185.42 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -6990,51 +6800,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 185.42 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 185.42 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 185.42 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 185.42 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "603-RC0402FR-7D10KL"
 			(at 185.42 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -7125,72 +6891,6 @@
 				)
 			)
 		)
-		(property "MPN" ""
-			(at 76.2 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 76.2 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 76.2 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 76.2 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 76.2 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 76.2 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "8ed6fcd0-4e02-4ac4-bf7d-f993fbb31a9d")
 		)
@@ -7205,7 +6905,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 148.59 106.68 0)
+		(at 144.78 110.49 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7216,7 +6916,7 @@
 		(fields_autoplaced yes)
 		(uuid "1a439d93-2702-4736-a9c1-29bb8aaf03e0")
 		(property "Reference" "R24"
-			(at 151.13 105.4099 0)
+			(at 147.32 109.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7227,7 +6927,7 @@
 			)
 		)
 		(property "Value" "33"
-			(at 151.13 107.9499 0)
+			(at 147.32 111.7599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7238,7 +6938,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 146.812 106.68 90)
+			(at 143.002 110.49 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7249,7 +6949,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 106.68 0)
+			(at 144.78 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7260,7 +6960,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 148.59 106.68 0)
+			(at 144.78 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7271,7 +6971,7 @@
 			)
 		)
 		(property "MPN" "ERA-6AHD330V"
-			(at 148.59 106.68 0)
+			(at 144.78 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7281,52 +6981,8 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 148.59 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 148.59 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 148.59 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 148.59 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 148.59 106.68 0)
+		(property "Mouser" "667-ERA-6AHD330V"
+			(at 144.78 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7429,51 +7085,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 184.15 38.1 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 184.15 38.1 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 184.15 38.1 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 184.15 38.1 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "512-SS34"
 			(at 184.15 38.1 90)
 			(hide yes)
 			(show_name no)
@@ -7554,72 +7166,6 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 21.59 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" ""
-			(at 21.59 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 21.59 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 21.59 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 21.59 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 21.59 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
 			(at 21.59 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -7797,51 +7343,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 241.3 36.83 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 241.3 36.83 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 241.3 36.83 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 241.3 36.83 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "512-SS34"
 			(at 241.3 36.83 90)
 			(hide yes)
 			(show_name no)
@@ -7934,7 +7436,7 @@
 				)
 			)
 		)
-		(property "MPN" "ESR01MZPF1002"
+		(property "MPN" "RC0402FR-7D10KL"
 			(at 248.92 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -7945,51 +7447,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 248.92 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 248.92 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 248.92 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 248.92 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "603-RC0402FR-7D10KL"
 			(at 248.92 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -8017,7 +7475,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 149.86 68.58 0)
+		(at 144.78 68.58 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8028,7 +7486,7 @@
 		(fields_autoplaced yes)
 		(uuid "2a3a4bd9-d4db-4081-ad22-a8e827171d1c")
 		(property "Reference" "R25"
-			(at 152.4 67.3099 0)
+			(at 147.32 67.3099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8039,7 +7497,7 @@
 			)
 		)
 		(property "Value" "33"
-			(at 152.4 69.8499 0)
+			(at 147.32 69.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8050,7 +7508,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 148.082 68.58 90)
+			(at 143.002 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8061,7 +7519,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 149.86 68.58 0)
+			(at 144.78 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8072,7 +7530,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 149.86 68.58 0)
+			(at 144.78 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8083,7 +7541,7 @@
 			)
 		)
 		(property "MPN" "ERA-6AHD330V"
-			(at 149.86 68.58 0)
+			(at 144.78 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8093,52 +7551,8 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 149.86 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 149.86 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 149.86 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 149.86 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 149.86 68.58 0)
+		(property "Mouser" "667-ERA-6AHD330V"
+			(at 144.78 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8239,51 +7653,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 181.61 135.89 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 181.61 135.89 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 181.61 135.89 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 181.61 135.89 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "603-RC0100FR-07100RL"
 			(at 181.61 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -8464,51 +7834,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 20.32 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 20.32 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 20.32 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 20.32 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "534-4901"
 			(at 20.32 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -8610,51 +7936,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 203.2 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 203.2 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 203.2 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 203.2 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "653-G2RL-1A-E-DC5"
 			(at 203.2 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -8764,51 +8046,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 147.32 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 147.32 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 147.32 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 147.32 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "80-ESL227M035AG8AA"
 			(at 147.32 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -9065,51 +8303,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 203.2 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 203.2 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 203.2 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 203.2 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "653-G2RL-1A-E-DC5"
 			(at 203.2 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -9206,72 +8400,6 @@
 				)
 			)
 		)
-		(property "MPN" ""
-			(at 21.59 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 21.59 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 21.59 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 21.59 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 21.59 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 21.59 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "b4fef83a-2454-49fd-b7d3-c0eac738a89e")
 		)
@@ -9279,6 +8407,109 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 71.12 144.78 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "50142805-c7a9-4ca3-ad86-08ac72fbe180")
+		(property "Reference" "R49"
+			(at 69.85 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 72.39 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 71.12 143.002 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 71.12 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RP0402BRD071KL"
+			(at 71.12 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 71.12 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "99279dea-1478-4646-9905-b5c510605dcb")
+		)
+		(pin "1"
+			(uuid "5d22ae65-7900-40d3-94ca-a9ed12cc5acc")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -9438,51 +8669,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 102.87 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 102.87 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 102.87 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 102.87 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "534-4901"
 			(at 102.87 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -9616,51 +8803,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 259.08 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 259.08 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 259.08 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 259.08 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "78-SI2302DDS-T1-GE3"
 			(at 259.08 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -9766,51 +8909,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 77.47 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 77.47 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 77.47 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 77.47 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "963-EMK105B7333KVHF"
 			(at 77.47 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -10064,51 +9163,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 132.08 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 132.08 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 132.08 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 132.08 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "534-4901"
 			(at 132.08 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -10364,8 +9419,111 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 156.21 68.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "78df1a0e-a97e-4c99-adfd-371650038b49")
+		(property "Reference" "C35"
+			(at 160.02 67.3099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33n"
+			(at 160.02 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 157.1752 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 156.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "EMK105B7333KVHF"
+			(at 156.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "963-EMK105B7333KVHF"
+			(at 156.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "521534f4-4879-4af2-b2b7-c097d9f3940f")
+		)
+		(pin "1"
+			(uuid "d3d97fd8-f51a-42c8-9393-d3ecab315de7")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "C35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transformer:ZMCT103C")
-		(at 143.51 106.68 90)
+		(at 139.7 110.49 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -10376,7 +9534,7 @@
 		(dnp no)
 		(uuid "88e0a6aa-9c8b-42d4-b553-e6ca58a30bbf")
 		(property "Reference" "Csns1"
-			(at 140.97 105.0289 90)
+			(at 137.16 108.8389 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10387,7 +9545,7 @@
 			)
 		)
 		(property "Value" "ZMCT103C"
-			(at 140.97 107.5689 90)
+			(at 137.16 111.3789 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10398,7 +9556,7 @@
 			)
 		)
 		(property "Footprint" "Transformer_THT:Transformer_Zeming_ZMCT103C"
-			(at 143.51 106.68 0)
+			(at 139.7 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10409,7 +9567,7 @@
 			)
 		)
 		(property "Datasheet" "https://5krorwxhmqqirik.leadongcdn.com/ZMCT103C+specification-aidirBqoKomRilSjpimnokp.pdf"
-			(at 136.525 106.68 0)
+			(at 132.715 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10420,7 +9578,7 @@
 			)
 		)
 		(property "Description" "Qingxian Zeming Langxi Electronic ZMCT103C current transformer 1000:1 10A"
-			(at 143.51 106.68 0)
+			(at 139.7 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10431,7 +9589,7 @@
 			)
 		)
 		(property "MPN" "ZMCT103C"
-			(at 143.51 106.68 0)
+			(at 139.7 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10442,7 +9600,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 143.51 106.68 90)
+			(at 139.7 110.49 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10453,7 +9611,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 143.51 106.68 90)
+			(at 139.7 110.49 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10464,7 +9622,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" ""
-			(at 143.51 106.68 90)
+			(at 139.7 110.49 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10475,7 +9633,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 143.51 106.68 90)
+			(at 139.7 110.49 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10486,7 +9644,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 143.51 106.68 90)
+			(at 139.7 110.49 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10664,51 +9822,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 242.57 135.89 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 242.57 135.89 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 242.57 135.89 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 242.57 135.89 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "603-RC0100FR-07100RL"
 			(at 242.57 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -10953,7 +10067,7 @@
 				)
 			)
 		)
-		(property "MPN" "ESR01MZPF1002"
+		(property "MPN" "RC0402FR-7D10KL"
 			(at 186.69 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -10964,51 +10078,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 186.69 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 186.69 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 186.69 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 186.69 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "603-RC0402FR-7D10KL"
 			(at 186.69 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -11029,6 +10099,109 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "R29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 71.12 107.95 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "98737e73-dae1-486b-89f9-cab3dfdcbaf0")
+		(property "Reference" "R47"
+			(at 69.85 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 72.39 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 71.12 106.172 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 71.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RP0402BRD071KL"
+			(at 71.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 71.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "916533f6-fdb7-42f2-8f06-1291b0d22626")
+		)
+		(pin "1"
+			(uuid "8c44c526-a220-4540-b0d8-3fe7947cfc33")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "R47")
 					(unit 1)
 				)
 			)
@@ -11112,51 +10285,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 129.54 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 129.54 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 129.54 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 129.54 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "78-SMF5V0A-E3-08"
 			(at 129.54 148.59 90)
 			(hide yes)
 			(show_name no)
@@ -11304,7 +10433,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "B72210S0271K101 "
 			(at 62.23 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -11315,51 +10444,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 62.23 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 62.23 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 62.23 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 62.23 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "871-B72210S271K101"
 			(at 62.23 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -11464,7 +10549,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 67.31 149.86 180)
+		(at 63.5 149.86 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11475,7 +10560,7 @@
 		(fields_autoplaced yes)
 		(uuid "a5b40880-4d4c-44c1-a11d-2dfc38f1d362")
 		(property "Reference" "R23"
-			(at 71.12 148.5899 0)
+			(at 67.31 148.5899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11486,7 +10571,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 71.12 151.1299 0)
+			(at 67.31 151.1299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11497,7 +10582,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 69.088 149.86 90)
+			(at 65.278 149.86 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11508,7 +10593,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 67.31 149.86 0)
+			(at 63.5 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11519,7 +10604,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 67.31 149.86 0)
+			(at 63.5 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11530,7 +10615,7 @@
 			)
 		)
 		(property "MPN" "RP0402BRD071KL"
-			(at 67.31 149.86 0)
+			(at 63.5 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11540,52 +10625,8 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 67.31 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 67.31 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 67.31 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 67.31 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 67.31 149.86 0)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 63.5 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11642,7 +10683,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Wire:SolderWire-4sqmm_1x01_D3mm_OD6mm"
+		(property "Footprint" "Connector_Wire:SolderWire-2sqmm_1x01_D2mm_OD3.9mm"
 			(at 114.3 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -11665,72 +10706,6 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 114.3 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" ""
-			(at 114.3 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 114.3 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 114.3 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 114.3 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 114.3 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
 			(at 114.3 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -11818,7 +10793,7 @@
 				)
 			)
 		)
-		(property "MPN" "100020"
+		(property "MPN" "01000020Z"
 			(at 107.95 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -11829,51 +10804,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 107.95 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 107.95 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 107.95 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 107.95 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "576-01000020Z"
 			(at 107.95 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -12010,51 +10941,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 256.54 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 256.54 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 256.54 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 256.54 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "78-SI2302DDS-T1-GE3"
 			(at 256.54 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -12078,6 +10965,110 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 71.12 118.11 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "aa16f783-fd62-4820-be8d-7082588f4034")
+		(property "Reference" "R48"
+			(at 69.85 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 72.39 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 71.12 119.888 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 71.12 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RP0402BRD071KL"
+			(at 71.12 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 71.12 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ff3bc574-cdea-4974-97a2-ac21d4d66737")
+		)
+		(pin "1"
+			(uuid "f17fec6e-c235-4aa6-8888-2654812224d5")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -12159,51 +11150,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 34.29 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 34.29 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 34.29 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 34.29 107.95 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "603-VT1206BRB071ML"
 			(at 34.29 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -12305,51 +11252,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 245.11 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 245.11 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 245.11 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 245.11 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "603-RC0100FR-07100RL"
 			(at 245.11 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -12451,51 +11354,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 181.61 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 181.61 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 181.61 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 181.61 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "603-RC0100FR-07100RL"
 			(at 181.61 57.15 90)
 			(hide yes)
 			(show_name no)
@@ -12516,6 +11375,108 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 151.13 101.6 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b31726bc-674f-458b-93e7-b1850cc833c4")
+		(property "Reference" "R43"
+			(at 151.13 95.25 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 151.13 97.79 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 151.13 99.822 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 151.13 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RP0402BRD071KL"
+			(at 151.13 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 151.13 101.6 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "1b85120a-ae3e-48f5-97c0-3c938d4010ff")
+		)
+		(pin "1"
+			(uuid "2767b797-2b95-4648-8390-30756e789ee8")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -12586,7 +11547,7 @@
 				)
 			)
 		)
-		(property "MPN" "100020"
+		(property "MPN" "01000020Z"
 			(at 107.95 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -12597,51 +11558,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 107.95 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 107.95 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 107.95 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 107.95 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "576-01000020Z"
 			(at 107.95 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -12823,51 +11740,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 260.35 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 260.35 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 260.35 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 260.35 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "653-G2RL-1A-E-DC5"
 			(at 260.35 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -12978,51 +11851,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 260.35 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 260.35 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 260.35 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 260.35 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "653-G2RL-1A-E-DC5"
 			(at 260.35 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -13119,72 +11948,6 @@
 				)
 			)
 		)
-		(property "MPN" ""
-			(at 76.2 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 76.2 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 76.2 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 76.2 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 76.2 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 76.2 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "4c6e9f2f-1f43-437b-b991-dadd6fa11d10")
 		)
@@ -13192,154 +11955,6 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "J10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 251.46 60.96 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c435ad9e-5178-4636-8b20-fd8f56ff6e0c")
-		(property "Reference" "R33"
-			(at 254 59.6899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 254 62.2299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 253.238 60.96 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 251.46 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "ESR01MZPF1002"
-			(at 251.46 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 251.46 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 251.46 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 251.46 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 251.46 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 251.46 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "bd037168-4b6e-476e-a802-39175878b495")
-		)
-		(pin "1"
-			(uuid "c3a1c416-07f0-4478-9f68-163203bfcb7b")
-		)
-		(instances
-			(project "smart_supply"
-				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
-					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -13423,7 +12038,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Fuse_1")
 		(lib_id "Device:Fuse")
 		(at 53.34 22.86 270)
 		(unit 1)
@@ -13488,7 +12102,7 @@
 				)
 			)
 		)
-		(property "MPN" "100020"
+		(property "MPN" "01000020Z"
 			(at 53.34 22.86 0)
 			(hide yes)
 			(show_name no)
@@ -13499,51 +12113,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 53.34 22.86 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 53.34 22.86 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 53.34 22.86 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 53.34 22.86 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "576-01000020Z"
 			(at 53.34 22.86 90)
 			(hide yes)
 			(show_name no)
@@ -13680,51 +12250,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 195.58 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 195.58 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 195.58 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 195.58 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "78-SI2302DDS-T1-GE3"
 			(at 195.58 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -13830,51 +12356,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 20.32 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 20.32 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 20.32 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 20.32 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "534-4901"
 			(at 20.32 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -14129,51 +12611,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 132.08 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 132.08 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 132.08 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 132.08 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "534-4901"
 			(at 132.08 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -14273,51 +12711,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 77.47 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 77.47 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 77.47 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 77.47 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "963-EMK105B7333KVHF"
 			(at 77.47 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -14338,6 +12732,210 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 151.13 120.65 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dc9c766c-4aea-4d69-b65f-38b52d65e26b")
+		(property "Reference" "R44"
+			(at 151.13 127 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 151.13 124.46 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 151.13 122.428 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 151.13 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RP0402BRD071KL"
+			(at 151.13 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 151.13 120.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "04b58d76-e7c5-41e0-8db7-b4fafeab1496")
+		)
+		(pin "1"
+			(uuid "2f974097-85db-4d1a-96cc-be8aeaa4e316")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "R44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 151.13 78.74 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ea4f2d77-b7c3-419a-b3c7-6d88f25fcef5")
+		(property "Reference" "R46"
+			(at 151.13 85.09 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 151.13 82.55 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 151.13 80.518 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 151.13 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RP0402BRD071KL"
+			(at 151.13 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 151.13 78.74 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "23e9e957-b804-4e3b-93cf-950c55b58d3e")
+		)
+		(pin "1"
+			(uuid "0586f562-a0f2-4b2b-b66d-24144128f829")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -14421,51 +13019,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 241.3 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 241.3 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 241.3 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 241.3 116.84 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "512-SS34"
 			(at 241.3 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -14486,6 +13040,109 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 156.21 110.49 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ec215815-4283-45b2-9984-f59f0c28e518")
+		(property "Reference" "C34"
+			(at 160.02 109.2199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33n"
+			(at 160.02 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 157.1752 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 156.21 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "EMK105B7333KVHF"
+			(at 156.21 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "963-EMK105B7333KVHF"
+			(at 156.21 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "aee6d4fe-928b-47ba-89c0-caec3cf365aa")
+		)
+		(pin "1"
+			(uuid "66d19962-7437-43d4-8538-55b75c468866")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -14602,51 +13259,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 195.58 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 195.58 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 195.58 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 195.58 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "78-SI2302DDS-T1-GE3"
 			(at 195.58 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -14707,7 +13320,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Wire:SolderWire-4sqmm_1x01_D3mm_OD6mm"
+		(property "Footprint" "Connector_Wire:SolderWire-2sqmm_1x01_D2mm_OD3.9mm"
 			(at 88.9 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -14740,72 +13353,6 @@
 				)
 			)
 		)
-		(property "MPN" ""
-			(at 88.9 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 88.9 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 88.9 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 88.9 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 88.9 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 88.9 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "7739ebd2-e9be-4c00-b779-ea0ae3f43c7d")
 		)
@@ -14813,6 +13360,214 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 71.12 154.94 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ee49ab88-c50f-496f-9527-1d2928dd50d2")
+		(property "Reference" "R50"
+			(at 69.85 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 72.39 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 71.12 156.718 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 71.12 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RP0402BRD071KL"
+			(at 71.12 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 71.12 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "143f9963-9e31-4d86-aa91-c42d6a4c3757")
+		)
+		(pin "1"
+			(uuid "7ec432c8-bb73-4c74-a7e0-1e65f01fcc89")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 251.46 60.96 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f20c4d09-0fa4-43f4-96df-3454e6885770")
+		(property "Reference" "R33"
+			(at 254 59.6899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 254 62.2299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 253.238 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 251.46 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 251.46 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-7D10KL"
+			(at 251.46 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "603-RC0402FR-7D10KL"
+			(at 251.46 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "758ddea8-18d6-4a13-8f03-d10546c50aa8")
+		)
+		(pin "1"
+			(uuid "c57a6832-e02b-487e-b11f-cf7d040183cb")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -14894,51 +13649,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 34.29 144.78 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 34.29 144.78 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 34.29 144.78 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 34.29 144.78 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "603-VT1206BRD07510KL"
 			(at 34.29 144.78 90)
 			(hide yes)
 			(show_name no)
@@ -15040,51 +13751,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 102.87 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 102.87 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 102.87 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 102.87 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "534-4901"
 			(at 102.87 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -15186,7 +13853,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 67.31 113.03 180)
+		(at 63.5 113.03 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15194,10 +13861,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f7dccd3d-8687-48a7-9a79-34152356eabf")
 		(property "Reference" "R22"
-			(at 71.12 111.7599 0)
+			(at 64.77 111.76 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15208,7 +13874,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 71.12 114.2999 0)
+			(at 64.77 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15219,7 +13885,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 69.088 113.03 90)
+			(at 65.278 113.03 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15230,7 +13896,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 67.31 113.03 0)
+			(at 63.5 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15241,7 +13907,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 67.31 113.03 0)
+			(at 63.5 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15252,7 +13918,7 @@
 			)
 		)
 		(property "MPN" "RP0402BRD071KL"
-			(at 67.31 113.03 0)
+			(at 63.5 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15262,52 +13928,8 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 67.31 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 67.31 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 67.31 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 67.31 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 67.31 113.03 0)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 63.5 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15408,51 +14030,7 @@
 				)
 			)
 		)
-		(property "Height" ""
-			(at 114.3 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 114.3 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" ""
-			(at 114.3 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 114.3 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
+		(property "Mouser" "495-TMG15105"
 			(at 114.3 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -15479,6 +14057,108 @@
 			(project "smart_supply"
 				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
 					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 151.13 59.69 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fe5f7208-c93c-4ce8-94ee-a9300600510c")
+		(property "Reference" "R45"
+			(at 151.13 53.34 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 151.13 55.88 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 151.13 57.912 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 151.13 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RP0402BRD071KL"
+			(at 151.13 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser" "603-RP0402BRD071KL"
+			(at 151.13 59.69 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "cabeb739-664c-43df-8911-477b9fae4870")
+		)
+		(pin "1"
+			(uuid "6c557abc-6e0c-48c9-94e7-de0390a72e72")
+		)
+		(instances
+			(project "smart_supply"
+				(path "/487ef637-7a03-4925-80c1-798e0c6f0bbd/34ab41b0-567d-4411-99e8-070d64ace837"
+					(reference "R45")
 					(unit 1)
 				)
 			)
