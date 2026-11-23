@@ -445,3 +445,16 @@ select { background: #0d1727; color: #e7eef9; border: 1px solid #3a5066; border-
     grid-template-columns: 1fr;
   }
 }
+/* Sequence editor */
+.testing-panel { margin-bottom: 20px; }
+.testing-help { margin-top: 12px; line-height: 1.5; }
+.testing-toolbar, .testing-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+.testing-table-wrap { overflow-x: auto; }
+.testing-table { width: 100%; border-collapse: collapse; text-align: left; }
+.testing-table th, .testing-table td { padding: 12px; border-bottom: 1px solid #2a3b51; }
+.testing-table th { color: #9cadbf; }
+.testing-table input, .testing-table select { width: 100%; min-width: 90px; }
+.testing-table tr.active { background: #243a4c; }
+.testing-cycle { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.testing-cycle input { width: 18px; height: 18px; accent-color: #60d5b4; }
+.testing-panel select:focus-visible { outline: 2px solid #60d5b4; outline-offset: 2px; }

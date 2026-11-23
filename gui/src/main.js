@@ -158,7 +158,7 @@ function drawPowerTriangle(p, q, channel = 'ch1') {
   if (qAxisLabel) qAxisLabel.setAttribute('x', 10)
 
   const x = x0 + p * scale
-  const y = y0 - q * scale // In SVG, positive y points down.
+  const y = y0 - q * scale // In SVG, positive y points down
 
   function setLine(id, x1, y1, x2, y2) {
     const line = triangleEl(id)
@@ -322,6 +322,7 @@ function connect() {
 
   // When the connection closes, reset the buttons for another attempt
   client.on('close', () => {
+    stopTesting(false)
     client = null
 
     // Disable relay controls and clear their displayed states
@@ -341,7 +342,7 @@ function connect() {
   })
 }
 
-// Wire up the dashboard buttons
+// connect the dashboard buttons
 $('connect-btn').addEventListener('click', connect)
 
 // Close the connection if a client exists
@@ -363,6 +364,10 @@ document.querySelectorAll('.channel-command').forEach(button => {
       return
     }
 
+    if (testingRun?.channel === button.dataset.channel) {
+      $('testing-status').textContent = 'Stop the sequence before controlling this channel manually.'
+      return
+    }
     const channel = button.dataset.channel
     const command = button.dataset.enabled === 'true' ? '1' : '0'
 
@@ -381,3 +386,95 @@ document.querySelectorAll('.channel-command').forEach(button => {
     )
   })
 })
+
+// relay sequence: each row holds a state for N seconds
+let testingRun = null
+let testingTimer = null
+
+function addTestingRow(seconds = 5, state = '1') {
+  const row = document.createElement('tr')
+  row.innerHTML = `<td><input class="testing-time" type="number" min="1" max="86400" step="1" value="5" aria-label="Duration in seconds" required></td>
+    <td><select class="testing-state" aria-label="Relay state"><option value="1">On</option><option value="0">Off</option></select></td>
+    <td><button type="button" class="secondary">Delete</button></td>`
+  row.querySelector('input').value = seconds
+  row.querySelector('select').value = state
+  row.querySelector('button').addEventListener('click', () => row.remove())
+  $('testing-rows').append(row)
+}
+
+function lockTesting(locked) {
+  document.querySelectorAll('#testing-rows input, #testing-rows select, #testing-rows button, #testing-channel, #testing-cycle, #testing-add, #testing-play').forEach(element => {
+    element.disabled = locked
+  })
+  $('testing-stop').disabled = !locked
+}
+
+// Local cancellation also works if the MQTT connection is lost
+function stopTesting(sendOff = true, reason = 'Stopped') {
+  if (!testingRun) return
+  const channel = testingRun.channel
+  testingRun = null
+  clearTimeout(testingTimer)
+  document.querySelectorAll('#testing-rows tr').forEach(row => row.classList.remove('active'))
+  lockTesting(false)
+  if (sendOff && client?.connected) {
+    client.publish(`command/${channel}`, '0', { retain: false, qos: 0 }, error => {
+      if (error) $('testing-status').textContent = `Could not send Off: ${error.message}`
+    })
+    $('testing-status').textContent = `${reason}. Off command sent to ${channel.toUpperCase()}; check the state indicator.`
+  } else {
+    $('testing-status').textContent = 'Connection lost. Sequence cancelled; relay state is unknown and Off could not be sent.'
+  }
+  log(`Testing ${channel.toUpperCase()}: ${reason}`)
+}
+
+function runTestingStep(run, index) {
+  if (testingRun !== run) return
+  if (!client?.connected) return stopTesting(false)
+  if (index === run.steps.length) {
+    if (!run.cyclic) return stopTesting(true, 'Completed')
+    index = 0
+  }
+  const step = run.steps[index]
+  document.querySelectorAll('#testing-rows tr').forEach((row, i) => row.classList.toggle('active', i === index))
+  $('testing-status').textContent = `${run.channel.toUpperCase()} · Row ${index + 1}/${run.steps.length} · ${step.state === '1' ? 'On' : 'Off'} · ${step.seconds} s`
+  client.publish(`command/${run.channel}`, step.state, { retain: false, qos: 0 }, error => {
+    if (testingRun !== run) return
+    if (error) return stopTesting(true, 'Publish failed')
+    testingTimer = setTimeout(() => runTestingStep(run, index + 1), step.seconds * 1000)
+  })
+}
+
+$('testing-add').addEventListener('click', () => addTestingRow())
+$('testing-stop').addEventListener('click', () => stopTesting())
+$('testing-play').addEventListener('click', () => {
+  if (!client?.connected) {
+    $('testing-status').textContent = 'Connect to the broker first.'
+    return
+  }
+  const rows = [...$('testing-rows').rows]
+  if (!rows.length) {
+    $('testing-status').textContent = 'Add at least one row.'
+    return
+  }
+  for (const row of rows) {
+    if (!row.querySelector('input').reportValidity()) return
+  }
+  testingRun = {
+    channel: $('testing-channel').value,
+    cyclic: $('testing-cycle').checked,
+    steps: rows.map(row => ({ seconds: Number(row.querySelector('input').value), state: row.querySelector('select').value })),
+  }
+  lockTesting(true)
+  log(`Testing ${testingRun.channel.toUpperCase()}: started`)
+  runTestingStep(testingRun, 0)
+})
+
+// Warn before leaving: closing the page cannot guarantee an Off delivery
+window.addEventListener('beforeunload', event => {
+  if (!testingRun) return
+  event.preventDefault()
+  event.returnValue = ''
+})
+addTestingRow(5, '1')
+addTestingRow(5, '0')
