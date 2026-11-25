@@ -3904,7 +3904,7 @@
 	(text_box "Note: Fuse holder quantity in BOM must be duplicated."
 		(exclude_from_sim no)
 		(at 95.25 168.91 0)
-		(size 38.1 20.32)
+		(size 38.1 6.35)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -6216,7 +6216,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d52e3212-458d-42cd-959a-ae04c71ac2ab")
+			(uuid "7388272e-07c7-433e-af18-1170cb22ae17")
 		)
 		(instances
 			(project "smart_supply"
@@ -6306,10 +6306,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "a5b94667-765e-4985-bf2f-e3db76a44f81")
+			(uuid "6d19090b-f665-47e7-9a07-3cf619e24e1d")
 		)
 		(pin "1"
-			(uuid "46dfe8c0-f250-4988-b9c4-5d678221aacc")
+			(uuid "f0774fa0-5e67-403d-a568-caf48b9e56cb")
 		)
 		(instances
 			(project "smart_supply"
@@ -6410,10 +6410,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "b20124cd-0021-4b31-9bcc-227edd7527ad")
+			(uuid "dfcef9cc-8525-4dec-9ee9-6a7cb5c9a223")
 		)
 		(pin "2"
-			(uuid "18b3787b-9e73-406e-8f77-f248a1b33357")
+			(uuid "db536481-741d-4732-a03b-9f21f6fbbb89")
 		)
 		(instances
 			(project "smart_supply"
@@ -6512,7 +6512,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e37862ac-7770-46c6-9a3c-4fbcd48d15db")
+			(uuid "ead4cab7-61a1-4804-9c91-47abce891942")
 		)
 		(instances
 			(project "smart_supply"
@@ -6612,7 +6612,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "1e1f4f13-e0e1-44c5-a444-eca1bee9cfea")
+			(uuid "83abe69f-e1e8-4a49-8cf9-5828f74f1692")
 		)
 		(instances
 			(project "smart_supply"
@@ -6711,7 +6711,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d8833494-3c85-431a-982c-bfd87cc21a8b")
+			(uuid "605fb031-a5ff-4b89-9acf-1fde076864f9")
 		)
 		(instances
 			(project "smart_supply"
@@ -6812,10 +6812,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "90c96b1d-e0ce-44c4-8703-100cc2a91558")
+			(uuid "d6774690-e6b3-4318-bba9-72fc6a41b13b")
 		)
 		(pin "1"
-			(uuid "b1d20479-2d4f-40fc-9768-0bf15480e50b")
+			(uuid "31e295a6-ea71-42c2-8aad-fa543a9f8b6c")
 		)
 		(instances
 			(project "smart_supply"
@@ -6832,7 +6832,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -6891,8 +6891,19 @@
 				)
 			)
 		)
+		(property "MPN" ""
+			(at 76.2 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "8ed6fcd0-4e02-4ac4-bf7d-f993fbb31a9d")
+			(uuid "e4ddf737-b781-4e8f-a1de-77b743473c67")
 		)
 		(instances
 			(project "smart_supply"
@@ -6993,10 +7004,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "f24ca934-0c12-444f-80c9-1c864c265224")
+			(uuid "ed781b86-3620-453e-ac0c-f209e132b48d")
 		)
 		(pin "2"
-			(uuid "266889ac-3da6-46b9-89db-a7cc1e3b07c1")
+			(uuid "31ccfb5d-5f71-421f-9ed2-026925a3abce")
 		)
 		(instances
 			(project "smart_supply"
@@ -7097,10 +7108,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "7423472f-17e1-4162-a19a-2b0ee9942df4")
+			(uuid "487ac070-af5e-423e-8b2d-cf970e424a58")
 		)
 		(pin "2"
-			(uuid "c719769a-d674-4358-b3e0-e8a92b1d0bc3")
+			(uuid "79592823-d764-4903-a77a-1651f4a25713")
 		)
 		(instances
 			(project "smart_supply"
@@ -7117,7 +7128,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -7176,8 +7187,19 @@
 				)
 			)
 		)
+		(property "MPN" ""
+			(at 21.59 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "12634e1f-f1af-4f80-8734-1bb931a5e8f3")
+			(uuid "bb2430e0-48fe-4def-8308-baf2bdd7224c")
 		)
 		(instances
 			(project "smart_supply"
@@ -7254,7 +7276,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "bc2e77a2-f5e5-473d-bfd9-759db74aad0e")
+			(uuid "2e34e0e9-f68c-42f8-8ccf-ff43784e4981")
 		)
 		(instances
 			(project "smart_supply"
@@ -7355,10 +7377,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "24ff6929-92ab-4193-8e5d-32dd890a642d")
+			(uuid "8367bdb8-8271-4993-adf6-3134a6bf594a")
 		)
 		(pin "2"
-			(uuid "80127de4-5c7a-4241-b52d-9bd49822fef0")
+			(uuid "c31b6dbf-c2a4-40a3-8ea2-bd1386676813")
 		)
 		(instances
 			(project "smart_supply"
@@ -7459,10 +7481,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "1db4b9e0-615f-45b6-9249-2cc4fbaaaba7")
+			(uuid "ddc32df4-d8c8-4c87-905d-d7ce35b8a029")
 		)
 		(pin "1"
-			(uuid "2e26e039-8c75-4102-9ea0-add670888b88")
+			(uuid "44d617db-f7f2-4ce0-a725-5be2111d74c0")
 		)
 		(instances
 			(project "smart_supply"
@@ -7563,10 +7585,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "75a30301-fe98-42dd-8c70-4ddd3ef5cc03")
+			(uuid "2e3f80c6-306a-40e1-90a1-531ed1fb80ce")
 		)
 		(pin "2"
-			(uuid "9e21f955-ca1c-4a51-b990-87894b02db26")
+			(uuid "346a77ac-22c4-4eeb-9298-16ee70eb5b68")
 		)
 		(instances
 			(project "smart_supply"
@@ -7642,7 +7664,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0100FR-07100RL"
+		(property "MPN" "CR0402JW-101GLF"
 			(at 181.61 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -7653,7 +7675,7 @@
 				)
 			)
 		)
-		(property "Mouser" "603-RC0100FR-07100RL"
+		(property "Mouser" "652-CR0402JW-101GLF"
 			(at 181.61 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -7665,10 +7687,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "1cf3fe29-90d1-4611-bc1a-1c115622b349")
+			(uuid "82f84abf-ec79-45be-81d4-c25465a85c0d")
 		)
 		(pin "1"
-			(uuid "1dc428c8-2d7e-4668-bcb6-c3965b3b24fd")
+			(uuid "8b9c9375-7d57-470e-836b-b896aa1b152a")
 		)
 		(instances
 			(project "smart_supply"
@@ -7746,7 +7768,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "f2bdc3c9-fb73-4894-88e7-9e40d1e7f052")
+			(uuid "cc0dc72e-2585-4584-b081-4da39be41d98")
 		)
 		(instances
 			(project "smart_supply"
@@ -7846,7 +7868,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "7efd1765-c414-4570-b735-062c695f95d3")
+			(uuid "7e4ae2b5-cb8d-470f-9d9b-513a6d59ebd2")
 		)
 		(instances
 			(project "smart_supply"
@@ -7948,16 +7970,16 @@
 			)
 		)
 		(pin "13"
-			(uuid "6d3371ac-6333-4e31-9ea7-a1df93469a8c")
+			(uuid "1b05a35f-9014-4222-b4a5-da947f36773e")
 		)
 		(pin "A1"
-			(uuid "0c2dda0f-e6d4-4d70-ac59-015a7fdf4576")
+			(uuid "7d671b30-f87b-40bf-bdf6-6987bf1d5ce2")
 		)
 		(pin "14"
-			(uuid "c98b7c48-ffb3-480a-b8df-7031b5058e54")
+			(uuid "fadb8ba0-128a-4542-a1ff-bccdbe0d5483")
 		)
 		(pin "A2"
-			(uuid "a47bd1b6-389c-4ee9-8e36-ef2be9b04aac")
+			(uuid "7fac85e1-688c-4d4f-b455-5da9a77475dc")
 		)
 		(instances
 			(project "smart_supply"
@@ -8058,10 +8080,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "5e532c8c-90d9-457a-af29-e2ef394d7600")
+			(uuid "3525caa9-5066-47a8-92c6-69b75da1d8da")
 		)
 		(pin "1"
-			(uuid "2eb2b1a0-5140-431a-9fa6-e25b0ad9e138")
+			(uuid "f2fd143e-ca59-4d41-827e-b20c2908e727")
 		)
 		(instances
 			(project "smart_supply"
@@ -8204,16 +8226,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "c960c1d9-d525-400e-b616-b1f80b07ee18")
+			(uuid "f41f4b6a-b28e-449a-9260-ef6831011306")
 		)
 		(pin "2"
-			(uuid "4455c765-d098-4d57-a52d-fb2cf443b94d")
+			(uuid "30869cf2-a275-4c2c-9231-2dc76dfdc5c4")
 		)
 		(pin "3"
-			(uuid "5b491678-b31c-4a51-b113-64ff982092fa")
+			(uuid "0a6c112b-b050-40f6-b342-3e4c76e45f98")
 		)
 		(pin "4"
-			(uuid "f3e49151-6c17-4010-8b8b-f664313c2e54")
+			(uuid "86ee0eb3-cd5d-418c-a129-18bf4715a7fe")
 		)
 		(instances
 			(project "smart_supply"
@@ -8315,16 +8337,16 @@
 			)
 		)
 		(pin "13"
-			(uuid "5275c8b0-9607-4d92-81a2-e326ea79a4d3")
+			(uuid "3a7067ff-ce73-4b17-93ae-d5601855fa08")
 		)
 		(pin "A1"
-			(uuid "a4888c87-3e79-4422-a3ab-0d826cbae1d0")
+			(uuid "a98cb749-8656-48d6-bd87-f1d53e8894a7")
 		)
 		(pin "14"
-			(uuid "822c3bff-cc8b-48c0-b349-5b3827861f7c")
+			(uuid "7020ee66-6c5e-4ab3-901a-822dca455c3a")
 		)
 		(pin "A2"
-			(uuid "446f8d7d-6c09-41f3-a138-9d63da46aae2")
+			(uuid "b6b809b8-7125-4283-850e-29de219ff60e")
 		)
 		(instances
 			(project "smart_supply"
@@ -8341,7 +8363,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -8400,8 +8422,19 @@
 				)
 			)
 		)
+		(property "MPN" ""
+			(at 21.59 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "b4fef83a-2454-49fd-b7d3-c0eac738a89e")
+			(uuid "d52d3080-77dd-4b10-8d09-829374bcd674")
 		)
 		(instances
 			(project "smart_supply"
@@ -8501,10 +8534,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "99279dea-1478-4646-9905-b5c510605dcb")
+			(uuid "9292975e-a2ff-4580-a6b6-ac386fea463f")
 		)
 		(pin "1"
-			(uuid "5d22ae65-7900-40d3-94ca-a9ed12cc5acc")
+			(uuid "35748864-5962-4862-bcc5-e85c4f35882c")
 		)
 		(instances
 			(project "smart_supply"
@@ -8582,7 +8615,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "acf06c9c-1d1c-4820-99e8-8b5878e46231")
+			(uuid "12276e4f-d652-4f85-82d9-eb66c454cf3e")
 		)
 		(instances
 			(project "smart_supply"
@@ -8681,7 +8714,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "8c5fcaad-9a1e-4b7a-b95a-e2b0544b9b5b")
+			(uuid "7a8cec9b-f87b-4c35-ad4b-d10ff8aaf813")
 		)
 		(instances
 			(project "smart_supply"
@@ -8815,13 +8848,13 @@
 			)
 		)
 		(pin "3"
-			(uuid "c6463df9-0e17-4666-bbba-7e3bfaf9d86b")
+			(uuid "2942e913-763d-4a0e-8ef1-61e6c9b79860")
 		)
 		(pin "2"
-			(uuid "9acaac5e-27e0-4b31-8fa8-42fbe5e7242d")
+			(uuid "44929995-5538-466d-9765-6a822ebb9146")
 		)
 		(pin "1"
-			(uuid "03cfb778-575a-487b-bd22-cc2d29c02f29")
+			(uuid "2afad9f6-7fac-41d2-9f99-d7423ed9265f")
 		)
 		(instances
 			(project "smart_supply"
@@ -8921,10 +8954,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "1a469b01-b9ca-41e5-84c6-4fcc4aef8819")
+			(uuid "f6f10f49-5950-4eb2-87bb-c23b59f3af07")
 		)
 		(pin "1"
-			(uuid "87a479c2-f65f-4bcd-97e4-0e3a0df67822")
+			(uuid "b0fa90d0-e988-4216-abb6-3a865e21e9da")
 		)
 		(instances
 			(project "smart_supply"
@@ -9067,16 +9100,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "41cf4fb3-f6d9-4e2b-84a3-ebc1bde3eb50")
+			(uuid "c3a8f7fd-08a6-4a8a-a775-7bd887e4276d")
 		)
 		(pin "2"
-			(uuid "eb1802bd-e79e-47b9-b948-0bbd2f26aa33")
+			(uuid "4a6700d0-0bf7-48a8-ad50-9222f479849a")
 		)
 		(pin "3"
-			(uuid "be67f08b-a838-4092-b880-d29d597eb8c3")
+			(uuid "3cb0bdf4-d05e-42d6-8e3c-b4d031dee5c4")
 		)
 		(pin "4"
-			(uuid "da08de1e-767f-4a29-98ce-0c365f2da7e0")
+			(uuid "c6657bb1-0598-4d74-85ef-5d8e8cbab5e3")
 		)
 		(instances
 			(project "smart_supply"
@@ -9175,7 +9208,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "cbea1315-d1c2-4283-a5ad-cb99307b8061")
+			(uuid "58d6e741-7e4d-4442-9298-4e1b4c05f8be")
 		)
 		(instances
 			(project "smart_supply"
@@ -9253,7 +9286,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "ac8a9687-4619-4287-99ad-2891f47eec79")
+			(uuid "4a11e4d3-370e-40e5-b9c8-486607ad4673")
 		)
 		(instances
 			(project "smart_supply"
@@ -9330,7 +9363,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "bfd1cf95-b629-4b3c-8e44-2ce763cbbec4")
+			(uuid "f5c399cd-373f-4642-a883-4ee65dd6c808")
 		)
 		(instances
 			(project "smart_supply"
@@ -9407,7 +9440,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "1f18139e-bff9-4462-b021-beb785bd036f")
+			(uuid "02661a6b-7117-49de-8b01-6968d80cab1e")
 		)
 		(instances
 			(project "smart_supply"
@@ -9507,10 +9540,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "521534f4-4879-4af2-b2b7-c097d9f3940f")
+			(uuid "16a80766-e632-4111-9a5a-8a1769bdcbae")
 		)
 		(pin "1"
-			(uuid "d3d97fd8-f51a-42c8-9393-d3ecab315de7")
+			(uuid "86203774-a700-4169-bc9c-f01438590c10")
 		)
 		(instances
 			(project "smart_supply"
@@ -9655,10 +9688,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "9fc79e49-d4fc-4ff4-99ec-dea0788b5ae6")
+			(uuid "4678be9d-a8c9-4f47-a447-e3f495e1f81e")
 		)
 		(pin "1"
-			(uuid "533c28be-d692-479e-a933-fb9213ceada2")
+			(uuid "a03294f0-8149-475f-a467-17062373790c")
 		)
 		(instances
 			(project "smart_supply"
@@ -9735,7 +9768,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e75506f4-33d5-4cbe-96ef-162db0819e7e")
+			(uuid "85fcfab8-81a1-49e8-8b69-63a9af6313bf")
 		)
 		(instances
 			(project "smart_supply"
@@ -9811,7 +9844,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0100FR-07100RL"
+		(property "MPN" "CR0402JW-101GLF"
 			(at 242.57 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -9822,7 +9855,7 @@
 				)
 			)
 		)
-		(property "Mouser" "603-RC0100FR-07100RL"
+		(property "Mouser" "652-CR0402JW-101GLF"
 			(at 242.57 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -9834,10 +9867,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "81dfddc7-80d9-4953-956b-0a7b12cf70f5")
+			(uuid "28705857-df1f-47ac-9a82-9e27f83e798e")
 		)
 		(pin "1"
-			(uuid "593ea533-09fb-42c2-9d0f-d2af62602c80")
+			(uuid "f236a815-4126-4ad7-bd69-5784f8f964c3")
 		)
 		(instances
 			(project "smart_supply"
@@ -9980,16 +10013,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "90b4b72d-06fc-48a8-8364-9bb87d83894a")
+			(uuid "1a162c14-b9a2-4173-a33f-076557f7cf15")
 		)
 		(pin "2"
-			(uuid "7f81632c-2790-490b-ab74-cafa0861d3d0")
+			(uuid "b7d58f63-f1c6-4a49-989c-5b39a8e0c954")
 		)
 		(pin "3"
-			(uuid "34c01266-c94e-460c-b170-7e00419453cb")
+			(uuid "2f28b9eb-d2e4-46b8-aa31-fa697559c08b")
 		)
 		(pin "4"
-			(uuid "876aa013-649e-4c9a-aaa0-4605bb62ef79")
+			(uuid "6aab0686-eda4-4c95-93e6-4692c16e770a")
 		)
 		(instances
 			(project "smart_supply"
@@ -10090,10 +10123,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "32a88b87-80e2-42d2-b7ce-9a5add6b0884")
+			(uuid "eee81789-b9f2-4d4b-ae95-263396d74b5f")
 		)
 		(pin "1"
-			(uuid "cdad5045-ab1b-4c7c-8aba-6800ab8e0800")
+			(uuid "34c97741-8b9f-4200-9d86-fc52bc1e68a1")
 		)
 		(instances
 			(project "smart_supply"
@@ -10193,10 +10226,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "916533f6-fdb7-42f2-8f06-1291b0d22626")
+			(uuid "cef4418b-d93f-4603-9873-a82a99f7844e")
 		)
 		(pin "1"
-			(uuid "8c44c526-a220-4540-b0d8-3fe7947cfc33")
+			(uuid "fd557a6c-70dc-4a1a-88bc-262de2aeaf2a")
 		)
 		(instances
 			(project "smart_supply"
@@ -10297,10 +10330,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "eeab3f1b-24c6-4655-82eb-0f45f9c72d2b")
+			(uuid "be78d4ba-ff4e-4ad1-b4df-d04eb2776664")
 		)
 		(pin "2"
-			(uuid "2cd2b890-0e86-4c81-aa35-d8ecc858a1c4")
+			(uuid "18e5685c-e807-4083-8abc-ace8e2b7ea6c")
 		)
 		(instances
 			(project "smart_supply"
@@ -10456,10 +10489,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "735fc573-093d-4041-b122-39acee51a430")
+			(uuid "a8bec3ca-2137-48f6-9f60-31bdbfa3f893")
 		)
 		(pin "1"
-			(uuid "ffa858be-e04a-452a-bdf0-eb63f6b80373")
+			(uuid "48e4305e-ff98-48d7-8911-4786e6098f7c")
 		)
 		(instances
 			(project "smart_supply"
@@ -10536,7 +10569,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "bbc8d851-b8f8-47cd-9d61-1d0ce5a0345f")
+			(uuid "9a26834c-603a-42fe-b9c9-05717100bc7c")
 		)
 		(instances
 			(project "smart_supply"
@@ -10637,10 +10670,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "ec554eb9-4583-4d1a-acc1-95d29d566064")
+			(uuid "2f66b493-cbaa-4dbb-af74-c4f8d5303843")
 		)
 		(pin "1"
-			(uuid "7085a231-e5a8-4a5a-88ac-98f9acdba41a")
+			(uuid "7ad1e999-18bd-4c52-899d-0d4a7718cb7f")
 		)
 		(instances
 			(project "smart_supply"
@@ -10657,7 +10690,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -10716,8 +10749,19 @@
 				)
 			)
 		)
+		(property "MPN" ""
+			(at 114.3 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "cf73c433-5689-4e02-8ecf-e23b4383c03f")
+			(uuid "ffe66e51-71a1-412b-9ff4-1cdfce6b40dd")
 		)
 		(instances
 			(project "smart_supply"
@@ -10816,10 +10860,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "58cf42bf-adeb-4e34-927f-026aec375d33")
+			(uuid "e6bb0f0b-590d-40cb-9af7-617980110f29")
 		)
 		(pin "2"
-			(uuid "e26d1bec-766f-4ed2-87e0-02a8011b2fa4")
+			(uuid "e12218e1-8b50-40e6-96ad-a616d08a871c")
 		)
 		(instances
 			(project "smart_supply"
@@ -10953,13 +10997,13 @@
 			)
 		)
 		(pin "3"
-			(uuid "76e1dda4-1aaa-4485-a454-4a094314f250")
+			(uuid "77a3f2da-565c-426b-8a1a-2bbb947a531e")
 		)
 		(pin "2"
-			(uuid "6293df21-5103-4553-b8af-1f62156623b8")
+			(uuid "423b51f6-88da-4e2c-85fa-d38133bfac28")
 		)
 		(pin "1"
-			(uuid "8dba1ca3-612f-4602-84d1-e34dc61e10cb")
+			(uuid "2809b8ca-4734-465e-9283-ac17d88d2579")
 		)
 		(instances
 			(project "smart_supply"
@@ -11060,10 +11104,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "ff3bc574-cdea-4974-97a2-ac21d4d66737")
+			(uuid "af6c494d-72ef-4a46-ab9a-fd71dc79eef1")
 		)
 		(pin "1"
-			(uuid "f17fec6e-c235-4aa6-8888-2654812224d5")
+			(uuid "d86afe60-1390-4123-a5a6-29baee14c4a5")
 		)
 		(instances
 			(project "smart_supply"
@@ -11162,10 +11206,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "189e8592-6d89-4053-8d07-11f0ef656ccb")
+			(uuid "cf96bdc1-8074-4f68-a0ee-f5fc629c43e7")
 		)
 		(pin "1"
-			(uuid "b67d2c5c-bd96-4ddf-a181-d582f79e6c28")
+			(uuid "3e28990a-e3b1-47b0-ae3c-53797aa836dd")
 		)
 		(instances
 			(project "smart_supply"
@@ -11241,7 +11285,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0100FR-07100RL"
+		(property "MPN" "CR0402JW-101GLF"
 			(at 245.11 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -11252,7 +11296,7 @@
 				)
 			)
 		)
-		(property "Mouser" "603-RC0100FR-07100RL"
+		(property "Mouser" "652-CR0402JW-101GLF"
 			(at 245.11 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -11264,10 +11308,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "99474c5e-a67a-4aed-ac57-bdb286e568aa")
+			(uuid "1c20a315-e2c1-49a0-b499-af9876b81fce")
 		)
 		(pin "1"
-			(uuid "57db2159-5602-4da2-ba3d-9e80203f1de6")
+			(uuid "aefe875a-5b64-45fc-868d-74bc4f0b6d39")
 		)
 		(instances
 			(project "smart_supply"
@@ -11343,7 +11387,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0100FR-07100RL"
+		(property "MPN" "CR0402JW-101GLF"
 			(at 181.61 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11354,7 +11398,7 @@
 				)
 			)
 		)
-		(property "Mouser" "603-RC0100FR-07100RL"
+		(property "Mouser" "652-CR0402JW-101GLF"
 			(at 181.61 57.15 90)
 			(hide yes)
 			(show_name no)
@@ -11366,10 +11410,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "dd1462f2-3717-4c9f-817b-f6fc137751ca")
+			(uuid "8c55a587-a469-41e4-904c-130915bcef3d")
 		)
 		(pin "1"
-			(uuid "ee0f0f7d-c2db-4fda-ab39-e645a03a7a26")
+			(uuid "1a51db11-714b-4fcb-9023-52c0dbfd177d")
 		)
 		(instances
 			(project "smart_supply"
@@ -11468,10 +11512,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "1b85120a-ae3e-48f5-97c0-3c938d4010ff")
+			(uuid "9222379a-0141-4b86-8bb3-23b5b662e86b")
 		)
 		(pin "1"
-			(uuid "2767b797-2b95-4648-8390-30756e789ee8")
+			(uuid "d5409bc1-e388-49c3-a3d0-88747bc997c7")
 		)
 		(instances
 			(project "smart_supply"
@@ -11570,10 +11614,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "75eb4a62-822d-4bc7-a8a7-42c4ca01fcab")
+			(uuid "91f16873-c550-4af1-8e10-7fa188949ac9")
 		)
 		(pin "2"
-			(uuid "a43544b6-3ffd-4d01-8466-8661882a4d5a")
+			(uuid "36efd98b-b982-45fd-8594-8300b0019dbc")
 		)
 		(instances
 			(project "smart_supply"
@@ -11650,7 +11694,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "26ef2bdd-035a-40f1-ad25-9931c8f17376")
+			(uuid "85830fe3-9c82-41a3-a165-ea2bb246f475")
 		)
 		(instances
 			(project "smart_supply"
@@ -11752,16 +11796,16 @@
 			)
 		)
 		(pin "13"
-			(uuid "9da16f65-240c-473f-abef-d7b362a613d9")
+			(uuid "24b8a8b1-02b5-4600-8951-b5ca66584c87")
 		)
 		(pin "A1"
-			(uuid "df1ac907-3f06-4c00-9fb1-1a0b7b36a42d")
+			(uuid "32df8dd5-0d46-4cbe-8058-840925ecbe6d")
 		)
 		(pin "14"
-			(uuid "93351e72-c95a-4b2e-aae1-3fa2f97f31d5")
+			(uuid "5d4d5652-3721-48b0-a7a8-4cdbb588a5fe")
 		)
 		(pin "A2"
-			(uuid "b3a317cf-9db6-478e-8653-8b76238b9bd3")
+			(uuid "dedcc482-a1ab-4856-97aa-90b660097499")
 		)
 		(instances
 			(project "smart_supply"
@@ -11863,16 +11907,16 @@
 			)
 		)
 		(pin "13"
-			(uuid "fe347a21-67b0-4dd5-ab83-ef0e54988bd4")
+			(uuid "1e973f39-5965-4f9f-8f63-d89777a63b3c")
 		)
 		(pin "A1"
-			(uuid "5f8bcd78-f56c-4686-9dea-76e32b8dd4bc")
+			(uuid "a5726b91-ceaa-4b61-b695-207792691963")
 		)
 		(pin "14"
-			(uuid "2eba878f-785c-4133-886e-8bd0adf37d87")
+			(uuid "4c25d7d2-29e2-420e-b256-f40d2799f1ae")
 		)
 		(pin "A2"
-			(uuid "12a42911-8c57-4fa7-ab71-0737ea32f155")
+			(uuid "3daaf8e7-f366-4c7f-be23-caf0123e10e2")
 		)
 		(instances
 			(project "smart_supply"
@@ -11889,7 +11933,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -11948,8 +11992,19 @@
 				)
 			)
 		)
+		(property "MPN" ""
+			(at 76.2 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "4c6e9f2f-1f43-437b-b991-dadd6fa11d10")
+			(uuid "0d3f9fdd-f612-4967-8ac0-e6037175d47a")
 		)
 		(instances
 			(project "smart_supply"
@@ -12026,7 +12081,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "557f84ef-b636-445d-bf02-cb2800fa32c1")
+			(uuid "244f6e84-20e5-46cd-80b8-7f7d5d2d5115")
 		)
 		(instances
 			(project "smart_supply"
@@ -12125,10 +12180,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5a0f32d7-d493-41f4-8085-35e57ea6d57a")
+			(uuid "dafbdc71-bda7-477f-9ea3-4e2a89eaf5ae")
 		)
 		(pin "2"
-			(uuid "e53b4a90-abf5-424a-93a5-bccf4f5e5ac4")
+			(uuid "1dab07c5-e64f-4ed3-bd2e-089aa2e60372")
 		)
 		(instances
 			(project "smart_supply"
@@ -12262,13 +12317,13 @@
 			)
 		)
 		(pin "3"
-			(uuid "3ad90a5d-bf15-4451-8022-d3b1e86e8a8a")
+			(uuid "33cac02f-80ef-4bfd-97a8-58ebc7aba4a9")
 		)
 		(pin "2"
-			(uuid "0b6c94e4-0a86-488a-9903-ba89ab5aad53")
+			(uuid "8bb6ec8c-9cce-4aba-8d87-04d5fe1194f5")
 		)
 		(pin "1"
-			(uuid "1319bafe-45e3-4b5d-9c71-56fa5cc2878c")
+			(uuid "cc32fc3f-e476-460e-bc26-d444368cf5af")
 		)
 		(instances
 			(project "smart_supply"
@@ -12368,7 +12423,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "de651b1e-e6d0-4d85-b0b6-7a569ea67d3d")
+			(uuid "36405625-d0c0-4724-9e88-19e0c1bbe407")
 		)
 		(instances
 			(project "smart_supply"
@@ -12446,7 +12501,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "bc9f8c0e-f49b-40af-93dc-14e530c73de6")
+			(uuid "a5b21e99-b711-48c9-abc3-5f1dbbee165d")
 		)
 		(instances
 			(project "smart_supply"
@@ -12524,7 +12579,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "fcfe8747-6bff-4d6d-95f5-24d30a4bd914")
+			(uuid "cc88a0b7-6533-4549-afe9-45288c510409")
 		)
 		(instances
 			(project "smart_supply"
@@ -12623,7 +12678,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "2bdae1ed-8735-4cf7-936e-a7357367728e")
+			(uuid "508bfd1c-a45d-4541-b19d-bb8f5bde8cce")
 		)
 		(instances
 			(project "smart_supply"
@@ -12723,10 +12778,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "9c0655c2-6639-4243-96c7-240383f5a937")
+			(uuid "6c7981e0-d0cf-4d81-a6e4-1f94dea9e1b9")
 		)
 		(pin "1"
-			(uuid "be36e709-3a95-4a76-824e-80cbcbc1458c")
+			(uuid "de86b611-a0f2-47ee-a943-ec2026e54a98")
 		)
 		(instances
 			(project "smart_supply"
@@ -12825,10 +12880,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "04b58d76-e7c5-41e0-8db7-b4fafeab1496")
+			(uuid "aaff6b21-4218-4a53-9289-8b2f1032a96b")
 		)
 		(pin "1"
-			(uuid "2f974097-85db-4d1a-96cc-be8aeaa4e316")
+			(uuid "1e596dce-3b5e-4954-8551-6aed6d888a32")
 		)
 		(instances
 			(project "smart_supply"
@@ -12927,10 +12982,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "23e9e957-b804-4e3b-93cf-950c55b58d3e")
+			(uuid "33113c2e-e16b-408a-90c4-dc79781b93e9")
 		)
 		(pin "1"
-			(uuid "0586f562-a0f2-4b2b-b66d-24144128f829")
+			(uuid "cd26e16a-c6a4-4447-b6be-80f820313b2c")
 		)
 		(instances
 			(project "smart_supply"
@@ -13031,10 +13086,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "f8ece6fc-6e97-4556-89ef-0cbf0332fce3")
+			(uuid "f0868d1b-a82e-4d5f-a833-5c265a14f48c")
 		)
 		(pin "2"
-			(uuid "dd0bae64-e35a-419e-a588-c485798cc473")
+			(uuid "e57ca0d3-1128-4ab6-8f95-491097e6d126")
 		)
 		(instances
 			(project "smart_supply"
@@ -13134,10 +13189,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "aee6d4fe-928b-47ba-89c0-caec3cf365aa")
+			(uuid "01f1de86-5c15-4616-ae27-66c344927701")
 		)
 		(pin "1"
-			(uuid "66d19962-7437-43d4-8538-55b75c468866")
+			(uuid "f1daf9ba-4fea-46ae-bb86-5f52a55b52f8")
 		)
 		(instances
 			(project "smart_supply"
@@ -13271,13 +13326,13 @@
 			)
 		)
 		(pin "3"
-			(uuid "c5797e4c-0e35-4108-9f09-0db00d3ad7f6")
+			(uuid "840a0379-0e7d-450a-a3dd-95a56a7b2ca0")
 		)
 		(pin "2"
-			(uuid "b98b99df-8f0b-46b1-9681-5761584e9f9a")
+			(uuid "8af68fdf-0535-4c56-9732-8b6173ca3de1")
 		)
 		(pin "1"
-			(uuid "ebdf68c2-9efa-43aa-8f71-c0ec1592b90a")
+			(uuid "286ccee4-e192-49b4-8676-ccfafc6bab5b")
 		)
 		(instances
 			(project "smart_supply"
@@ -13294,7 +13349,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -13353,8 +13408,19 @@
 				)
 			)
 		)
+		(property "MPN" ""
+			(at 88.9 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "7739ebd2-e9be-4c00-b779-ea0ae3f43c7d")
+			(uuid "9931202b-7bca-4ffc-8bf9-95fa7ba78718")
 		)
 		(instances
 			(project "smart_supply"
@@ -13455,10 +13521,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "143f9963-9e31-4d86-aa91-c42d6a4c3757")
+			(uuid "0233bd17-44ff-40dd-92b5-8adf104db326")
 		)
 		(pin "1"
-			(uuid "7ec432c8-bb73-4c74-a7e0-1e65f01fcc89")
+			(uuid "37c30caf-9feb-435b-adb8-992ff6b1c0c8")
 		)
 		(instances
 			(project "smart_supply"
@@ -13559,10 +13625,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "758ddea8-18d6-4a13-8f03-d10546c50aa8")
+			(uuid "61ec7733-1456-4ea2-915c-6de9d6e1b0bf")
 		)
 		(pin "1"
-			(uuid "c57a6832-e02b-487e-b11f-cf7d040183cb")
+			(uuid "6dd87be0-8ae7-49ff-a0f7-6a9755d44950")
 		)
 		(instances
 			(project "smart_supply"
@@ -13661,10 +13727,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "68fc4b92-c737-4420-bec8-7e9877c0894f")
+			(uuid "8e3aa211-5346-4db6-a815-60df0fd55503")
 		)
 		(pin "1"
-			(uuid "9f6b9521-fdd1-46e1-afad-6f457195668d")
+			(uuid "375a3e2f-ca0e-4215-b4a3-771fe210af41")
 		)
 		(instances
 			(project "smart_supply"
@@ -13763,7 +13829,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "0ad66d3d-a6c4-4b2b-8384-da7840c1f641")
+			(uuid "43f595af-f5fc-40aa-9ff3-5809d8e1c4dc")
 		)
 		(instances
 			(project "smart_supply"
@@ -13840,7 +13906,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "39eb4d57-acce-469a-ba77-0ab272043f54")
+			(uuid "104da83e-62db-46e0-b6df-5ad1a19e329e")
 		)
 		(instances
 			(project "smart_supply"
@@ -13940,10 +14006,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "6bbab9bb-b62f-4051-92e7-7ad279c2fffc")
+			(uuid "56ee16b6-08a3-4473-9515-220ff1ecf789")
 		)
 		(pin "1"
-			(uuid "431b70ed-3766-443f-80e0-fc672c4d2849")
+			(uuid "9c1fdab7-8cbf-4346-ae40-1224b96c937b")
 		)
 		(instances
 			(project "smart_supply"
@@ -14042,16 +14108,16 @@
 			)
 		)
 		(pin "2"
-			(uuid "9f953931-1d30-4b15-b300-460432589259")
+			(uuid "9516c175-5b4c-452a-9d06-c8d5c5190a5e")
 		)
 		(pin "3"
-			(uuid "7d60a60e-a52c-4124-9091-f5ef90b1e444")
+			(uuid "43a2db88-8765-4957-8e31-92c9097da8de")
 		)
 		(pin "4"
-			(uuid "f3691b3c-259b-4d40-b576-17bb7c5fc08e")
+			(uuid "6d979970-f1af-478d-80da-41df3683ecfe")
 		)
 		(pin "1"
-			(uuid "3fc7e8f7-7346-4d63-810f-0768ce99f0d8")
+			(uuid "9ebf39ed-3a49-44c0-911f-f40c2757ca70")
 		)
 		(instances
 			(project "smart_supply"
@@ -14150,10 +14216,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "cabeb739-664c-43df-8911-477b9fae4870")
+			(uuid "c2b0b7ea-e741-4fe3-8e08-51b8bde7d354")
 		)
 		(pin "1"
-			(uuid "6c557abc-6e0c-48c9-94e7-de0390a72e72")
+			(uuid "d9e8227b-02e3-4dd4-a74c-95802e140f79")
 		)
 		(instances
 			(project "smart_supply"
