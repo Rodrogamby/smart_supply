@@ -1,11 +1,12 @@
 from machine import Timer
 from network_interface import Nif
 from logger import Log
+from sys import print_exception
 
 ## Class for making measurements and
 ## keeping the Sender object 'alive'
 class Worker:
-    sample_rate = 30 # hz
+    sample_rate = 2 # hz
     publish_interval = 1 # sec
     retry_cooldown = 3000 # msec
 
@@ -53,7 +54,8 @@ class Worker:
         except Exception as e:
             #t.deinit()
             self.recover()
-            Log.warn(f'Failed to publish:\n{e}\nRecovery poller enabled...')
+            Log.warn('Failed to publish.\nRecovery poller enabled...')
+            print_exception(e)
 
     def measure(self):
         self.cnt += 1
@@ -81,7 +83,8 @@ class Worker:
             "s": self.meas[4], 
             "pf": self.meas[5], 
             "angle": self.meas[6],
-            "freq": self.meas[7]
+            "freq": self.meas[7],
+            "waveform": self.meter.waveform_capture()
         }
         self.sender.send(readings)
         Log.debug('Published readings.')

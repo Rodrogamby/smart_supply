@@ -2,6 +2,8 @@ from binascii import hexlify
 from machine import Pin, SPI
 from math import pi
 from struct import unpack
+from time import ticks_us, ticks_diff
+import gc
 
 sqrt2 = 2**0.5
 
@@ -119,7 +121,7 @@ class ADE7953:
     LAST_RWDATA_32 = Register(0x3FF, 32, False, False)
     
     class Module():
-        spi = SPI(2, sck=Pin(12), miso=Pin(11), mosi=(13), polarity=1, baudrate=1000000) # share hardware spi
+        spi = SPI(2, sck=Pin(12), miso=Pin(11), mosi=(13), polarity=1, baudrate=2000000) # share hardware spi
 
         def __init__(self, en, cs, v_fscale=500, i_fscale=500):
             self.en = Pin(en, mode=Pin.OUT, value=1) # enable
@@ -155,10 +157,60 @@ class ADE7953:
             b32 = [to_uint32, to_int32]
             b16 = [to_uint16, to_int16]
             signed = 1 if address.signed else 0
-            if address.bits == 32:
-                return b32[signed](rx)
+            if cast is True:
+                if address.bits == 32:
+                    return b32[signed](rx)
+                else:
+                    return b16[signed](rx)
             else:
-                return b16[signed](rx)
+                return rx
+
+        # cpu-blocking 2kHz waveform capture (span of 50ms/ 100 samples)
+        # carefully hardcoded
+        def waveform_capture(self):
+            sample_count = 200
+            sampling_period_us = 125 
+            full_buff = bytearray((sample_count * 3) * 2) # 3 bytes per read
+            full_mv = memoryview(full_buff) # pair-like structure -> [v, i]
+
+            rx_buff = bytearray(12) # duplex comms rx bufer
+            rx_mv = memoryview(rx_buff)
+
+            tx_v = bytearray([0x2, 0x18, 0x80, 0x0, 0x0, 0x0]) # instruction: read V register (6B symmetric)
+            tx_i = bytearray([0x2, 0x17, 0x80, 0x0, 0x0, 0x0]) # " read IA
+            offset = 0
+
+            gc.collect()
+            gc.disable()
+            next_t = ticks_us()
+            for _ in range(sample_count):
+                while ticks_diff(ticks_us(), next_t) < 0:
+                    pass
+                next_t += sampling_period_us
+              
+                self.cs(0) # read voltage
+                ADE7953.Module.spi.write_readinto(tx_v, rx_mv[0:6])
+                self.cs(1)
+                self.cs(0) # read current
+                ADE7953.Module.spi.write_readinto(tx_i, rx_mv[6:12])
+                self.cs(1)
+
+                full_mv[offset:offset+3] = rx_mv[3:6]
+                full_mv[offset+3:offset+6] = rx_mv[9:12]
+                offset += 6
+            
+            gc.enable()
+    
+            samples = [[0] * sample_count for _ in range(2)]
+            conv = (self.conv_v, self.conv_i)
+            for i in range(sample_count):
+                for j in range(2):
+                    idx = (i * 6) + j * 3
+                    val = (full_buff[idx] << 16) | (full_buff[idx + 1] << 8) | full_buff[idx + 2]
+                    if val & 0x800000:  # Sign-extend 24-bit two's complement
+                        val -= 0x1000000
+                    samples[j][i] = conv[j](val)
+            return samples
 
         ### unitful conversion ###
         def conv_v(self, raw : int):   # p.21
