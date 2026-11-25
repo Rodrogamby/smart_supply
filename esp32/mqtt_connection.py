@@ -36,8 +36,8 @@ class Sender:
 	
         #active and low of relay ch1
         self.relays = {
-            b'ch1' : machine.Pin(16, machine.Pin.OUT, value=1),
-            b'ch2' : machine.Pin(17, machine.Pin.OUT, value=1) }
+            b'ch1' : machine.Pin(38, machine.Pin.OUT, value=1),
+            b'ch2' : machine.Pin(3, machine.Pin.OUT, value=1) }
         
         self.relay_enabled =  {b'ch1': False, b'ch2': False}
         self.state_pending =  {b'ch1': False, b'ch2': False}
