@@ -206,6 +206,69 @@ function setStatus(message, type) {
 }
 
 // Read the connection form and start the MQTT connection
+
+//  waveform: [voltageSamples, currentSamples].
+const waveformPeriodUs = 125
+
+function drawWaveform(canvasId, samples = null, unit = 'V', periodUs = waveformPeriodUs) {
+  const canvas = $(canvasId)
+  if (!canvas) return false
+  const ctx = canvas.getContext('2d')
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  const valid = Array.isArray(samples) && samples.length >= 2 &&
+    samples.length <= 10000 && samples.every(Number.isFinite) &&
+    Number.isFinite(periodUs) && periodUs > 0
+  const left = 72, right = canvas.width - 16, top = 20, bottom = canvas.height - 32
+  const center = (top + bottom) / 2
+  const peak = valid ? samples.reduce((m, v) => Math.max(m, Math.abs(v)), 0) : 0
+  const limit = peak ? peak * 1.1 : 1
+  ctx.font = '11px sans-serif'
+  ctx.fillStyle = '#9cadbf'
+  ctx.strokeStyle = '#456078'
+  ctx.lineWidth = 1
+  ctx.beginPath()
+  ctx.moveTo(left, top); ctx.lineTo(left, bottom); ctx.lineTo(right, bottom)
+  ctx.stroke()
+  ctx.strokeStyle = '#2a3b51'
+  ctx.beginPath(); ctx.moveTo(left, center); ctx.lineTo(right, center); ctx.stroke()
+  ctx.textAlign = 'right'
+  for (const [value, y] of [[limit, top + 4], [0, center + 4], [-limit, bottom]]) {
+    ctx.fillText(value.toFixed(2) + ' ' + unit, left - 6, y)
+  }
+  ctx.textAlign = 'left'
+  ctx.fillText('0 ms', left, bottom + 20)
+  if (!valid) {
+    ctx.textAlign = 'center'
+    return false
+  }
+  ctx.textAlign = 'right'
+  ctx.fillText(((samples.length - 1) * periodUs / 1000).toFixed(2) + ' ms', right, bottom + 20)
+  ctx.save()
+  ctx.beginPath(); ctx.rect(left, top, right - left, bottom - top); ctx.clip()
+  ctx.strokeStyle = unit === 'V' ? '#60d5b4' : '#ffca80'
+  ctx.lineWidth = 2
+  ctx.beginPath()
+  samples.forEach((value, index) => {
+    const x = left + index / (samples.length - 1) * (right - left)
+    const y = center - value / limit * (bottom - top) / 2
+    if (index === 0) ctx.moveTo(x, y)
+    else ctx.lineTo(x, y)
+  })
+  ctx.stroke()
+  ctx.restore()
+  return true
+}
+
+function updateWaveforms(channel, waveform) {
+  const validPair = Array.isArray(waveform) && waveform.length === 2 &&
+    waveform.every(a => Array.isArray(a) && a.length >= 2 && a.length <= 10000 && a.every(Number.isFinite)) &&
+    waveform[0].length === waveform[1].length
+  drawWaveform(channel + '-voltage_waveform-chart', validPair ? waveform[0] : null, 'V')
+  drawWaveform(channel + '-current_waveform-chart', validPair ? waveform[1] : null, 'A')
+  const status = $(channel + '-waveform-status')
+
+}
+
 function connect() {
   const url = $('broker-url').value.trim()
   const username = $('mqtt-user').value.trim()
@@ -279,6 +342,7 @@ function connect() {
 
     try {
       const readings = JSON.parse(message.toString())
+      updateWaveforms(channel, readings.waveform)
       const { vrms, irms, p, q, s, pf, freq } = readings
       function show(id, value) {
           const element = $(id)
@@ -323,6 +387,9 @@ function connect() {
   // When the connection closes, reset the buttons for another attempt
   client.on('close', () => {
     stopTesting(false)
+    for (const channel of ['ch1', 'ch2']) {
+      updateWaveforms(channel, null)
+    }
     client = null
 
     // Disable relay controls and clear their displayed states
@@ -355,6 +422,8 @@ $('clear-log').addEventListener('click', () => $('event-log').replaceChildren())
 // Draw empty axes using the same limits used for live updates
 drawChannelHistory('ch1')
 drawChannelHistory('ch2')
+updateWaveforms('ch1', null)
+updateWaveforms('ch2', null)
 
 // Publish a command when a relay button is clicked
 document.querySelectorAll('.channel-command').forEach(button => {
